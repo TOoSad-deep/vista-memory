@@ -1,6 +1,6 @@
 ---
 title: vista-memory 最小图片记录与 MCP 接入设计
-subtitle: 2026-11-13 独立项目设计，暂不实施
+subtitle: 2026-11-13 独立项目设计
 lang: zh
 template: doc
 theme: paper
@@ -9,7 +9,7 @@ file: vista-minimal-image-records-20261113
 
 VISTA 作为独立项目 vista-memory 开发，以“一张图片及其可选对应代码”为存储单位。后端负责保存，Agent 通过 MCP 工具发现和回看记录。
 
-状态：最小存储与工具设计已确认，本次补充独立项目和 MCP 接入路线。尚未按本文创建独立工程或实施功能，文档中的测试均为后续计划。
+状态：最小存储与工具设计已确认，独立存取核心、MCP 适配和本地协议验收已完成。DSH 图像入模、全新 Agent 会话及业务接入的验收留待后续执行，结果见实施计划。
 
 ## A 定位与范围
 
@@ -192,6 +192,8 @@ VISTA --> 业务后端: 返回记录摘要
 
 ## G 接入与验收
 
+2026-11-13 实施安排已调整为先完成独立存取、MCP 本地协议验证与本地连续记录测试，随后接入 DSH。下表描述完整验收路径，具体执行顺序见[实施计划](vista-memory-implementation-plan-20261113.md)。
+
 先在独立项目内验证，再接入 Shader Deep。首个 MCP 验证宿主采用 DSH；pi 的扩展或 MCP 桥接接入作为后续兼容验证，按实际宿主版本确认能力。
 
 测试固定宿主版本、视觉模型和输入记录。第一轮只接一个宿主，不同时建设两套适配。
@@ -213,7 +215,7 @@ VISTA --> 业务后端: 返回记录摘要
 
 图片和代码在后续上下文中保留多久，由外层 harness 决定。首轮验收关注存取和回读可靠性，Shader 视觉质量作为后续业务评估。
 
-以下是后续实施的验收项，本轮未实施或执行这些行为测试。
+以下是完整设计的验收项，当前完成范围与检查结果见[实施计划中的本轮验收记录](vista-memory-implementation-plan-20261113.md#本轮验收记录)。
 
 - 参考图可列出和读取；读取代码时正常说明没有关联代码。
 - 两份 JSON 可以引用同一份稳定 GLSL，并读取各自图片。
@@ -229,10 +231,10 @@ VISTA --> 业务后端: 返回记录摘要
 
 ## H 文档状态与下一步
 
-本设计替代[2026-11-12 通用材料库草案](vista-visual-memory-module-proposal-20261112.md)。不继续沿用其中的集中材料索引、材料 ID 和通用关联设计。
+本设计替代 2026-11-12 通用材料库草案 `vista-visual-memory-module-proposal-20261112.md`。不继续沿用其中的集中材料索引、材料 ID 和通用关联设计。
 
-[旧版最小 TODO](vista-minimal-harness-todo-20261109.md)和[旧版实施记录](vista-minimal-harness-implementation-20261111.md)保留为历史与现有实现依据。旧版验证结果不代表本设计已经实现或验证。
+旧版最小 TODO `vista-minimal-harness-todo-20261109.md` 和旧版实施记录 `vista-minimal-harness-implementation-20261111.md` 保留为历史与现有实现依据。上述历史文档位于 Shader Deep 仓库的 `apps/shader_deep/docs/work-items/`。旧版验证结果不代表本设计已经实现或验证。
 
-本文暂保留在原讨论文档位置，独立工程建立后作为设计依据迁入。这个存放位置不构成 vista-memory 对 Shader Deep 的代码依赖。
+本文已复制到 vista-memory 的 `docs/`，后续以本仓库文档作为独立开发依据。
 
-下一步编写独立项目的实施方案，确定语言、依赖、MCP 启动方式与测试入口，再创建 vista-memory 工程。当前只调整设计文档，不创建项目、不安装依赖、不启动服务或改造生产代码。
+工程基础、存取核心和 MCP 本地开发已按[实施计划](vista-memory-implementation-plan-20261113.md)完成。下一阶段补齐 DSH 宿主配置，验证图像入模与全新 Agent 会话回看。
