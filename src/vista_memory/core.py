@@ -6,9 +6,11 @@ import io
 import json
 import logging
 import os
-import tempfile
+import stat
+from contextlib import ExitStack
 from dataclasses import dataclass
 from pathlib import Path
+from secrets import token_hex
 from typing import Any, Literal
 from uuid import uuid4
 
@@ -84,17 +86,58 @@ def _validate_png(data: bytes) -> None:
             image.load()
 
 
+@dataclass
+class _Directory:
+    fd: int
+    relative: Path
+    logical: str
+
+
+@dataclass
+class _StoredFile:
+    directory: _Directory
+    name: str
+
+    @property
+    def relative(self) -> Path:
+        return self.directory.relative / self.name
+
+
+_DESCRIPTOR_IO_SUPPORTED = (
+    hasattr(os, "O_DIRECTORY")
+    and hasattr(os, "O_NOFOLLOW")
+    and all(
+        function in os.supports_dir_fd
+        for function in (os.open, os.mkdir, os.link, os.unlink)
+    )
+    and os.listdir in os.supports_fd
+)
+_DIRECTORY_FLAGS = (
+    os.O_RDONLY | getattr(os, "O_DIRECTORY", 0) | getattr(os, "O_NOFOLLOW", 0)
+)
+
+
 class VistaStore:
     """Bind storage operations to a single persistent data directory."""
 
     def __init__(self, root: str | Path):
         try:
+            if not _DESCRIPTOR_IO_SUPPORTED:
+                raise OSError(
+                    "Store requires directory-fd and no-follow file operations"
+                )
             self.root = Path(root).expanduser().resolve()
-            self.root.mkdir(parents=True, exist_ok=True)
-            for name in ("png", "glsl", "json"):
-                directory = self._path(name)
-                directory.mkdir(parents=True, exist_ok=True)
-                self._directory(name)
+            with ExitStack() as opened:
+                root_fd = self._open_absolute_directory(self.root, create=True)
+                opened.callback(os.close, root_fd)
+                self._root_identity = self._identity(root_fd)
+                for name in ("png", "glsl", "json"):
+                    try:
+                        os.mkdir(name, dir_fd=root_fd)
+                    except FileExistsError:
+                        pass
+                    self._open_directory(root_fd, name, opened)
+                self._assert_root_current(root_fd)
         except Exception as error:
             raise VistaError(f"Cannot initialize store {root!r}: {error}") from error
 
@@ -109,9 +152,6 @@ class VistaStore:
         render: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
         """Append a record, publishing its JSON after all content is complete."""
-        temporary_files: list[Path] = []
-        published_files: list[Path] = []
-        committed = False
         try:
             if not isinstance(label, str):
                 raise TypeError("label must be a string")
@@ -134,67 +174,86 @@ class VistaStore:
             if render is not None:
                 record["render"] = _json_snapshot(render)
 
-            code_bytes = None
-            if reuse_glsl_from is not None:
-                source = self._load_record(reuse_glsl_from)
-                if source["glsl"] is None:
-                    raise ValueError(
-                        f"Record {reuse_glsl_from!r} has no associated code"
+            with ExitStack() as opened:
+                root_fd = self._open_root(opened)
+                code_bytes = None
+                if reuse_glsl_from is not None:
+                    source = self._load_record(root_fd, reuse_glsl_from)
+                    if source["glsl"] is None:
+                        raise ValueError(
+                            f"Record {reuse_glsl_from!r} has no associated code"
+                        )
+                    self._read_code(root_fd, source["glsl"])
+                    record["glsl"] = source["glsl"]
+                elif glsl is not None:
+                    code_bytes = glsl.encode("utf-8")
+                    record["glsl"] = f"glsl/shader-{uuid4().hex}.glsl"
+
+                json_bytes = json.dumps(
+                    record, ensure_ascii=False, allow_nan=False, indent=2
+                ).encode("utf-8")
+                summary = self._summary(record_name, record)
+                directories = [self._open_directory(root_fd, "png", opened)]
+                if code_bytes is not None:
+                    directories.append(self._open_directory(root_fd, "glsl", opened))
+                json_directory = self._open_directory(root_fd, "json", opened)
+                directories.append(json_directory)
+                temporary_files: list[_StoredFile] = []
+                published_files: list[_StoredFile] = []
+                committed = False
+                try:
+                    png_temporary = self._write_temporary(
+                        directories[0], png, temporary_files
                     )
-                self._read_code(source["glsl"])
-                record["glsl"] = source["glsl"]
-            elif glsl is not None:
-                code_bytes = glsl.encode("utf-8")
-                record["glsl"] = f"glsl/shader-{uuid4().hex}.glsl"
+                    contents = [(png_temporary, _StoredFile(directories[0], png_name))]
+                    if code_bytes is not None:
+                        code_temporary = self._write_temporary(
+                            directories[1], code_bytes, temporary_files
+                        )
+                        contents.append(
+                            (
+                                code_temporary,
+                                _StoredFile(directories[1], Path(record["glsl"]).name),
+                            )
+                        )
+                    for temporary, destination in contents:
+                        self._publish(temporary, destination)
+                        published_files.append(destination)
 
-            json_bytes = json.dumps(
-                record, ensure_ascii=False, allow_nan=False, indent=2
-            ).encode("utf-8")
-            summary = self._summary(record_name, record)
-
-            png_destination = self._directory("png") / png_name
-            png_temporary = self._write_temporary(
-                png_destination.parent, png, temporary_files
-            )
-            contents = [(png_temporary, png_destination)]
-            if code_bytes is not None:
-                code_destination = self._directory("glsl") / Path(record["glsl"]).name
-                code_temporary = self._write_temporary(
-                    code_destination.parent, code_bytes, temporary_files
-                )
-                contents.append((code_temporary, code_destination))
-
-            for temporary, destination in contents:
-                self._publish(temporary, destination)
-                published_files.append(destination)
-
-            json_destination = self._directory("json") / record_name
-            json_temporary = self._write_temporary(
-                json_destination.parent, json_bytes, temporary_files
-            )
-            self._publish(json_temporary, json_destination)
-            committed = True
-            return summary
+                    json_temporary = self._write_temporary(
+                        json_directory, json_bytes, temporary_files
+                    )
+                    self._assert_bindings(root_fd, directories, record)
+                    json_destination = _StoredFile(json_directory, record_name)
+                    self._publish(json_temporary, json_destination)
+                    published_files.append(json_destination)
+                    self._assert_bindings(root_fd, directories, record)
+                    committed = True
+                    return summary
+                finally:
+                    if not committed:
+                        self._cleanup(published_files)
+                    self._cleanup(temporary_files)
         except Exception as error:
-            if not committed:
-                self._cleanup(published_files)
             raise VistaError(f"Cannot save record {label!r}: {error}") from error
-        finally:
-            self._cleanup(temporary_files)
 
     def list_records(self) -> dict[str, list[dict[str, Any]]]:
         """List published records, failing explicitly on a malformed record."""
         try:
-            names = sorted(
-                entry.name
-                for entry in self._directory("json").iterdir()
-                if entry.name.endswith(".json")
-            )
-            return {
-                "records": [
-                    self._summary(name, self._load_record(name)) for name in names
-                ]
-            }
+            with ExitStack() as opened:
+                root_fd = self._open_root(opened)
+                directory = self._open_directory(root_fd, "json", opened)
+                names = sorted(
+                    name for name in os.listdir(directory.fd) if name.endswith(".json")
+                )
+                result = {
+                    "records": [
+                        self._summary(name, self._load_record(root_fd, name))
+                        for name in names
+                    ]
+                }
+                self._assert_root_current(root_fd)
+                return result
         except Exception as error:
             raise VistaError(f"Cannot list records in {self.root}: {error}") from error
 
@@ -207,20 +266,23 @@ class VistaStore:
         try:
             if content not in ("image", "code", "both"):
                 raise ValueError("content must be 'image', 'code', or 'both'")
-            data = self._load_record(record)
-            metadata = {
-                "record": record,
-                "label": data["label"],
-                "source_agent": data["source_agent"],
-            }
-            if "render" in data:
-                metadata["render"] = data["render"]
-            result = RecordContent(metadata=metadata)
-            if content in ("image", "both"):
-                result.image = self._read_image(data["png"])
-            if content in ("code", "both") and data["glsl"] is not None:
-                result.code = self._read_code(data["glsl"])
-            return result
+            with ExitStack() as opened:
+                root_fd = self._open_root(opened)
+                data = self._load_record(root_fd, record)
+                metadata = {
+                    "record": record,
+                    "label": data["label"],
+                    "source_agent": data["source_agent"],
+                }
+                if "render" in data:
+                    metadata["render"] = data["render"]
+                result = RecordContent(metadata=metadata)
+                if content in ("image", "both"):
+                    result.image = self._read_image(root_fd, data["png"])
+                if content in ("code", "both") and data["glsl"] is not None:
+                    result.code = self._read_code(root_fd, data["glsl"])
+                self._assert_root_current(root_fd)
+                return result
         except Exception as error:
             raise VistaError(f"Cannot read record {record!r}: {error}") from error
 
@@ -234,13 +296,103 @@ class VistaStore:
             raise ValueError(f"File path escapes the store: {relative!r}")
         return resolved
 
-    def _directory(self, name: str) -> Path:
-        directory = self._path(name)
-        if not directory.is_dir():
-            raise NotADirectoryError(f"Store directory is unavailable: {directory}")
-        return directory
+    @staticmethod
+    def _identity(descriptor: int) -> tuple[int, int]:
+        info = os.fstat(descriptor)
+        return info.st_dev, info.st_ino
 
-    def _load_record(self, name: str) -> dict[str, Any]:
+    @staticmethod
+    def _open_absolute_directory(path: Path, *, create: bool = False) -> int:
+        descriptor = os.open(path.anchor, _DIRECTORY_FLAGS)
+        try:
+            for name in path.parts[1:]:
+                try:
+                    child = os.open(name, _DIRECTORY_FLAGS, dir_fd=descriptor)
+                except FileNotFoundError:
+                    if not create:
+                        raise
+                    try:
+                        os.mkdir(name, dir_fd=descriptor)
+                    except FileExistsError:
+                        pass
+                    child = os.open(name, _DIRECTORY_FLAGS, dir_fd=descriptor)
+                os.close(descriptor)
+                descriptor = child
+            return descriptor
+        except BaseException:
+            os.close(descriptor)
+            raise
+
+    def _open_root(self, opened: ExitStack) -> int:
+        descriptor = self._open_absolute_directory(self.root)
+        opened.callback(os.close, descriptor)
+        if self._identity(descriptor) != self._root_identity:
+            raise ValueError(f"Store root changed: {self.root}")
+        return descriptor
+
+    def _open_directory(
+        self, root_fd: int, logical: str, opened: ExitStack
+    ) -> _Directory:
+        relative = self._path(logical).relative_to(self.root)
+        return self._open_resolved_directory(root_fd, relative, logical, opened)
+
+    @staticmethod
+    def _open_resolved_directory(
+        root_fd: int, relative: Path, logical: str, opened: ExitStack
+    ) -> _Directory:
+        descriptor = os.dup(root_fd)
+        try:
+            for name in relative.parts:
+                child = os.open(name, _DIRECTORY_FLAGS, dir_fd=descriptor)
+                os.close(descriptor)
+                descriptor = child
+        except BaseException:
+            os.close(descriptor)
+            raise
+        opened.callback(os.close, descriptor)
+        return _Directory(descriptor, relative, logical)
+
+    def _assert_root_current(self, root_fd: int) -> None:
+        current = self._open_absolute_directory(self.root)
+        try:
+            if self._identity(current) != self._identity(root_fd):
+                raise ValueError(f"Store root changed: {self.root}")
+        finally:
+            os.close(current)
+
+    def _assert_bindings(
+        self, root_fd: int, directories: list[_Directory], record: dict[str, Any]
+    ) -> None:
+        self._assert_root_current(root_fd)
+        with ExitStack() as opened:
+            for directory in directories:
+                current = self._open_directory(root_fd, directory.logical, opened)
+                if self._identity(current.fd) != self._identity(directory.fd):
+                    raise ValueError(f"Store directory changed: {directory.logical}")
+        self._path(record["png"])
+        if record["glsl"] is not None:
+            self._path(record["glsl"])
+
+    def _read_bytes(self, root_fd: int, relative: str) -> bytes:
+        resolved = self._path(relative).relative_to(self.root)
+        with ExitStack() as opened:
+            parent = self._open_resolved_directory(
+                root_fd, resolved.parent, str(resolved.parent), opened
+            )
+            descriptor = os.open(
+                resolved.name,
+                os.O_RDONLY | os.O_NOFOLLOW | getattr(os, "O_NONBLOCK", 0),
+                dir_fd=parent.fd,
+            )
+            opened.callback(os.close, descriptor)
+            with os.fdopen(descriptor, "rb", closefd=False) as handle:
+                if not stat.S_ISREG(os.fstat(handle.fileno()).st_mode):
+                    raise ValueError(
+                        f"Store content must be a regular file: {relative}"
+                    )
+                return handle.read()
+
+    def _load_record(self, root_fd: int, name: str) -> dict[str, Any]:
         try:
             if (
                 not isinstance(name, str)
@@ -250,9 +402,8 @@ class VistaStore:
                 or "\x00" in name
             ):
                 raise ValueError("record must be a JSON filename without a path")
-            record_path = self._path(f"json/{name}")
             data = json.loads(
-                record_path.read_bytes().decode("utf-8"),
+                self._read_bytes(root_fd, f"json/{name}").decode("utf-8"),
                 parse_constant=_reject_json_constant,
             )
             if not isinstance(data, dict):
@@ -277,17 +428,17 @@ class VistaStore:
                 f"Invalid or unreadable record {name!r}: {error}"
             ) from error
 
-    def _read_image(self, relative: str) -> bytes:
+    def _read_image(self, root_fd: int, relative: str) -> bytes:
         try:
-            data = self._path(relative).read_bytes()
+            data = self._read_bytes(root_fd, relative)
             _validate_png(data)
             return data
         except Exception as error:
             raise ValueError(f"Cannot read PNG {relative!r}: {error}") from error
 
-    def _read_code(self, relative: str) -> str:
+    def _read_code(self, root_fd: int, relative: str) -> str:
         try:
-            return self._path(relative).read_bytes().decode("utf-8")
+            return self._read_bytes(root_fd, relative).decode("utf-8")
         except Exception as error:
             raise ValueError(f"Cannot read GLSL {relative!r}: {error}") from error
 
@@ -301,35 +452,53 @@ class VistaStore:
         }
 
     @staticmethod
-    def _write_temporary(directory: Path, data: bytes, files: list[Path]) -> Path:
-        temporary = None
+    def _write_temporary(
+        directory: _Directory, data: bytes, files: list[_StoredFile]
+    ) -> _StoredFile:
+        temporary = _StoredFile(directory, f".vista-{token_hex(16)}.tmp")
         try:
-            with tempfile.NamedTemporaryFile(
-                mode="wb", dir=directory, prefix=".vista-", suffix=".tmp", delete=False
-            ) as handle:
-                temporary = Path(handle.name)
+            with ExitStack() as opened:
+                descriptor = os.open(
+                    temporary.name,
+                    os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
+                    0o600,
+                    dir_fd=directory.fd,
+                )
+                opened.callback(os.close, descriptor)
                 files.append(temporary)
-                handle.write(data)
-                handle.flush()
-                os.fsync(handle.fileno())
+                with os.fdopen(descriptor, "wb", closefd=False) as handle:
+                    handle.write(data)
+                    handle.flush()
+                    os.fsync(handle.fileno())
             return temporary
         except Exception as error:
             raise OSError(
-                f"Cannot write temporary file {temporary or directory}: {error}"
+                f"Cannot write temporary file {temporary.relative}: {error}"
             ) from error
 
     @staticmethod
-    def _publish(temporary: Path, destination: Path) -> None:
+    def _publish(temporary: _StoredFile, destination: _StoredFile) -> None:
         try:
-            os.link(temporary, destination)
+            os.link(
+                temporary.name,
+                destination.name,
+                src_dir_fd=temporary.directory.fd,
+                dst_dir_fd=destination.directory.fd,
+                follow_symlinks=False,
+            )
         except OSError as error:
-            raise OSError(f"Cannot publish file {destination}: {error}") from error
+            raise OSError(
+                f"Cannot publish file {destination.relative}: {error}"
+            ) from error
 
-    def _cleanup(self, files: list[Path]) -> None:
+    @staticmethod
+    def _cleanup(files: list[_StoredFile]) -> None:
         for filename in reversed(files):
             try:
-                if not filename.parent.resolve().is_relative_to(self.root):
-                    raise ValueError(f"Cleanup directory escapes store: {filename}")
-                filename.unlink(missing_ok=True)
+                os.unlink(filename.name, dir_fd=filename.directory.fd)
+            except FileNotFoundError:
+                pass
             except Exception:
-                logger.error("Could not remove store file %s", filename, exc_info=True)
+                logger.error(
+                    "Could not remove store file %s", filename.relative, exc_info=True
+                )

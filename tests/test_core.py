@@ -386,10 +386,10 @@ def test_failed_publication_cleans_own_files_and_preserves_existing(
     real_sync = core.os.fsync
     sync_calls = 0
 
-    def fail_link(source, destination):
+    def fail_link(source, destination, *args, **kwargs):
         if Path(destination).suffix == failure:
             raise OSError("injected publication failure")
-        return real_link(source, destination)
+        return real_link(source, destination, *args, **kwargs)
 
     def fail_sync(descriptor):
         nonlocal sync_calls
@@ -420,10 +420,10 @@ def test_failed_record_keeps_reused_code(
     old = store.save_record(png=png, label="old", glsl="// shared")
     real_link = core.os.link
 
-    def fail_json(source, destination):
+    def fail_json(source, destination, *args, **kwargs):
         if Path(destination).suffix == ".json":
             raise OSError("injected JSON failure")
-        return real_link(source, destination)
+        return real_link(source, destination, *args, **kwargs)
 
     monkeypatch.setattr(core.os, "link", fail_json)
     with pytest.raises(VistaError, match="JSON failure"):
@@ -456,15 +456,15 @@ def test_name_collision_never_overwrites_existing_file(
 def test_post_commit_cleanup_failure_keeps_successful_record(
     store: VistaStore, png: bytes, monkeypatch: pytest.MonkeyPatch, caplog
 ) -> None:
-    real_unlink = Path.unlink
+    real_unlink = core.os.unlink
 
     def fail_temporary_unlink(filename, *args, **kwargs):
-        if filename.suffix == ".tmp":
+        if Path(filename).suffix == ".tmp":
             raise PermissionError("injected cleanup failure")
         return real_unlink(filename, *args, **kwargs)
 
     with monkeypatch.context() as patch:
-        patch.setattr(Path, "unlink", fail_temporary_unlink)
+        patch.setattr(core.os, "unlink", fail_temporary_unlink)
         summary = store.save_record(png=png, label="committed", glsl="// code")
     assert "Could not remove store file" in caplog.text
     assert store.list_records() == {"records": [summary]}
@@ -479,12 +479,12 @@ def test_catalog_cannot_see_record_before_json_publication(
     release_json = threading.Event()
     real_link = core.os.link
 
-    def pause_json(source, destination):
+    def pause_json(source, destination, *args, **kwargs):
         if Path(destination).suffix == ".json":
             json_ready.set()
             if not release_json.wait(timeout=10):
                 raise TimeoutError("JSON publication test timed out")
-        return real_link(source, destination)
+        return real_link(source, destination, *args, **kwargs)
 
     monkeypatch.setattr(core.os, "link", pause_json)
     with ThreadPoolExecutor(max_workers=1) as executor:

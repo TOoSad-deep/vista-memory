@@ -4,7 +4,7 @@ VISTA 视觉记忆，以一张图片及其可选对应代码为记录单位，�
 
 ## 安装
 
-需要 Python 3.11 及以上。使用 uv 安装开发依赖与 MCP 适配层。
+需要 Python 3.11 及以上，以及支持目录描述符相对操作和 `O_NOFOLLOW` 的 POSIX 文件系统环境。本轮验证使用 macOS。使用 uv 安装开发依赖与 MCP 适配层。
 
 ```bash
 uv sync --extra mcp --group dev
@@ -52,7 +52,7 @@ png_bytes = result.image
 
 保存成功返回 `record`、`label`、`source_agent` 和 `has_glsl`。`read_record()` 默认读取图片，支持 `image`、`code`、`both`。返回对象含 `metadata`、`image` 和 `code`，其中 `image` 是 PNG 字节，`code` 是 GLSL 字符串，未选择的内容为 `None`。参考图的 `code` 为 `None`，空代码正文保留为空字符串。
 
-核心使用 `VistaError` 报告无效输入、损坏记录和文件访问错误。目录按文件名排序，遇到损坏 JSON 时报告具体记录并使本次列出失败。内容文件按读取模式访问。保存以完整 JSON 的原子发布为完成时点，发布前失败会尽力清理本次独有文件。
+核心使用 `VistaError` 报告无效输入、损坏记录和文件访问错误。目录按文件名排序，遇到损坏 JSON 时报告具体记录并使本次列出失败。内容文件按读取模式访问。文件操作绑定已打开的目录描述符，读取逐层使用 `O_NOFOLLOW`。保存最后发布完整 JSON，并在返回成功前复核目录绑定。绑定变化时报告错误，通过原目录描述符清理本次独有文件。
 
 ## MCP 启动
 
@@ -73,7 +73,7 @@ uv run --extra mcp vista-memory-mcp --root /absolute/path/to/vista
 
 ```bash
 uv run --extra mcp python examples/local_roundtrip.py --root /tmp/vista-example
-uv run pytest tests/test_core.py
+uv run pytest tests/test_core.py tests/test_path_races.py
 uv run --extra mcp pytest tests/test_mcp.py
 uv run ruff check .
 uv run ruff format --check .
@@ -86,4 +86,4 @@ uv build
 
 详见[最小图片记录与 MCP 接入设计](docs/vista-minimal-image-records-design-20261113.md)和[实施计划](docs/vista-memory-implementation-plan-20261113.md)。
 
-首轮独立存取核心、MCP 读取接口和本地协议验收已完成，71 个测试通过，连续记录与重启回读示例通过，构建及独立安装检查通过。DSH 宿主、视觉模型图像入模与 Shader Deep 业务接入安排在后续阶段。
+首轮独立存取核心、MCP 读取接口和本地协议验收已完成，79 个测试通过，包含 8 个目录或文件替换竞态回归用例。连续记录与重启回读示例通过，构建及独立安装检查通过。DSH 宿主、视觉模型图像入模与 Shader Deep 业务接入安排在后续阶段。
