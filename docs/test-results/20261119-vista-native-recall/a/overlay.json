@@ -1,0 +1,108 @@
+[
+  {
+    "id": "tool-fs",
+    "disabled": true
+  },
+  {
+    "id": "tool-working-directory",
+    "disabled": true
+  },
+  {
+    "id": "persistent-bash",
+    "disabled": true
+  },
+  {
+    "id": "persistent-pwsh",
+    "disabled": true
+  },
+  {
+    "id": "mcp-resources",
+    "disabled": true
+  },
+  {
+    "id": "terminal-bash",
+    "disabled": true
+  },
+  {
+    "id": "terminal-pwsh",
+    "disabled": true
+  },
+  {
+    "id": "pty",
+    "disabled": true
+  },
+  {
+    "id": "subprocess",
+    "disabled": true
+  },
+  {
+    "id": "llm-deepseek",
+    "disabled": true
+  },
+  {
+    "id": "session-log-deepseek",
+    "disabled": true
+  },
+  {
+    "id": "plugin-package-inventory-deepseek",
+    "disabled": true
+  },
+  {
+    "insert": [
+      {
+        "id": "credentials-local",
+        "name": "@deepseek-ai/dsh-credentials-local",
+        "config": {
+          "path": "/Users/douwen/.dsh/.credentials.yaml",
+          "watch": false
+        }
+      },
+      {
+        "id": "mcp-vista",
+        "name": "@deepseek-ai/dsh-mcp-client",
+        "config": {
+          "serverName": "vista",
+          "transport": "stdio",
+          "command": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/.venv/bin/vista-memory-mcp",
+          "args": [
+            "--root",
+            "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261119-vista-native-recall/catalog"
+          ],
+          "cwd": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory",
+          "startupTimeoutMs": 30000,
+          "toolCallTimeoutMs": 30000,
+          "failOnStartupError": true
+        }
+      },
+      {
+        "id": "account-auth",
+        "name": "@deepseek-ai/dsh-authorization"
+      },
+      {
+        "id": "account",
+        "name": "@deepseek-ai/dsh-deepseek-account",
+        "config": {
+          "desktopPlatform": "darwin"
+        }
+      },
+      {
+        "id": "account-models",
+        "name": "@deepseek-ai/dsh-llm-deepseek-account",
+        "config": {
+          "modelsMaxAgeMs": 600000
+        }
+      },
+      {
+        "id": "observer",
+        "name": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261119-vista-native-recall/setup/observe.mjs",
+        "config": {
+          "marker": "/private/var/folders/td/sk653c_s5zs_g1njndhklzyh0000gn/T/native-vista-0h6nsy45/stage2",
+          "log": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261119-vista-native-recall/a/wire.jsonl",
+          "question": "上次定稿的「潮汐」图标，缺口朝哪边？",
+          "summary": "「潮汐」图标已经定稿。",
+          "digest": "37dcd19c284f99e1ab9b39e3c90fe65d2742e30803f521a604b22edd0ecd6a1c"
+        }
+      }
+    ]
+  }
+]

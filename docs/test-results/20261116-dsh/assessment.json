@@ -1,0 +1,2035 @@
+{
+  "status": "passed",
+  "case_counts": {
+    "passed": 12
+  },
+  "cases": {
+    "D1": {
+      "id": "D1",
+      "session_id": "vista-d1-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__list_records",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "List call succeeded",
+          "passed": true
+        },
+        {
+          "name": "Catalog is a single text block",
+          "passed": true
+        },
+        {
+          "name": "Catalog summaries match registered fixtures",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image content block types",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image-only text",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        },
+        {
+          "name": "Default content argument omitted",
+          "passed": true
+        },
+        {
+          "name": "Catalog discovery precedes reading",
+          "passed": true
+        },
+        {
+          "name": "Expected catalog size",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "Record: `record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json` (label `r-a`).\n\nThe image shows **one light-gray circle** centered horizontally and vertically on a **dark navy-blue background**."
+      ],
+      "usage": {
+        "inputTokens": 1465,
+        "outputTokens": 124,
+        "totalTokens": 1589
+      },
+      "reads": [
+        {
+          "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+          "mode": "image",
+          "content_omitted": true,
+          "is_error": false,
+          "event_seq": 17
+        }
+      ],
+      "catalogs": [
+        [
+          {
+            "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+            "label": "r-a",
+            "source_agent": "acceptance",
+            "has_glsl": false
+          },
+          {
+            "record": "record-8b1aa4d6df1640db8f2b64553ef6f186.json",
+            "label": "r-d",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+            "label": "r-b",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-f20ce50817414201bb9b992fceecdfc5.json",
+            "label": "r-c",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          }
+        ]
+      ],
+      "tool_sequence": [
+        "mcp__vista__list_records",
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 3,
+      "status": "passed",
+      "run_file": "run-d1.json"
+    },
+    "D7-missing-record": {
+      "id": "D7-missing-record",
+      "session_id": "vista-d7missing-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Expected error scenario",
+          "passed": true
+        },
+        {
+          "name": "Error includes an explanation",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image content block types",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image-only text",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        },
+        {
+          "name": "Expected error followed by successful recovery",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "The first read failed: `record-does-not-exist.json` could not be read because the file does not exist (`[Errno 2] No such file or directory`). I’ll now read the second record to verify recovery.",
+        "- **Initial error:** `record-does-not-exist.json` could not be read: `[Errno 2] No such file or directory`.\n- **Recovery verified:** Successfully read `record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json` with `content=image`. The image is a 96×96 square with a dark navy background and a small, solid light-gray circle centered in it."
+      ],
+      "usage": {
+        "inputTokens": 1221,
+        "outputTokens": 235,
+        "totalTokens": 1456
+      },
+      "reads": [
+        {
+          "record": "record-does-not-exist.json",
+          "mode": "image",
+          "content_omitted": false,
+          "is_error": true,
+          "event_seq": 12,
+          "error_text": "Error: Error executing tool read_record: Cannot read record 'record-does-not-exist.json': Invalid or unreadable record 'record-does-not-exist.json': [Errno 2] No such file or directory: 'record-does-not-exist.json'"
+        },
+        {
+          "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+          "mode": "image",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 17
+        }
+      ],
+      "catalogs": [],
+      "tool_sequence": [
+        "mcp__vista__read_record",
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 3,
+      "status": "passed",
+      "run_file": "run-errors.json"
+    },
+    "D7-corrupt-record": {
+      "id": "D7-corrupt-record",
+      "session_id": "vista-d7corrupt-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Expected error scenario",
+          "passed": true
+        },
+        {
+          "name": "Error includes an explanation",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image content block types",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image-only text",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        },
+        {
+          "name": "Expected error followed by successful recovery",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "Reading `record-corrupt.json` failed with a JSON parsing error: `Expecting property name enclosed in double quotes: line 1 column 2 (char 1)`. I’ll now read the second record to verify recovery.",
+        "Recovery verified: `record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json` loaded successfully after the corrupt record’s JSON parsing error.\n\nThe received image is a 96×96 square with a dark navy background and a small light-gray circle centered in it."
+      ],
+      "usage": {
+        "inputTokens": 1191,
+        "outputTokens": 201,
+        "totalTokens": 1392
+      },
+      "reads": [
+        {
+          "record": "record-corrupt.json",
+          "mode": "image",
+          "content_omitted": false,
+          "is_error": true,
+          "event_seq": 12,
+          "error_text": "Error: Error executing tool read_record: Cannot read record 'record-corrupt.json': Invalid or unreadable record 'record-corrupt.json': Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+        },
+        {
+          "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+          "mode": "image",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 17
+        }
+      ],
+      "catalogs": [],
+      "tool_sequence": [
+        "mcp__vista__read_record",
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 3,
+      "status": "passed",
+      "run_file": "run-errors.json"
+    },
+    "D7-missing-image": {
+      "id": "D7-missing-image",
+      "session_id": "vista-d7image-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Expected error scenario",
+          "passed": true
+        },
+        {
+          "name": "Error includes an explanation",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json code content block types",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json complete code",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json code in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        },
+        {
+          "name": "Expected error followed by successful recovery",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "The image read failed:\n```text\nCannot read record 'record-b9a45327c6de4c14a4a8ead59c4a9e9b.json': Cannot read PNG 'png/image-9d82bfbba49c42fca9e0ada4bd590e04.png': [Errno 2] No such file or directory: 'image-9d82bfbba49c42fca9e0ada4bd590e04.png'\n```\nI’ll now request only the code from the same record.",
+        "Selective code retrieval succeeded despite the missing PNG. The `content=\"code\"` request returned:\n\n```glsl\n// Storage fixture version 1; not executed by this example.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    fragColor = vec4(0.2, 0.6, 0.9, 1.0);\n}\n```"
+      ],
+      "usage": {
+        "inputTokens": 1395,
+        "outputTokens": 313,
+        "totalTokens": 1708
+      },
+      "reads": [
+        {
+          "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+          "mode": "image",
+          "content_omitted": false,
+          "is_error": true,
+          "event_seq": 12,
+          "error_text": "Error: Error executing tool read_record: Cannot read record 'record-b9a45327c6de4c14a4a8ead59c4a9e9b.json': Cannot read PNG 'png/image-9d82bfbba49c42fca9e0ada4bd590e04.png': [Errno 2] No such file or directory: 'image-9d82bfbba49c42fca9e0ada4bd590e04.png'"
+        },
+        {
+          "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+          "mode": "code",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 17
+        }
+      ],
+      "catalogs": [],
+      "tool_sequence": [
+        "mcp__vista__read_record",
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 3,
+      "status": "passed",
+      "run_file": "run-errors.json"
+    },
+    "D2-image": {
+      "id": "D2-image",
+      "session_id": "vista-d2-image-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json image content block types",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json image-only text",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "Record: `record-b9a45327c6de4c14a4a8ead59c4a9e9b.json`\n\n- **Foreground:** Blue circle, RGB `(48, 156, 220)`\n- **Background:** Dark navy, RGB `(16, 24, 40)`\n- **Render radius:** `18` pixels"
+      ],
+      "usage": {
+        "inputTokens": 791,
+        "outputTokens": 129,
+        "totalTokens": 920
+      },
+      "reads": [
+        {
+          "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+          "mode": "image",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 12
+        }
+      ],
+      "catalogs": [],
+      "tool_sequence": [
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 2,
+      "status": "passed",
+      "run_file": "run-modes-live.json"
+    },
+    "D2-code": {
+      "id": "D2-code",
+      "session_id": "vista-d2-code-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json code content block types",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json complete code",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json code in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        },
+        {
+          "name": "Code-only session has no HTTP images",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "Record: `record-b9a45327c6de4c14a4a8ead59c4a9e9b.json`  \nRender radius: `18`\n\n```glsl\n// Storage fixture version 1; not executed by this example.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    fragColor = vec4(0.2, 0.6, 0.9, 1.0);\n}\n```"
+      ],
+      "usage": {
+        "inputTokens": 694,
+        "outputTokens": 154,
+        "totalTokens": 848
+      },
+      "reads": [
+        {
+          "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+          "mode": "code",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 12
+        }
+      ],
+      "catalogs": [],
+      "tool_sequence": [
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 2,
+      "status": "passed",
+      "run_file": "run-modes-live.json"
+    },
+    "D2-both": {
+      "id": "D2-both",
+      "session_id": "vista-d2-both-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json both content block types",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json complete code",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json code in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "**Record:** `record-b9a45327c6de4c14a4a8ead59c4a9e9b.json`\n\n**Image:** A 96 × 96 image with a solid bright blue circle centered at (48, 48) on a dark navy background. The foreground RGB is (48, 156, 220), and the background RGB is (16, 24, 40).\n\n**Render radius:** 18 pixels.\n\n**Full returned GLSL:**\n```glsl\n// Storage fixture version 1; not executed by this example.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    fragColor = vec4(0.2, 0.6, 0.9, 1.0);\n}\n```"
+      ],
+      "usage": {
+        "inputTokens": 856,
+        "outputTokens": 220,
+        "totalTokens": 1076
+      },
+      "reads": [
+        {
+          "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+          "mode": "both",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 12
+        }
+      ],
+      "catalogs": [],
+      "tool_sequence": [
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 2,
+      "status": "passed",
+      "run_file": "run-modes-live.json"
+    },
+    "D3": {
+      "id": "D3",
+      "session_id": "vista-d3-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json code content block types",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json complete code",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json both content block types",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json complete code",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "Read `content=code` first, then `content=both`. Both calls reported **no associated code**.\n\nThe second call returned a **96×96 image with a solid dark navy background and a small, light-gray circle centered in it**. There is no text or other visible content."
+      ],
+      "usage": {
+        "inputTokens": 1184,
+        "outputTokens": 203,
+        "totalTokens": 1387
+      },
+      "reads": [
+        {
+          "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+          "mode": "code",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 12
+        },
+        {
+          "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+          "mode": "both",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 17
+        }
+      ],
+      "catalogs": [],
+      "tool_sequence": [
+        "mcp__vista__read_record",
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 3,
+      "status": "passed",
+      "run_file": "run-modes-live.json"
+    },
+    "D4": {
+      "id": "D4",
+      "session_id": "vista-d4-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json both content block types",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json complete code",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json code in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-f20ce50817414201bb9b992fceecdfc5.json both content block types",
+          "passed": true
+        },
+        {
+          "name": "record-f20ce50817414201bb9b992fceecdfc5.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-f20ce50817414201bb9b992fceecdfc5.json complete code",
+          "passed": true
+        },
+        {
+          "name": "record-f20ce50817414201bb9b992fceecdfc5.json code in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-f20ce50817414201bb9b992fceecdfc5.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-f20ce50817414201bb9b992fceecdfc5.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-f20ce50817414201bb9b992fceecdfc5.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-8b1aa4d6df1640db8f2b64553ef6f186.json both content block types",
+          "passed": true
+        },
+        {
+          "name": "record-8b1aa4d6df1640db8f2b64553ef6f186.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-8b1aa4d6df1640db8f2b64553ef6f186.json complete code",
+          "passed": true
+        },
+        {
+          "name": "record-8b1aa4d6df1640db8f2b64553ef6f186.json code in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-8b1aa4d6df1640db8f2b64553ef6f186.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-8b1aa4d6df1640db8f2b64553ef6f186.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-8b1aa4d6df1640db8f2b64553ef6f186.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "| Record | Render radius | Image |\n|---|---:|---|\n| `record-b9a45327c6de4c14a4a8ead59c4a9e9b.json` (r-b) | 18 px | Small blue circle |\n| `record-f20ce50817414201bb9b992fceecdfc5.json` (r-c) | 30 px | Larger blue circle |\n| `record-8b1aa4d6df1640db8f2b64553ef6f186.json` (r-d) | 24 px | Medium orange circle |\n\n**r-b and r-c have exactly the same code.** r-d differs in its version comment and output color.\n\nAll images are 96×96, with circles centered at (48, 48) on the same dark background. The stored code is marked as a fixture, not executed to produce these renders."
+      ],
+      "usage": {
+        "inputTokens": 294,
+        "outputTokens": 356,
+        "totalTokens": 2117,
+        "cacheWriteTokens": 1467
+      },
+      "reads": [
+        {
+          "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+          "mode": "both",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 12
+        },
+        {
+          "record": "record-f20ce50817414201bb9b992fceecdfc5.json",
+          "mode": "both",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 14
+        },
+        {
+          "record": "record-8b1aa4d6df1640db8f2b64553ef6f186.json",
+          "mode": "both",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 16
+        }
+      ],
+      "catalogs": [],
+      "tool_sequence": [
+        "mcp__vista__read_record",
+        "mcp__vista__read_record",
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 2,
+      "status": "passed",
+      "run_file": "run-modes-live.json"
+    },
+    "D5-before": {
+      "id": "D5-before",
+      "session_id": "vista-d5-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__list_records",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "List call succeeded",
+          "passed": true
+        },
+        {
+          "name": "Catalog is a single text block",
+          "passed": true
+        },
+        {
+          "name": "Catalog summaries match registered fixtures",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        },
+        {
+          "name": "Expected catalog size",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "Found **4 VISTA records**:\n\n- `record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json`\n- `record-8b1aa4d6df1640db8f2b64553ef6f186.json`\n- `record-b9a45327c6de4c14a4a8ead59c4a9e9b.json`\n- `record-f20ce50817414201bb9b992fceecdfc5.json`"
+      ],
+      "usage": {
+        "inputTokens": 611,
+        "outputTokens": 135,
+        "totalTokens": 746
+      },
+      "reads": [],
+      "catalogs": [
+        [
+          {
+            "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+            "label": "r-a",
+            "source_agent": "acceptance",
+            "has_glsl": false
+          },
+          {
+            "record": "record-8b1aa4d6df1640db8f2b64553ef6f186.json",
+            "label": "r-d",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+            "label": "r-b",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-f20ce50817414201bb9b992fceecdfc5.json",
+            "label": "r-c",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          }
+        ]
+      ],
+      "tool_sequence": [
+        "mcp__vista__list_records"
+      ],
+      "http_request_count": 2,
+      "status": "passed",
+      "run_file": "run-modes-live.json"
+    },
+    "D5-append": {
+      "id": "D5-append",
+      "session_id": "vista-d5-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-83f218116a98493b8ff0bb7135b81af3.json both content block types",
+          "passed": true
+        },
+        {
+          "name": "record-83f218116a98493b8ff0bb7135b81af3.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-83f218116a98493b8ff0bb7135b81af3.json complete code",
+          "passed": true
+        },
+        {
+          "name": "record-83f218116a98493b8ff0bb7135b81af3.json code in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-83f218116a98493b8ff0bb7135b81af3.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-83f218116a98493b8ff0bb7135b81af3.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-83f218116a98493b8ff0bb7135b81af3.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__list_records",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "List call succeeded",
+          "passed": true
+        },
+        {
+          "name": "Catalog is a single text block",
+          "passed": true
+        },
+        {
+          "name": "Catalog summaries match registered fixtures",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        },
+        {
+          "name": "Expected catalog size",
+          "passed": true
+        },
+        {
+          "name": "Append summary used directly",
+          "passed": true
+        },
+        {
+          "name": "New record is read before catalog scanning",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "Read `record-83f218116a98493b8ff0bb7135b81af3.json` with `content=\"both\"`, then listed VISTA records.\n\n- **Listed:** Yes; there are now **5 records**.\n- **Render radius:** **36 pixels**.\n- **Actual image:** A solid green circle centered on a dark navy background, in a **96 × 96 px** image. The stored GLSL describes a uniform blue output, but that is **not** the actual image appearance."
+      ],
+      "usage": {
+        "inputTokens": 1613,
+        "outputTokens": 179,
+        "totalTokens": 3077,
+        "cacheWriteTokens": 1285
+      },
+      "reads": [
+        {
+          "record": "record-83f218116a98493b8ff0bb7135b81af3.json",
+          "mode": "both",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 25
+        }
+      ],
+      "catalogs": [
+        [
+          {
+            "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+            "label": "r-a",
+            "source_agent": "acceptance",
+            "has_glsl": false
+          },
+          {
+            "record": "record-83f218116a98493b8ff0bb7135b81af3.json",
+            "label": "r-e",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-8b1aa4d6df1640db8f2b64553ef6f186.json",
+            "label": "r-d",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+            "label": "r-b",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-f20ce50817414201bb9b992fceecdfc5.json",
+            "label": "r-c",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          }
+        ]
+      ],
+      "tool_sequence": [
+        "mcp__vista__read_record",
+        "mcp__vista__list_records"
+      ],
+      "http_request_count": 3,
+      "status": "passed",
+      "run_file": "run-modes-live.json"
+    },
+    "D6": {
+      "id": "D6",
+      "session_id": "vista-d6-new-20261116-nuo9zod_",
+      "checks": [
+        {
+          "name": "Agent turn completed",
+          "passed": true
+        },
+        {
+          "name": "Actual HTTP requests captured",
+          "passed": true
+        },
+        {
+          "name": "Canonical tool set at event 7",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__list_records",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "List call succeeded",
+          "passed": true
+        },
+        {
+          "name": "Catalog is a single text block",
+          "passed": true
+        },
+        {
+          "name": "Catalog summaries match registered fixtures",
+          "passed": true
+        },
+        {
+          "name": "Allowed tool mcp__vista__read_record",
+          "passed": true
+        },
+        {
+          "name": "Unique tool call ID",
+          "passed": true
+        },
+        {
+          "name": "Tool result has matching call",
+          "passed": true
+        },
+        {
+          "name": "Read identifies a known fixture",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image content block types",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json metadata",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment hash",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json attachment MIME",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image in later HTTP request",
+          "passed": true
+        },
+        {
+          "name": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json image-only text",
+          "passed": true
+        },
+        {
+          "name": "Every tool call has a result",
+          "passed": true
+        },
+        {
+          "name": "Canonical request header captured",
+          "passed": true
+        },
+        {
+          "name": "Requested scenario reads occurred",
+          "passed": true
+        },
+        {
+          "name": "Catalog discovery precedes reading",
+          "passed": true
+        },
+        {
+          "name": "Expected catalog size",
+          "passed": true
+        }
+      ],
+      "answers": [
+        "Existing records:\n\n| Label | Record filename |\n|---|---|\n| r-a | `record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json` |\n| r-e | `record-83f218116a98493b8ff0bb7135b81af3.json` |\n| r-d | `record-8b1aa4d6df1640db8f2b64553ef6f186.json` |\n| r-b | `record-b9a45327c6de4c14a4a8ead59c4a9e9b.json` |\n| r-c | `record-f20ce50817414201bb9b992fceecdfc5.json` |\n\nRead **r-a** using `content=\"image\"`.\n\nIts image is a **96 × 96 square with a uniform very dark navy background and a small, solid light-gray circle centered in it**. The circle is approximately 25 pixels across, with a slightly softened edge. There are no other visible shapes or text."
+      ],
+      "usage": {
+        "inputTokens": 1478,
+        "outputTokens": 300,
+        "totalTokens": 1778
+      },
+      "reads": [
+        {
+          "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+          "mode": "image",
+          "content_omitted": false,
+          "is_error": false,
+          "event_seq": 17
+        }
+      ],
+      "catalogs": [
+        [
+          {
+            "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+            "label": "r-a",
+            "source_agent": "acceptance",
+            "has_glsl": false
+          },
+          {
+            "record": "record-83f218116a98493b8ff0bb7135b81af3.json",
+            "label": "r-e",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-8b1aa4d6df1640db8f2b64553ef6f186.json",
+            "label": "r-d",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+            "label": "r-b",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          },
+          {
+            "record": "record-f20ce50817414201bb9b992fceecdfc5.json",
+            "label": "r-c",
+            "source_agent": "acceptance",
+            "has_glsl": true
+          }
+        ]
+      ],
+      "tool_sequence": [
+        "mcp__vista__list_records",
+        "mcp__vista__read_record"
+      ],
+      "http_request_count": 3,
+      "status": "passed",
+      "run_file": "run-restart.json"
+    }
+  },
+  "suite": {
+    "id": "D8-and-suite",
+    "checks": [
+      {
+        "name": "Unique case results",
+        "passed": true
+      },
+      {
+        "name": "Archived source PNG r-a.png",
+        "passed": true
+      },
+      {
+        "name": "Archived source PNG r-b.png",
+        "passed": true
+      },
+      {
+        "name": "Archived source PNG r-c.png",
+        "passed": true
+      },
+      {
+        "name": "Archived source PNG r-d.png",
+        "passed": true
+      },
+      {
+        "name": "Archived source PNG r-e.png",
+        "passed": true
+      },
+      {
+        "name": "Shared and changed code fixture versions",
+        "passed": true
+      },
+      {
+        "name": "Three modes use separate sessions",
+        "passed": true
+      },
+      {
+        "name": "Live append reuses the running session and process",
+        "passed": true
+      },
+      {
+        "name": "New process initialized for D6",
+        "passed": true
+      },
+      {
+        "name": "New session used for D6",
+        "passed": true
+      },
+      {
+        "name": "D6 discovers existing records",
+        "passed": true
+      },
+      {
+        "name": "HTTP audit records are complete",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 1 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 1 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 1 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 2 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 2 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 2 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 3 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 3 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 3 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 4 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 4 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 4 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 5 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 5 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 5 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 6 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 6 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 6 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 7 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 7 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 7 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 8 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 8 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 8 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 9 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 9 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 9 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 10 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 10 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 10 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 11 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 11 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 11 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 12 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 12 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 12 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 13 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 13 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 13 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 14 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 14 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 14 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 15 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 15 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 15 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 16 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 16 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 16 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 17 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 17 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 17 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 18 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 18 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 18 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 19 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 19 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 19 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 20 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 20 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 20 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 21 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 21 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 21 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 22 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 22 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 22 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 23 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 23 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 23 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 24 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 24 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 24 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 25 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 25 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 25 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 26 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 26 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 26 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 27 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 27 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 27 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 28 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 28 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 28 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 29 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 29 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 29 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 30 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 30 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 30 known images",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 31 tools",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 31 response",
+        "passed": true
+      },
+      {
+        "name": "HTTP request 31 known images",
+        "passed": true
+      }
+    ],
+    "status": "passed"
+  },
+  "audit_problems": [],
+  "source_png_sha256": {
+    "r-a.png": "ddadc310e93934a77c170d501b217eb8b61ccd32b167a600346789793ddd708c",
+    "r-b.png": "a7cf31165183a7cd677399d70884d895800f0a06cad05003da0ce8dd3130f790",
+    "r-c.png": "aec180d047eb4a13a2d35f59a5b8c5b935d584dc37f1f54aa7d3e99b10f40b9d",
+    "r-d.png": "1d82a58848c316bcbe96d8eea00264042866d3ab747c8290eff23417f1890ade",
+    "r-e.png": "0909e04a97c23af6f7213ceda6c8c936750e691fc580f43ebf96e62b7dce98fd"
+  },
+  "usage": {
+    "inputTokens": 12793,
+    "outputTokens": 2549,
+    "totalTokens": 18094,
+    "cacheWriteTokens": 2752
+  },
+  "http_request_count": 31,
+  "http_image_occurrences": 12,
+  "requested_reasoning_efforts": [
+    "high"
+  ],
+  "wire_top_level_reasoning_efforts": [
+    "medium"
+  ],
+  "wire_configuration_reasoning_efforts": [
+    "high"
+  ],
+  "visual_answer_review": "Visual answers require separate review."
+}

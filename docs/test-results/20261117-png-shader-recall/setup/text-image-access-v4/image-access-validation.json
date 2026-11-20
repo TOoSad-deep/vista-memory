@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "condition": "text",
+  "record": "record-dc075e0868884d8780f1994450a27282.json",
+  "checks": {
+    "author_submitted": true,
+    "template_unchanged": true,
+    "no_control_failure": true,
+    "mcp_historical_image_controlled": true,
+    "filesystem_historical_image_controlled": true,
+    "historical_composite_controlled": true,
+    "code_and_parameters_visible": true,
+    "no_unresolved_file_references": true,
+    "reference_visible": true,
+    "historical_wire_visibility_matches": true,
+    "cached_old_current_controlled": true,
+    "raw_historical_attachment_not_uploaded": true
+  },
+  "model_requests": 24,
+  "image_occurrences": 65
+}

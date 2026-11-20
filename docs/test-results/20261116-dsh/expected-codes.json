@@ -1,0 +1,4 @@
+[
+  "// Storage fixture version 1; not executed by this example.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    fragColor = vec4(0.2, 0.6, 0.9, 1.0);\n}\n",
+  "// Storage fixture version 2; not executed by this example.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    fragColor = vec4(0.9, 0.4, 0.2, 1.0);\n}\n"
+]

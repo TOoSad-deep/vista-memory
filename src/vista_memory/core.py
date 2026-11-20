@@ -9,18 +9,25 @@ import os
 import stat
 from contextlib import ExitStack
 from dataclasses import dataclass
+from hashlib import sha256
 from pathlib import Path
 from secrets import token_hex
 from typing import Any, Literal
-from uuid import uuid4
+from uuid import UUID, uuid4
 
 from PIL import Image
+
+from vista_memory import _publication
 
 logger = logging.getLogger(__name__)
 
 
 class VistaError(Exception):
     """A record, input, or storage operation could not be completed."""
+
+
+class _ImageUnavailable(ValueError):
+    """Requested image bytes could not be read as a complete PNG."""
 
 
 @dataclass
@@ -150,8 +157,10 @@ class VistaStore:
         reuse_glsl_from: str | None = None,
         source_agent: str | None = None,
         render: dict[str, Any] | None = None,
+        record_id: UUID | None = None,
+        _pending: _publication.PendingPublication | None = None,
     ) -> dict[str, Any]:
-        """Append a record, publishing its JSON after all content is complete."""
+        """Append a record, optionally using a writer-reserved immutable UUID."""
         try:
             if not isinstance(label, str):
                 raise TypeError("label must be a string")
@@ -163,11 +172,13 @@ class VistaStore:
                 raise ValueError("glsl and reuse_glsl_from are mutually exclusive")
             _validate_png(png)
 
-            png_name = f"image-{uuid4().hex}.png"
-            record_name = f"record-{uuid4().hex}.json"
+            png_name = f"image-{uuid4().hex}.png" if _pending is None else None
+            if record_id is not None and not isinstance(record_id, UUID):
+                raise TypeError("record_id must be a UUID")
+            record_name = f"record-{(record_id or uuid4()).hex}.json"
             record: dict[str, Any] = {
                 "label": label,
-                "png": f"png/{png_name}",
+                "png": f"png/{png_name}" if png_name is not None else None,
                 "glsl": None,
                 "source_agent": source_agent,
             }
@@ -176,22 +187,24 @@ class VistaStore:
 
             with ExitStack() as opened:
                 root_fd = self._open_root(opened)
-                code_bytes = None
+                if _pending is not None:
+                    return self._resume_publication(
+                        root_fd,
+                        opened,
+                        record_name,
+                        record,
+                        png,
+                        glsl,
+                        reuse_glsl_from,
+                        _pending,
+                    )
+                code_bytes = glsl.encode("utf-8") if glsl is not None else None
                 if reuse_glsl_from is not None:
-                    source = self._load_record(root_fd, reuse_glsl_from)
-                    if source["glsl"] is None:
-                        raise ValueError(
-                            f"Record {reuse_glsl_from!r} has no associated code"
-                        )
-                    self._read_code(root_fd, source["glsl"])
-                    record["glsl"] = source["glsl"]
-                elif glsl is not None:
-                    code_bytes = glsl.encode("utf-8")
+                    record["glsl"], _ = self._shared_glsl(root_fd, reuse_glsl_from)
+                elif code_bytes is not None:
                     record["glsl"] = f"glsl/shader-{uuid4().hex}.glsl"
 
-                json_bytes = json.dumps(
-                    record, ensure_ascii=False, allow_nan=False, indent=2
-                ).encode("utf-8")
+                json_bytes = self._encode_record(record)
                 summary = self._summary(record_name, record)
                 directories = [self._open_directory(root_fd, "png", opened)]
                 if code_bytes is not None:
@@ -236,6 +249,151 @@ class VistaStore:
                     self._cleanup(temporary_files)
         except Exception as error:
             raise VistaError(f"Cannot save record {label!r}: {error}") from error
+
+    @staticmethod
+    def _encode_record(record: dict[str, Any]) -> bytes:
+        return json.dumps(record, ensure_ascii=False, allow_nan=False, indent=2).encode(
+            "utf-8"
+        )
+
+    def _shared_glsl(self, root_fd: int, source_name: str) -> tuple[str, str]:
+        source = self._load_record(root_fd, source_name)
+        path = source["glsl"]
+        if path is None:
+            raise ValueError(f"Record {source_name!r} has no associated code")
+        return path, self._read_code(root_fd, path)
+
+    def _resume_publication(
+        self,
+        root_fd: int,
+        opened: ExitStack,
+        record_name: str,
+        record: dict[str, Any],
+        png: bytes,
+        glsl: str | None,
+        reuse_glsl_from: str | None,
+        pending: _publication.PendingPublication,
+    ) -> dict[str, Any]:
+        code_bytes = glsl.encode("utf-8") if glsl is not None else None
+        if pending.manifest is None:
+            if pending.confirmed:
+                raise _publication.PublicationConflict("Write manifest is missing")
+            files = {"png": _publication.Target.reserve(f"image-{uuid4().hex}.png")}
+            if code_bytes is not None:
+                files["glsl"] = _publication.Target.reserve(
+                    f"shader-{uuid4().hex}.glsl"
+                )
+            files["json"] = _publication.Target.reserve(record_name)
+            manifest = _publication.Manifest(files)
+            if reuse_glsl_from is not None:
+                shared_path, shared_code = self._shared_glsl(root_fd, reuse_glsl_from)
+                manifest.shared_glsl = shared_path
+                manifest.shared_glsl_digest = sha256(
+                    shared_code.encode("utf-8")
+                ).hexdigest()
+            pending.persist(manifest)
+        else:
+            manifest = pending.manifest
+
+        expected_files = {"png", "json"}
+        if code_bytes is not None:
+            expected_files.add("glsl")
+        if expected_files != manifest.files.keys():
+            raise _publication.PublicationConflict(
+                "Write manifest has unexpected files"
+            )
+        record["png"] = f"png/{manifest.files['png'].name}"
+        if code_bytes is not None:
+            record["glsl"] = f"glsl/{manifest.files['glsl'].name}"
+        elif reuse_glsl_from is not None:
+            shared_path = manifest.shared_glsl
+            if shared_path is None:
+                raise _publication.PublicationConflict(
+                    "Shared GLSL manifest is missing"
+                )
+            shared_code = self._read_code(root_fd, shared_path)
+            if (
+                sha256(shared_code.encode("utf-8")).hexdigest()
+                != manifest.shared_glsl_digest
+            ):
+                raise _publication.PublicationConflict("Shared GLSL content differs")
+            record["glsl"] = shared_path
+
+        contents = {"png": png}
+        if code_bytes is not None:
+            contents["glsl"] = code_bytes
+        contents["json"] = self._encode_record(record)
+        directories = {
+            key: self._open_directory(root_fd, key, opened) for key in contents
+        }
+        bound_directories = list(directories.values())
+        self._assert_bindings(root_fd, bound_directories, record)
+        if manifest.files["json"].name != record_name:
+            raise _publication.PublicationConflict("Manifest record name differs")
+        try:
+            os.stat(record_name, dir_fd=directories["json"].fd, follow_symlinks=False)
+        except FileNotFoundError:
+            require_published = pending.confirmed
+        else:
+            require_published = True
+        states = {
+            key: _publication.state(
+                directories[key].fd,
+                manifest.files[key],
+                data,
+                require_published=require_published,
+            )
+            for key, data in contents.items()
+        }
+        with ExitStack() as rollback:
+            for key, (published, partial) in states.items():
+                if published:
+                    continue
+                directory, target = directories[key], manifest.files[key]
+                if key == "json":
+                    for content_key in contents.keys() - {"json"}:
+                        _publication.verify_publication(
+                            directories[content_key].fd, manifest.files[content_key]
+                        )
+                _publication.write_temporary(
+                    directory.fd,
+                    target,
+                    contents[key],
+                    partial,
+                    lambda: pending.persist(manifest),
+                )
+                self._assert_bindings(root_fd, bound_directories, record)
+                try:
+                    self._publish(
+                        _StoredFile(directory, target.temporary),
+                        _StoredFile(directory, target.name),
+                    )
+                except OSError as error:
+                    if isinstance(error.__cause__, FileExistsError):
+                        raise _publication.PublicationConflict(
+                            f"File appeared at reserved destination: {target.name}"
+                        ) from error
+                    raise
+                if key == "json":
+                    # Unpublish new metadata on a detected failure. The manifest
+                    # and content links stay available for a retry.
+                    rollback.callback(
+                        _publication.remove_owned_link,
+                        directory.fd,
+                        target,
+                        name=target.name,
+                    )
+                _publication.verify_publication(directory.fd, target)
+                os.fsync(directory.fd)
+            self._assert_bindings(root_fd, bound_directories, record)
+            for key, directory in directories.items():
+                target = manifest.files[key]
+                _publication.remove_owned_link(
+                    directory.fd, target, name=target.temporary
+                )
+            self._assert_bindings(root_fd, bound_directories, record)
+            rollback.pop_all()
+        return self._summary(record_name, record)
 
     def list_records(self) -> dict[str, list[dict[str, Any]]]:
         """List published records, failing explicitly on a malformed record."""
@@ -434,7 +592,7 @@ class VistaStore:
             _validate_png(data)
             return data
         except Exception as error:
-            raise ValueError(f"Cannot read PNG {relative!r}: {error}") from error
+            raise _ImageUnavailable(f"Cannot read PNG {relative!r}: {error}") from error
 
     def _read_code(self, root_fd: int, relative: str) -> str:
         try:

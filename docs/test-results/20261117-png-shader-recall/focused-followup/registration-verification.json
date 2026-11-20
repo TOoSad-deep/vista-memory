@@ -1,0 +1,106 @@
+{
+  "command": "node --test tests/shader_recall_registration.test.mjs",
+  "test_output": [
+    "✔ a failed save commit recovers the published candidate across two cold starts (1265.979ms)",
+    "✔ a failed map commit recovers the published candidate across two cold starts (802.281167ms)",
+    "ℹ tests 2",
+    "ℹ suites 0",
+    "ℹ pass 2",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0",
+    "ℹ duration_ms 2143.356375"
+  ],
+  "test_sources": {
+    "tests/shader_recall_registration.test.mjs": "c3e75cd32b9ed724747c440c9b9bb5e484868b5cff3db60bf7a4bbae6f33fd78",
+    "tests/helpers/shader_recall_registration.py": "6f7cd9bf135eae5ac8d4b6a559989cdc2d2527c20396a7123dd2addec65c3b94"
+  },
+  "real_backend_checks": [
+    {
+      "name": "Real business worker exposes WebGL2",
+      "passed": true
+    },
+    {
+      "name": "Actual business task created and author binding persisted",
+      "passed": true
+    },
+    {
+      "name": "Initial business prompt captured for later live Session verification",
+      "passed": true
+    },
+    {
+      "name": "Two real candidates automatically registered",
+      "passed": true
+    },
+    {
+      "name": "Changed GLSL has changed image and source hashes",
+      "passed": true
+    },
+    {
+      "name": "Reference and two candidates discoverable",
+      "passed": true
+    },
+    {
+      "name": "PNG matches candidate 2ca5ae68-0c4b-46ed-b7d4-da59711f7af7",
+      "passed": true
+    },
+    {
+      "name": "GLSL matches candidate 2ca5ae68-0c4b-46ed-b7d4-da59711f7af7",
+      "passed": true
+    },
+    {
+      "name": "Render inputs saved for 2ca5ae68-0c4b-46ed-b7d4-da59711f7af7",
+      "passed": true
+    },
+    {
+      "name": "PNG matches candidate e3e28a58-0717-4f91-9889-5fc1149215ab",
+      "passed": true
+    },
+    {
+      "name": "GLSL matches candidate e3e28a58-0717-4f91-9889-5fc1149215ab",
+      "passed": true
+    },
+    {
+      "name": "Render inputs saved for e3e28a58-0717-4f91-9889-5fc1149215ab",
+      "passed": true
+    },
+    {
+      "name": "Failed render does not create an image record",
+      "passed": true
+    },
+    {
+      "name": "Rendering and registration recover after compilation failure",
+      "passed": true
+    },
+    {
+      "name": "Append in clone preserves frozen template bytes",
+      "passed": true
+    },
+    {
+      "name": "Clone append is isolated",
+      "passed": true
+    },
+    {
+      "name": "Existing run destination cannot be reused",
+      "passed": true
+    }
+  ],
+  "recovery_cli": {
+    "kind": "registration-recovery",
+    "startedAt": "2026-11-18T03:07:30.407Z",
+    "sessionMode": "preparation-controller-without-model",
+    "checks": [
+      {
+        "name": "All published candidates and experiments have VISTA mappings",
+        "passed": true
+      }
+    ],
+    "status": "passed",
+    "recovery": {
+      "registered": [],
+      "pending": []
+    },
+    "finishedAt": "2026-11-18T03:07:30.442Z"
+  }
+}

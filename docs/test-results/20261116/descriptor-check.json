@@ -1,0 +1,8 @@
+{
+  "data_root": "/private/tmp/vista-fd-check-20261116-rej6ogql",
+  "successful_reads": 100,
+  "expected_errors": 100,
+  "fd_count_before": 4,
+  "fd_count_after": 4,
+  "status": "passed"
+}

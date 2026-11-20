@@ -1,0 +1,160 @@
+{
+  "base": "/private/tmp/vista-dsh-acceptance-20261116-nuo9zod_",
+  "home": "/private/tmp/vista-dsh-acceptance-20261116-nuo9zod_/home",
+  "workspace": "/private/tmp/vista-dsh-acceptance-20261116-nuo9zod_/workspace",
+  "data_root": "/private/tmp/vista-dsh-acceptance-20261116-nuo9zod_/vista",
+  "records": {
+    "r-a": {
+      "summary": {
+        "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+        "label": "r-a",
+        "source_agent": "acceptance",
+        "has_glsl": false
+      },
+      "metadata": {
+        "record": "record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json",
+        "label": "r-a",
+        "source_agent": "acceptance"
+      },
+      "png_sha256": "ddadc310e93934a77c170d501b217eb8b61ccd32b167a600346789793ddd708c",
+      "png_bytes": 389,
+      "code": null,
+      "code_sha256": null
+    },
+    "r-b": {
+      "summary": {
+        "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+        "label": "r-b",
+        "source_agent": "acceptance",
+        "has_glsl": true
+      },
+      "metadata": {
+        "record": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+        "label": "r-b",
+        "source_agent": "acceptance",
+        "render": {
+          "width": 96,
+          "height": 96,
+          "center": [
+            48,
+            48
+          ],
+          "radius": 18,
+          "foreground": [
+            48,
+            156,
+            220
+          ],
+          "background": [
+            16,
+            24,
+            40
+          ]
+        }
+      },
+      "png_sha256": "a7cf31165183a7cd677399d70884d895800f0a06cad05003da0ce8dd3130f790",
+      "png_bytes": 436,
+      "code": "// Storage fixture version 1; not executed by this example.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    fragColor = vec4(0.2, 0.6, 0.9, 1.0);\n}\n",
+      "code_sha256": "49d998dcf254e2c924fe6ccafbf5d5b9bbb9c06114d619b3b784fd6c414a95bf"
+    },
+    "r-c": {
+      "summary": {
+        "record": "record-f20ce50817414201bb9b992fceecdfc5.json",
+        "label": "r-c",
+        "source_agent": "acceptance",
+        "has_glsl": true
+      },
+      "metadata": {
+        "record": "record-f20ce50817414201bb9b992fceecdfc5.json",
+        "label": "r-c",
+        "source_agent": "acceptance",
+        "render": {
+          "width": 96,
+          "height": 96,
+          "center": [
+            48,
+            48
+          ],
+          "radius": 30,
+          "foreground": [
+            48,
+            156,
+            220
+          ],
+          "background": [
+            16,
+            24,
+            40
+          ]
+        }
+      },
+      "png_sha256": "aec180d047eb4a13a2d35f59a5b8c5b935d584dc37f1f54aa7d3e99b10f40b9d",
+      "png_bytes": 496,
+      "code": "// Storage fixture version 1; not executed by this example.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    fragColor = vec4(0.2, 0.6, 0.9, 1.0);\n}\n",
+      "code_sha256": "49d998dcf254e2c924fe6ccafbf5d5b9bbb9c06114d619b3b784fd6c414a95bf"
+    },
+    "r-d": {
+      "summary": {
+        "record": "record-8b1aa4d6df1640db8f2b64553ef6f186.json",
+        "label": "r-d",
+        "source_agent": "acceptance",
+        "has_glsl": true
+      },
+      "metadata": {
+        "record": "record-8b1aa4d6df1640db8f2b64553ef6f186.json",
+        "label": "r-d",
+        "source_agent": "acceptance",
+        "render": {
+          "width": 96,
+          "height": 96,
+          "center": [
+            48,
+            48
+          ],
+          "radius": 24,
+          "foreground": [
+            230,
+            120,
+            50
+          ],
+          "background": [
+            16,
+            24,
+            40
+          ]
+        }
+      },
+      "png_sha256": "1d82a58848c316bcbe96d8eea00264042866d3ab747c8290eff23417f1890ade",
+      "png_bytes": 461,
+      "code": "// Storage fixture version 2; not executed by this example.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    fragColor = vec4(0.9, 0.4, 0.2, 1.0);\n}\n",
+      "code_sha256": "4b2587ea37b1524a76dcd49ff0ab22d3eb81ae6bfa9338d14902904c3dae7656"
+    },
+    "append": {
+      "png_sha256": "0909e04a97c23af6f7213ceda6c8c936750e691fc580f43ebf96e62b7dce98fd",
+      "render": {
+        "width": 96,
+        "height": 96,
+        "center": [
+          48,
+          48
+        ],
+        "radius": 36,
+        "foreground": [
+          80,
+          200,
+          120
+        ],
+        "background": [
+          16,
+          24,
+          40
+        ]
+      },
+      "png_path": "/private/tmp/vista-dsh-acceptance-20261116-nuo9zod_/append.png"
+    }
+  },
+  "model": "gpt-6.1-sol",
+  "provider": "openai",
+  "reasoning": "high",
+  "max_tokens": 8192
+}

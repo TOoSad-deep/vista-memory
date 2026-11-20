@@ -1,0 +1,90 @@
+{
+  "created": "2026-11-19T11:48:43.118840+08:00",
+  "records": [
+    {
+      "record": "record-a50f8f53932d48a688aea72081219dd4.json",
+      "label": "潮汐图标 · 初稿",
+      "source_agent": "design",
+      "has_glsl": false,
+      "png": "png/image-283f2041d32b44a59a2685db796e2794.png",
+      "sha256": "1e61a970a40446dfdb44a541ad0c6df9da9315cc4d98619538891b943531ae90"
+    },
+    {
+      "record": "record-519958159cd34824962292bbc4f76b5a.json",
+      "label": "潮汐图标 · 定稿",
+      "source_agent": "design",
+      "has_glsl": false,
+      "png": "png/image-545f661430144c01aafba41b16c6dfd0.png",
+      "sha256": "37dcd19c284f99e1ab9b39e3c90fe65d2742e30803f521a604b22edd0ecd6a1c"
+    },
+    {
+      "record": "record-32cfc5084cc145168752576b78611655.json",
+      "label": "航标图标 · 定稿",
+      "source_agent": "design",
+      "has_glsl": false,
+      "png": "png/image-c4289268cd244781a5e9cf342c0352a8.png",
+      "sha256": "1fee7f4259b115bb7b6a53f788bf39570b0611f40dd1c29cb717adb682b743da"
+    }
+  ],
+  "target": {
+    "record": "record-519958159cd34824962292bbc4f76b5a.json",
+    "label": "潮汐图标 · 定稿",
+    "source_agent": "design",
+    "has_glsl": false,
+    "png": "png/image-545f661430144c01aafba41b16c6dfd0.png",
+    "sha256": "37dcd19c284f99e1ab9b39e3c90fe65d2742e30803f521a604b22edd0ecd6a1c"
+  },
+  "direction": "下",
+  "pixel_check": {
+    "radius": 83,
+    "center": [
+      128,
+      128
+    ],
+    "rgb": {
+      "top": [
+        31,
+        94,
+        184
+      ],
+      "bottom": [
+        255,
+        255,
+        255
+      ],
+      "left": [
+        31,
+        94,
+        184
+      ],
+      "right": [
+        31,
+        94,
+        184
+      ]
+    }
+  },
+  "history": "这是「潮汐」图标的定稿，收到后请只回“收到”。",
+  "summary": "「潮汐」图标已经定稿。",
+  "questions": {
+    "a": "上次定稿的「潮汐」图标，缺口朝哪边？",
+    "b": "这次定稿的「潮汐」图标是蓝色的。请用一句话确认颜色。"
+  },
+  "allowed_tools": [
+    "mcp__vista__list_records",
+    "mcp__vista__read_record"
+  ],
+  "provider": "deepseek-account",
+  "model": "deepseek-flash",
+  "reasoning": "high",
+  "max_output_tokens": 4096,
+  "max_requests": {
+    "history": 3,
+    "question": 8
+  },
+  "seconds_per_turn": 300,
+  "score": {
+    "a": "自主发起图片回读，选中目标定稿，紧接的成功模型请求中该工具调用携带匹配原 PNG 的哈希。视觉回答单独判。",
+    "b": "根据当前文字确认蓝色，历史图片打开零次。目录与读取分别计数。"
+  }
+}

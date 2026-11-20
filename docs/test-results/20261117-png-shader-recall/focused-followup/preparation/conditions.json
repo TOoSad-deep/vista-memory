@@ -1,0 +1,159 @@
+{
+  "baseline": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/006",
+  "checkpoint": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-fixtures-v2/T05/checkpoint.json",
+  "model": {
+    "provider": "deepseek-account",
+    "id": "deepseek-flash",
+    "name": "DeepSeek-V4.1-Flash",
+    "inputModalities": [
+      "text",
+      "image"
+    ],
+    "reasoning": {
+      "efforts": [
+        {
+          "id": "off",
+          "name": "Off",
+          "description": "Use for simple tasks that do not need reasoning."
+        },
+        {
+          "id": "low",
+          "name": "Low",
+          "description": "Prefer for routine or latency-sensitive tasks."
+        },
+        {
+          "id": "high",
+          "name": "High",
+          "description": "The default balance for most tasks."
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "description": "Reserve for the hardest quality-first tasks."
+        }
+      ],
+      "defaultEffort": "high"
+    }
+  },
+  "explicit_instruction_011": "修改前，请先通过 VISTA 列出记录，从目录中找到当前选中版本紧前一次正式渲染的旧版本。取回它的渲染图和完整 Shader 源码，与当前版本比较铜环的窄高光和环宽，再决定怎样继续。",
+  "normalized_original_user_text_sha256": "b5901ff34e679e81d3902afc12e054cb2ed1b9c421c70981f9139f011aa057ec",
+  "evidence_for_012_descriptions": {
+    "90ee35cd-abd1-4e01-bae1-b603fe7f668d": {
+      "text": "本版确定了椭圆中心、长短轴和环宽。整幅渲染的最高灰度为 74（0–255），灰度达到 80 的像素有 0 个。",
+      "peak": 74,
+      "pixels_ge_80": 0,
+      "source_sha256": "af1e2b50e6447f9dee25d25891f7522ec2eb9097d0bfe0a89b8ee01f6f76c6f0",
+      "image_sha256": "f44b51b24d35200d5c62be91cafd6af845b0f951719ce0bf218e3958707d2c82"
+    },
+    "f5ef6b8f-4fed-418c-bcc3-657a67bba6ab": {
+      "text": "椭圆中心、长短轴和环宽沿用前版。整幅渲染的最高灰度为 158，灰度达到 80 的像素由 0 个增加至 2376 个。",
+      "peak": 158,
+      "pixels_ge_80": 2376,
+      "source_sha256": "70cb90a3cfc601eeb6101282902a586ea84a2843b248beeb2fccf4d74a63e424",
+      "image_sha256": "a358d2029178add0ef28ade877367d8cefeb9f63a3f642a0dbb9cad193d8171b"
+    },
+    "9060526e-2c27-4497-bb43-3119acc34eb0": {
+      "text": "椭圆中心、长短轴和环宽沿用前版。整幅渲染的最高灰度为 182，灰度达到 80 的像素由 2376 个增加至 3627 个。",
+      "peak": 182,
+      "pixels_ge_80": 3627,
+      "source_sha256": "7c25e99832830b2f523618c5a5a02d7cb2d3ceec402e2bf27c73e599705551b4",
+      "image_sha256": "7a1f80f99c65dac36e613bbc8431f46cdd2f8d16cda9bca2dbf63a94030f6e84"
+    },
+    "bd7167d0-6062-4673-83a5-35b43b9cae56": {
+      "text": "椭圆中心、长短轴和环宽沿用前版。整幅渲染的最高灰度为 120，灰度达到 80 的像素由 3627 个减少至 1241 个。",
+      "peak": 120,
+      "pixels_ge_80": 1241,
+      "source_sha256": "84f76d968f42aa8f9bf597e5285ce93abea1d0267e51f421f27ab9874e7bfd20",
+      "image_sha256": "bf12e78ad4342782b790f71348b3b91f82994f8c7ea610d0d920f9634444159f"
+    },
+    "3b13c410-8313-442d-a743-eea78e8ea5a4": {
+      "text": "椭圆中心、长短轴和环宽沿用前版。整幅渲染的最高灰度为 166，灰度达到 80 的像素由 1241 个增加至 2806 个。",
+      "peak": 166,
+      "pixels_ge_80": 2806,
+      "source_sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+      "image_sha256": "3cd1eb09c634aa8e61f86c510ae0de28045c5568390553112731e66c0e333a1a"
+    },
+    "e6bad174-0a44-4cfa-b11a-d4d7c39fb5a1": {
+      "text": "椭圆中心、长短轴和环宽沿用前版。整幅渲染的最高灰度为 52，灰度达到 80 的像素由 2806 个减少至 0 个。",
+      "peak": 52,
+      "pixels_ge_80": 0,
+      "source_sha256": "03f89a38feb337f1103108939652ca40a7800f9c264929cd9f8ff8a641a7dedd",
+      "image_sha256": "2924369ced489830582ec11598b3379a6b506113ba2cee7803d1fa305703814d"
+    }
+  },
+  "history_006_sha256": "fc7b7ecedfb009333a935da1d93441d3f65cbdd977aade845d560d5e0a5b59f8",
+  "history_012_sha256": "64699107e1361a2cf85fab890bc34e15d0d7417cfaad70ee108864739cec1288",
+  "commands": {
+    "011": [
+      "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/.venv/bin/python",
+      "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/scripts/run_shader_recall.py",
+      "checkpoint",
+      "--focused-run",
+      "011",
+      "--checkpoint",
+      "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-fixtures-v2/T05/checkpoint.json",
+      "--output",
+      "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011",
+      "--provider",
+      "deepseek-account",
+      "--model",
+      "deepseek-flash",
+      "--condition",
+      "natural",
+      "--access-view",
+      "discovery",
+      "--image-condition",
+      "visual",
+      "--requirements",
+      "继续完善铜色环上的窄高光层次，保持环的布局和宽度。",
+      "--max-model-requests",
+      "12",
+      "--max-render-attempts",
+      "3",
+      "--max-list-calls",
+      "2",
+      "--max-read-calls",
+      "8",
+      "--timeout",
+      "600.0"
+    ],
+    "012": [
+      "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/.venv/bin/python",
+      "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/scripts/run_shader_recall.py",
+      "checkpoint",
+      "--focused-run",
+      "012",
+      "--checkpoint",
+      "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-fixtures-v2/T05/checkpoint.json",
+      "--output",
+      "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/012",
+      "--provider",
+      "deepseek-account",
+      "--model",
+      "deepseek-flash",
+      "--condition",
+      "natural",
+      "--access-view",
+      "discovery",
+      "--image-condition",
+      "visual",
+      "--requirements",
+      "继续完善铜色环上的窄高光层次，保持环的布局和宽度。",
+      "--max-model-requests",
+      "12",
+      "--max-render-attempts",
+      "3",
+      "--max-list-calls",
+      "2",
+      "--max-read-calls",
+      "8",
+      "--timeout",
+      "600.0"
+    ]
+  },
+  "runtime_variation": [
+    "isolated paths and identifiers for sessions, calls and uploads",
+    "wall time, remaining seconds, model sampling and service state",
+    "registration repair and host-only shader and HTTP audit"
+  ]
+}

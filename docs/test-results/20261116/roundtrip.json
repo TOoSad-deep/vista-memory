@@ -1,0 +1,29 @@
+{
+  "data_root": "/private/tmp/vista-memory-roundtrip-20261116-p2mfb2s5",
+  "runs": [
+    {
+      "iteration": 1,
+      "command": [
+        "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/.venv/bin/python",
+        "examples/local_roundtrip.py",
+        "--root",
+        "/private/tmp/vista-memory-roundtrip-20261116-p2mfb2s5"
+      ],
+      "exit_code": 0,
+      "before": 0,
+      "after": 4
+    },
+    {
+      "iteration": 2,
+      "command": [
+        "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/.venv/bin/python",
+        "examples/local_roundtrip.py",
+        "--root",
+        "/private/tmp/vista-memory-roundtrip-20261116-p2mfb2s5"
+      ],
+      "exit_code": 0,
+      "before": 4,
+      "after": 8
+    }
+  ]
+}

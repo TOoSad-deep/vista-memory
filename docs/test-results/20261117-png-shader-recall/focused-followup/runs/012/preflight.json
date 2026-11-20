@@ -1,0 +1,15 @@
+{
+  "baseline": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/006",
+  "checks": {
+    "model_capabilities": true,
+    "configuration": true,
+    "original_user_text_including_budget": true,
+    "tool_schemas": true,
+    "workspace_before_treatment": true,
+    "catalog_and_contents": true,
+    "initial_attachments": true
+  },
+  "stage": "012",
+  "history_sha256": "64699107e1361a2cf85fab890bc34e15d0d7417cfaad70ee108864739cec1288",
+  "normalized_user_prompt_sha256": "b5901ff34e679e81d3902afc12e054cb2ed1b9c421c70981f9139f011aa057ec"
+}

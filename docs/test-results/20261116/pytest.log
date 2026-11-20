@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 79 items
+
+tests/test_core.py ..................................................... [ 67%]
+.............                                                            [ 83%]
+tests/test_path_races.py ........                                        [ 93%]
+tests/test_mcp.py .....                                                  [100%]
+
+- generated xml file: /Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116/pytest.xml -
+============================== 79 passed in 3.33s ==============================

@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "variants": [
+    {
+      "variant": "task_timeout",
+      "run_status": "failed",
+      "failure_stage": "wait",
+      "summary_status": "complete",
+      "selected_pairs": 2,
+      "counts": {
+        "failed": 1,
+        "passed": 3
+      },
+      "exit_code": 0
+    },
+    {
+      "variant": "max_tokens",
+      "run_status": "failed",
+      "failure_stage": "task",
+      "summary_status": "complete",
+      "selected_pairs": 2,
+      "counts": {
+        "failed": 1,
+        "passed": 3
+      },
+      "exit_code": 0
+    },
+    {
+      "variant": "initialize_timeout",
+      "run_status": "infra",
+      "failure_stage": "initialize",
+      "summary_status": "pending",
+      "selected_pairs": 1,
+      "counts": {
+        "infra": 1,
+        "passed": 3
+      },
+      "exit_code": 1
+    },
+    {
+      "variant": "shutdown_timeout",
+      "run_status": "infra",
+      "failure_stage": "shutdown",
+      "summary_status": "pending",
+      "selected_pairs": 1,
+      "counts": {
+        "infra": 1,
+        "passed": 3
+      },
+      "exit_code": 1
+    },
+    {
+      "variant": "prepare_timeout",
+      "run_status": "infra",
+      "failure_stage": "prepare",
+      "summary_status": "pending",
+      "selected_pairs": 1,
+      "counts": {
+        "infra": 1,
+        "passed": 3
+      },
+      "exit_code": 1
+    },
+    {
+      "variant": "cleanup_timeout",
+      "run_status": "infra",
+      "failure_stage": "cleanup",
+      "summary_status": "pending",
+      "selected_pairs": 1,
+      "counts": {
+        "infra": 1,
+        "passed": 3
+      },
+      "exit_code": 1
+    }
+  ],
+  "stage_less_fallback": "passed"
+}

@@ -23,6 +23,7 @@ where = ["src"]
 dev = ["pytest>=9.2,<10", "ruff>=0.17.5,<0.18"]
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
 testpaths = ["tests"]
 addopts = "-ra"
 

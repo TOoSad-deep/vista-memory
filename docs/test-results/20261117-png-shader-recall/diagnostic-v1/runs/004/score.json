@@ -1,0 +1,77 @@
+{
+  "index": 4,
+  "case_id": "T05-history",
+  "repeat": 1,
+  "condition": "reminded",
+  "access_view": "discovery",
+  "image_condition": "visual",
+  "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/004",
+  "exit_code": 0,
+  "status": "passed",
+  "error": null,
+  "submitted_candidate": "f23bc5bc-a37b-43e7-af37-c2f210c843ac",
+  "new_candidate_count": 1,
+  "template_unchanged": true,
+  "turn_reason": {
+    "kind": "completed"
+  },
+  "cleanup_error": null,
+  "model_requests": 12,
+  "image_control_errors": [],
+  "trace": {
+    "status": "timing-unverified",
+    "first_target_decision_seq": 97,
+    "unclassified_prior_actions": [
+      74
+    ],
+    "decision_request_id": 16,
+    "recall_triggered_before_decision": null,
+    "timely_related_evidence": null,
+    "requests_with_required_evidence": [],
+    "recalls": [],
+    "recall_attempted_in_run": false,
+    "required_evidence_visible_in_run": false,
+    "invalid_argument_events": [],
+    "vista_reads": 0,
+    "other_image_reads": 0,
+    "list_calls": 0,
+    "model_requests": 12,
+    "unresolved_wire_images": 0
+  },
+  "outcome": {
+    "author_submission_completed": true,
+    "visual_acceptance": "pending-review",
+    "candidate_state": "submitted",
+    "evaluated_source_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/004/business/restore-probe/candidates/f23bc5bc-a37b-43e7-af37-c2f210c843ac/shader.frag",
+    "evaluated_image_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/004/business/restore-probe/candidates/f23bc5bc-a37b-43e7-af37-c2f210c843ac/render.png",
+    "pixel_mae_before": 19.738252992983217,
+    "pixel_mae_after": 16.406875045211226,
+    "pixel_metric_note": "Auxiliary full-image pixel difference. Visual acceptance needs review."
+  },
+  "cost": {
+    "wall_seconds": 378.37877798080444,
+    "tool_calls": 15,
+    "tool_calls_by_name": {
+      "skill": 1,
+      "bash": 5,
+      "read": 3,
+      "load_workspace_dependencies": 1,
+      "write": 1,
+      "render_shader": 1,
+      "read_image": 1,
+      "assess_shader_candidate": 1,
+      "submit_shader_candidate": 1
+    },
+    "repeated_identical_tool_calls": 0,
+    "usage": {
+      "inputTokens": 13038,
+      "outputTokens": 10847,
+      "cacheReadTokens": 174080,
+      "cacheWriteTokens": 0,
+      "totalTokens": 197965
+    },
+    "currency_cost": null,
+    "currency_cost_note": "Account billing amount is not exposed in the captured session events."
+  },
+  "scoring_status": "complete-with-visual-review-pending"
+}

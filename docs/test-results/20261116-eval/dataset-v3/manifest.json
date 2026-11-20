@@ -1,0 +1,1392 @@
+{
+  "seed": 20261116,
+  "encoding_revision": 3,
+  "source_sha256": "01821945fdd618abce0c33f8ef9d72ef647fd039dc5d8071677eafaada821eb0",
+  "renderer": "Pillow deterministic drawing, four scene families",
+  "record_ids": "Backend-generated unique filenames, frozen in this corpus",
+  "context_scenarios": "Both scenarios reconstruct task context. compacted_context simulates retained summaries.",
+  "cases": [
+    {
+      "id": "R1-01",
+      "task_type": "R1",
+      "split": "formal",
+      "scenario": "new_session",
+      "scene_id": "s01",
+      "caption_detail": "detailed",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-01/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-01/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-01/current.png",
+      "record_order": [
+        "record-0f6ee1eb10a2476199d95c6f8434ab02.json",
+        "record-c1be120d700a4bf6a8652b5377e9bfe9.json",
+        "record-b90bfde769794932ae54098eff13ed1e.json",
+        "record-1eb633876eb742e3bddedc1d202067ac.json",
+        "record-d691af9632e64027999e71db469492ba.json",
+        "record-5f68858eaeb2464ca296fbff5794fdfe.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-0f6ee1eb10a2476199d95c6f8434ab02.json",
+          "control": 0.0,
+          "summary": "A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 693.0000.",
+          "render": {
+            "scene_id": "s01",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-c1be120d700a4bf6a8652b5377e9bfe9.json",
+          "control": 1.0,
+          "summary": "A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 1189.0000.",
+          "render": {
+            "scene_id": "s01",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-b90bfde769794932ae54098eff13ed1e.json",
+          "control": 2.0,
+          "summary": "A medium blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 2937.0000.",
+          "render": {
+            "scene_id": "s01",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-1eb633876eb742e3bddedc1d202067ac.json",
+          "control": 3.0,
+          "summary": "A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 5905.0000.",
+          "render": {
+            "scene_id": "s01",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-d691af9632e64027999e71db469492ba.json",
+          "control": 4.0,
+          "summary": "A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 8275.0000.",
+          "render": {
+            "scene_id": "s01",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-5f68858eaeb2464ca296fbff5794fdfe.json",
+          "control": 5.0,
+          "summary": "A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 9613.0000.",
+          "render": {
+            "scene_id": "s01",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 2.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nChoose the one historical record whose foreground appearance and relationship to the fixed gold or gray landmark match the TARGET image. Compare the circle silhouette and overlap, stripe spacing, or disk brightness as appropriate. Ignore the small gold mark at the bottom-right corner of the TARGET. Cite the selected record as evidence.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-0f6ee1eb10a2476199d95c6f8434ab02.json\", \"control\": 0.0, \"summary\": \"A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 693.0000.\", \"render\": {\"scene_id\": \"s01\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-c1be120d700a4bf6a8652b5377e9bfe9.json\", \"control\": 1.0, \"summary\": \"A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 1189.0000.\", \"render\": {\"scene_id\": \"s01\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-b90bfde769794932ae54098eff13ed1e.json\", \"control\": 2.0, \"summary\": \"A medium blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 2937.0000.\", \"render\": {\"scene_id\": \"s01\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-1eb633876eb742e3bddedc1d202067ac.json\", \"control\": 3.0, \"summary\": \"A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 5905.0000.\", \"render\": {\"scene_id\": \"s01\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-d691af9632e64027999e71db469492ba.json\", \"control\": 4.0, \"summary\": \"A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 8275.0000.\", \"render\": {\"scene_id\": \"s01\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-5f68858eaeb2464ca296fbff5794fdfe.json\", \"control\": 5.0, \"summary\": \"A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 9613.0000.\", \"render\": {\"scene_id\": \"s01\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-01/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-01/truth.json",
+      "scene_family": "area"
+    },
+    {
+      "id": "R1-02",
+      "task_type": "R1",
+      "split": "formal",
+      "scenario": "new_session",
+      "scene_id": "s02",
+      "caption_detail": "coarse",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-02/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-02/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-02/current.png",
+      "record_order": [
+        "record-550dabdcee624eb589d64551a2e37e8f.json",
+        "record-dbc9a39e9a0442a9b74e49e68df11e94.json",
+        "record-561632d7a9be45b6afca5dd434978ef4.json",
+        "record-8e3a19fc533743208dd86e8e089e0742.json",
+        "record-1746d5cc837948e2aa5406b920d1d242.json",
+        "record-222bd1af563842c9890bb2707c8e42f2.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-550dabdcee624eb589d64551a2e37e8f.json",
+          "control": 0.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s02",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-dbc9a39e9a0442a9b74e49e68df11e94.json",
+          "control": 1.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s02",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-561632d7a9be45b6afca5dd434978ef4.json",
+          "control": 2.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s02",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-8e3a19fc533743208dd86e8e089e0742.json",
+          "control": 3.0,
+          "summary": "A blue circle lies in the middle part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s02",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-1746d5cc837948e2aa5406b920d1d242.json",
+          "control": 4.0,
+          "summary": "A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s02",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-222bd1af563842c9890bb2707c8e42f2.json",
+          "control": 5.0,
+          "summary": "A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s02",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 2.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nChoose the one historical record whose foreground appearance and relationship to the fixed gold or gray landmark match the TARGET image. Compare the circle silhouette and overlap, stripe spacing, or disk brightness as appropriate. Ignore the small gold mark at the bottom-right corner of the TARGET. Cite the selected record as evidence.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-550dabdcee624eb589d64551a2e37e8f.json\", \"control\": 0.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s02\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-dbc9a39e9a0442a9b74e49e68df11e94.json\", \"control\": 1.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s02\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-561632d7a9be45b6afca5dd434978ef4.json\", \"control\": 2.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s02\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-8e3a19fc533743208dd86e8e089e0742.json\", \"control\": 3.0, \"summary\": \"A blue circle lies in the middle part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s02\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-1746d5cc837948e2aa5406b920d1d242.json\", \"control\": 4.0, \"summary\": \"A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s02\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-222bd1af563842c9890bb2707c8e42f2.json\", \"control\": 5.0, \"summary\": \"A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s02\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-02/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-02/truth.json",
+      "scene_family": "position"
+    },
+    {
+      "id": "R1-03",
+      "task_type": "R1",
+      "split": "formal",
+      "scenario": "compacted_context",
+      "scene_id": "s03",
+      "caption_detail": "coarse",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-03/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-03/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-03/current.png",
+      "record_order": [
+        "record-8fda8bbc6d1a42be9ea7607624e93d24.json",
+        "record-57a25c0172fc4a428d9f347e5f8c3fb0.json",
+        "record-9664cb076ae74a159694b3b2f8cc0f52.json",
+        "record-5df021a57f89487ab1a4518f8f1a7681.json",
+        "record-668481cfbc3a4d289d06b0b6778cae57.json",
+        "record-4e92347310634449a210528f092fd440.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-8fda8bbc6d1a42be9ea7607624e93d24.json",
+          "control": 0.0,
+          "summary": "A gold rectangular frame contains dense blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s03",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-57a25c0172fc4a428d9f347e5f8c3fb0.json",
+          "control": 1.0,
+          "summary": "A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s03",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-9664cb076ae74a159694b3b2f8cc0f52.json",
+          "control": 2.0,
+          "summary": "A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s03",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-5df021a57f89487ab1a4518f8f1a7681.json",
+          "control": 3.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s03",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-668481cfbc3a4d289d06b0b6778cae57.json",
+          "control": 4.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s03",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-4e92347310634449a210528f092fd440.json",
+          "control": 5.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s03",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 2.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nChoose the one historical record whose foreground appearance and relationship to the fixed gold or gray landmark match the TARGET image. Compare the circle silhouette and overlap, stripe spacing, or disk brightness as appropriate. Ignore the small gold mark at the bottom-right corner of the TARGET. Cite the selected record as evidence.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-8fda8bbc6d1a42be9ea7607624e93d24.json\", \"control\": 0.0, \"summary\": \"A gold rectangular frame contains dense blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s03\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-57a25c0172fc4a428d9f347e5f8c3fb0.json\", \"control\": 1.0, \"summary\": \"A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s03\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-9664cb076ae74a159694b3b2f8cc0f52.json\", \"control\": 2.0, \"summary\": \"A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s03\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-5df021a57f89487ab1a4518f8f1a7681.json\", \"control\": 3.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s03\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-668481cfbc3a4d289d06b0b6778cae57.json\", \"control\": 4.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s03\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-4e92347310634449a210528f092fd440.json\", \"control\": 5.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s03\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-03/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-03/truth.json",
+      "scene_family": "spacing"
+    },
+    {
+      "id": "R1-04",
+      "task_type": "R1",
+      "split": "formal",
+      "scenario": "compacted_context",
+      "scene_id": "s04",
+      "caption_detail": "coarse",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-04/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-04/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-04/current.png",
+      "record_order": [
+        "record-3e62dfed3d9748bf893173296cef899c.json",
+        "record-d730aa36399e44698511f1716452b4b8.json",
+        "record-06766f70cdea40ffa84ebbfb2804be1f.json",
+        "record-3cf7423d865b406cb7476e1ca3974ba8.json",
+        "record-3b1a1cd26a0b45aca65213f576c5268e.json",
+        "record-0f3bf3f824d240f0b7a6e57694413f17.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-3e62dfed3d9748bf893173296cef899c.json",
+          "control": 0.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s04",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-d730aa36399e44698511f1716452b4b8.json",
+          "control": 1.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s04",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-06766f70cdea40ffa84ebbfb2804be1f.json",
+          "control": 2.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s04",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-3cf7423d865b406cb7476e1ca3974ba8.json",
+          "control": 3.0,
+          "summary": "A mid-gray gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s04",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-3b1a1cd26a0b45aca65213f576c5268e.json",
+          "control": 4.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s04",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-0f3bf3f824d240f0b7a6e57694413f17.json",
+          "control": 5.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s04",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 2.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nChoose the one historical record whose foreground appearance and relationship to the fixed gold or gray landmark match the TARGET image. Compare the circle silhouette and overlap, stripe spacing, or disk brightness as appropriate. Ignore the small gold mark at the bottom-right corner of the TARGET. Cite the selected record as evidence.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-3e62dfed3d9748bf893173296cef899c.json\", \"control\": 0.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s04\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-d730aa36399e44698511f1716452b4b8.json\", \"control\": 1.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s04\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-06766f70cdea40ffa84ebbfb2804be1f.json\", \"control\": 2.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s04\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-3cf7423d865b406cb7476e1ca3974ba8.json\", \"control\": 3.0, \"summary\": \"A mid-gray gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s04\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-3b1a1cd26a0b45aca65213f576c5268e.json\", \"control\": 4.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s04\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-0f3bf3f824d240f0b7a6e57694413f17.json\", \"control\": 5.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s04\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-04/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R1-04/truth.json",
+      "scene_family": "brightness"
+    },
+    {
+      "id": "R2-01",
+      "task_type": "R2",
+      "split": "formal",
+      "scenario": "new_session",
+      "scene_id": "s05",
+      "caption_detail": "detailed",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-01/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-01/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-01/current.png",
+      "record_order": [
+        "record-484f565852ec498abaa487ba43b079df.json",
+        "record-1c0123b255f34d52acc9a8822cd12e49.json",
+        "record-45c3027d555a4646a609b36c0f2680af.json",
+        "record-c061eb1e37274655804329c9b28332b0.json",
+        "record-ae4648cb538a4937b57cc1b1143091e3.json",
+        "record-a614618225aa46639f644234fc0965b9.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-484f565852ec498abaa487ba43b079df.json",
+          "control": 0.0,
+          "summary": "A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 657.0000.",
+          "render": {
+            "scene_id": "s05",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-1c0123b255f34d52acc9a8822cd12e49.json",
+          "control": 1.0,
+          "summary": "A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 1104.0000.",
+          "render": {
+            "scene_id": "s05",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-45c3027d555a4646a609b36c0f2680af.json",
+          "control": 2.0,
+          "summary": "A medium blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 2453.0000.",
+          "render": {
+            "scene_id": "s05",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-c061eb1e37274655804329c9b28332b0.json",
+          "control": 3.0,
+          "summary": "A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 5675.0000.",
+          "render": {
+            "scene_id": "s05",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-ae4648cb538a4937b57cc1b1143091e3.json",
+          "control": 4.0,
+          "summary": "A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 8297.0000.",
+          "render": {
+            "scene_id": "s05",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-a614618225aa46639f644234fc0965b9.json",
+          "control": 5.0,
+          "summary": "A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 9633.0000.",
+          "render": {
+            "scene_id": "s05",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 0.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe measured feature is visible blue circle area in pixels. The ordered history contains equal +1 changes in control. Other external inputs stay fixed. Identify the adjacent pair with the largest absolute feature change. Then predict whether the feature will increase or decrease if control is increased by 0.5 immediately after the second record of that pair. Cite both records. The TARGET shows the last historical state with an irrelevant bottom-right mark; the CURRENT shows the starting state.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-484f565852ec498abaa487ba43b079df.json\", \"control\": 0.0, \"summary\": \"A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 657.0000.\", \"render\": {\"scene_id\": \"s05\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-1c0123b255f34d52acc9a8822cd12e49.json\", \"control\": 1.0, \"summary\": \"A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 1104.0000.\", \"render\": {\"scene_id\": \"s05\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-45c3027d555a4646a609b36c0f2680af.json\", \"control\": 2.0, \"summary\": \"A medium blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 2453.0000.\", \"render\": {\"scene_id\": \"s05\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-c061eb1e37274655804329c9b28332b0.json\", \"control\": 3.0, \"summary\": \"A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 5675.0000.\", \"render\": {\"scene_id\": \"s05\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-ae4648cb538a4937b57cc1b1143091e3.json\", \"control\": 4.0, \"summary\": \"A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 8297.0000.\", \"render\": {\"scene_id\": \"s05\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-a614618225aa46639f644234fc0965b9.json\", \"control\": 5.0, \"summary\": \"A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 9633.0000.\", \"render\": {\"scene_id\": \"s05\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-01/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-01/truth.json",
+      "scene_family": "area"
+    },
+    {
+      "id": "R2-02",
+      "task_type": "R2",
+      "split": "formal",
+      "scenario": "new_session",
+      "scene_id": "s06",
+      "caption_detail": "coarse",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-02/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-02/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-02/current.png",
+      "record_order": [
+        "record-798f89fb0a134115b979f5884faa02ac.json",
+        "record-0fea4924a8ac41adbb2a44ee25ada8c0.json",
+        "record-37e8daeea7f449bfba5ba70938c1cd0d.json",
+        "record-ec05981a46fa44d08a345764a8ee30c7.json",
+        "record-a8155b13762e4895b4885d51345ad0f7.json",
+        "record-354f2a6dd1e14d558314006f535d80f0.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-798f89fb0a134115b979f5884faa02ac.json",
+          "control": 0.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s06",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-0fea4924a8ac41adbb2a44ee25ada8c0.json",
+          "control": 1.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s06",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-37e8daeea7f449bfba5ba70938c1cd0d.json",
+          "control": 2.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s06",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-ec05981a46fa44d08a345764a8ee30c7.json",
+          "control": 3.0,
+          "summary": "A blue circle lies in the middle part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s06",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-a8155b13762e4895b4885d51345ad0f7.json",
+          "control": 4.0,
+          "summary": "A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s06",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-354f2a6dd1e14d558314006f535d80f0.json",
+          "control": 5.0,
+          "summary": "A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s06",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 0.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe measured feature is horizontal centroid of the blue circle in pixels. The ordered history contains equal +1 changes in control. Other external inputs stay fixed. Identify the adjacent pair with the largest absolute feature change. Then predict whether the feature will increase or decrease if control is increased by 0.5 immediately after the second record of that pair. Cite both records. The TARGET shows the last historical state with an irrelevant bottom-right mark; the CURRENT shows the starting state.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-798f89fb0a134115b979f5884faa02ac.json\", \"control\": 0.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s06\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-0fea4924a8ac41adbb2a44ee25ada8c0.json\", \"control\": 1.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s06\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-37e8daeea7f449bfba5ba70938c1cd0d.json\", \"control\": 2.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s06\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-ec05981a46fa44d08a345764a8ee30c7.json\", \"control\": 3.0, \"summary\": \"A blue circle lies in the middle part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s06\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-a8155b13762e4895b4885d51345ad0f7.json\", \"control\": 4.0, \"summary\": \"A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s06\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-354f2a6dd1e14d558314006f535d80f0.json\", \"control\": 5.0, \"summary\": \"A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s06\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-02/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-02/truth.json",
+      "scene_family": "position"
+    },
+    {
+      "id": "R2-03",
+      "task_type": "R2",
+      "split": "formal",
+      "scenario": "compacted_context",
+      "scene_id": "s07",
+      "caption_detail": "coarse",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-03/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v3/R2-03/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v3/R2-03/current.png",
+      "record_order": [
+        "record-99bfdbd27433464ab192b53debfef456.json",
+        "record-cfe42a9554534fb487ac4114ce6df3ea.json",
+        "record-6c013ba37a9f4f4693a14c7d34ba3369.json",
+        "record-bf44d9d99ceb46eaacdf752e1aca922f.json",
+        "record-b4b42b86311e4091a397355b01bba4f4.json",
+        "record-16387e1e314341eb9fcf64dd968eabad.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-99bfdbd27433464ab192b53debfef456.json",
+          "control": 0.0,
+          "summary": "A gold rectangular frame contains dense blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s07",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-cfe42a9554534fb487ac4114ce6df3ea.json",
+          "control": 1.0,
+          "summary": "A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s07",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-6c013ba37a9f4f4693a14c7d34ba3369.json",
+          "control": 2.0,
+          "summary": "A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s07",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-bf44d9d99ceb46eaacdf752e1aca922f.json",
+          "control": 3.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s07",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-b4b42b86311e4091a397355b01bba4f4.json",
+          "control": 4.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s07",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-16387e1e314341eb9fcf64dd968eabad.json",
+          "control": 5.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s07",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 0.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe measured feature is mean center-to-center spacing of blue vertical stripes in pixels. The ordered history contains equal +1 changes in control. Other external inputs stay fixed. Identify the adjacent pair with the largest absolute feature change. Then predict whether the feature will increase or decrease if control is increased by 0.5 immediately after the second record of that pair. Cite both records. The TARGET shows the last historical state with an irrelevant bottom-right mark; the CURRENT shows the starting state.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-99bfdbd27433464ab192b53debfef456.json\", \"control\": 0.0, \"summary\": \"A gold rectangular frame contains dense blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s07\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-cfe42a9554534fb487ac4114ce6df3ea.json\", \"control\": 1.0, \"summary\": \"A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s07\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-6c013ba37a9f4f4693a14c7d34ba3369.json\", \"control\": 2.0, \"summary\": \"A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s07\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-bf44d9d99ceb46eaacdf752e1aca922f.json\", \"control\": 3.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s07\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-b4b42b86311e4091a397355b01bba4f4.json\", \"control\": 4.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s07\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-16387e1e314341eb9fcf64dd968eabad.json\", \"control\": 5.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s07\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v3/R2-03/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v3/R2-03/truth.json",
+      "scene_family": "spacing"
+    },
+    {
+      "id": "R2-04",
+      "task_type": "R2",
+      "split": "formal",
+      "scenario": "compacted_context",
+      "scene_id": "s08",
+      "caption_detail": "coarse",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-04/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-04/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-04/current.png",
+      "record_order": [
+        "record-64248c2b67dd4930895299be907032d7.json",
+        "record-ba5bbfb582d24290af9867f02e7502cd.json",
+        "record-0699bf4e6125422e9edf74091a554b23.json",
+        "record-29b6011a98604cf682eebb37c7244023.json",
+        "record-f06569d584894c908fd2cc435e3f1a1c.json",
+        "record-9576c7328da840b7811b61d0e9251527.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-64248c2b67dd4930895299be907032d7.json",
+          "control": 0.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s08",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-ba5bbfb582d24290af9867f02e7502cd.json",
+          "control": 1.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s08",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-0699bf4e6125422e9edf74091a554b23.json",
+          "control": 2.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s08",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-29b6011a98604cf682eebb37c7244023.json",
+          "control": 3.0,
+          "summary": "A mid-gray gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s08",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-f06569d584894c908fd2cc435e3f1a1c.json",
+          "control": 4.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s08",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-9576c7328da840b7811b61d0e9251527.json",
+          "control": 5.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s08",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 0.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe measured feature is gray disk brightness on a 0 to 255 scale. The ordered history contains equal +1 changes in control. Other external inputs stay fixed. Identify the adjacent pair with the largest absolute feature change. Then predict whether the feature will increase or decrease if control is increased by 0.5 immediately after the second record of that pair. Cite both records. The TARGET shows the last historical state with an irrelevant bottom-right mark; the CURRENT shows the starting state.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-64248c2b67dd4930895299be907032d7.json\", \"control\": 0.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s08\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-ba5bbfb582d24290af9867f02e7502cd.json\", \"control\": 1.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s08\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-0699bf4e6125422e9edf74091a554b23.json\", \"control\": 2.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s08\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-29b6011a98604cf682eebb37c7244023.json\", \"control\": 3.0, \"summary\": \"A mid-gray gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s08\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-f06569d584894c908fd2cc435e3f1a1c.json\", \"control\": 4.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s08\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-9576c7328da840b7811b61d0e9251527.json\", \"control\": 5.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s08\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-04/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-04/truth.json",
+      "scene_family": "brightness"
+    },
+    {
+      "id": "R3-01",
+      "task_type": "R3",
+      "split": "formal",
+      "scenario": "new_session",
+      "scene_id": "s09",
+      "caption_detail": "detailed",
+      "current_control": 2.0,
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-01/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-01/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-01/current.png",
+      "record_order": [
+        "record-8978ac05d8d04b9084f3ad26de17848c.json",
+        "record-c3dd431379894d458c0d71932e44cfab.json",
+        "record-7cb2b5c48def4a25bbc0227853922f0b.json",
+        "record-8622794796e04daaa8a0b7c493bbca0e.json",
+        "record-6c4ff2966f2040838eafa230f9c20c81.json",
+        "record-c0f6b8c97f2d4b159b0c0b49817f5757.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-8978ac05d8d04b9084f3ad26de17848c.json",
+          "control": 0.0,
+          "summary": "A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 657.0000.",
+          "render": {
+            "scene_id": "s09",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-c3dd431379894d458c0d71932e44cfab.json",
+          "control": 1.0,
+          "summary": "A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 1064.0000.",
+          "render": {
+            "scene_id": "s09",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-7cb2b5c48def4a25bbc0227853922f0b.json",
+          "control": 2.0,
+          "summary": "A medium blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 2219.0000.",
+          "render": {
+            "scene_id": "s09",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-8622794796e04daaa8a0b7c493bbca0e.json",
+          "control": 3.0,
+          "summary": "A medium blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 5449.0000.",
+          "render": {
+            "scene_id": "s09",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-6c4ff2966f2040838eafa230f9c20c81.json",
+          "control": 4.0,
+          "summary": "A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 8323.0000.",
+          "render": {
+            "scene_id": "s09",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-c0f6b8c97f2d4b159b0c0b49817f5757.json",
+          "control": 5.0,
+          "summary": "A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 9657.0000.",
+          "render": {
+            "scene_id": "s09",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "action_step": 1.0,
+      "action_options": {
+        "decrease": 1.0,
+        "hold": 2.0,
+        "increase": 3.0
+      },
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe CURRENT image was rendered at control=2. Choose decrease (control - 1), hold, or increase (control + 1) to make the next render closest to the TARGET. Compare the history and both images. Cite two distinct historical records that bracket the current control, one at or below it and one at or above it. The chosen action will be executed and scored using mean absolute pixel error against the TARGET.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-8978ac05d8d04b9084f3ad26de17848c.json\", \"control\": 0.0, \"summary\": \"A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 657.0000.\", \"render\": {\"scene_id\": \"s09\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-c3dd431379894d458c0d71932e44cfab.json\", \"control\": 1.0, \"summary\": \"A small blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 1064.0000.\", \"render\": {\"scene_id\": \"s09\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-7cb2b5c48def4a25bbc0227853922f0b.json\", \"control\": 2.0, \"summary\": \"A medium blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 2219.0000.\", \"render\": {\"scene_id\": \"s09\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-8622794796e04daaa8a0b7c493bbca0e.json\", \"control\": 3.0, \"summary\": \"A medium blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 5449.0000.\", \"render\": {\"scene_id\": \"s09\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-6c4ff2966f2040838eafa230f9c20c81.json\", \"control\": 4.0, \"summary\": \"A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 8323.0000.\", \"render\": {\"scene_id\": \"s09\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-c0f6b8c97f2d4b159b0c0b49817f5757.json\", \"control\": 5.0, \"summary\": \"A large blue circle is centered on a dark navy background. A fixed vertical gold bar stands right of center and obscures the circle where they overlap. Measured visible blue circle area in pixels is 9657.0000.\", \"render\": {\"scene_id\": \"s09\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-01/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-01/truth.json",
+      "scene_family": "area"
+    },
+    {
+      "id": "R3-02",
+      "task_type": "R3",
+      "split": "formal",
+      "scenario": "new_session",
+      "scene_id": "s10",
+      "caption_detail": "coarse",
+      "current_control": 3.0,
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-02/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-02/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-02/current.png",
+      "record_order": [
+        "record-5a95e74e1cdf4f0184ae6f8822105acd.json",
+        "record-5da0c2bddfd8448f927541ea1a483ed1.json",
+        "record-18d21155adf24cbc8e84553582b6e552.json",
+        "record-9a9af2239d1146238cc5c9c1fe9c45b0.json",
+        "record-3e5c04eb12e74d22a245eb5993cff57d.json",
+        "record-bf1c6a5f9e6f4d9883cfce3dd03a4d2c.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-5a95e74e1cdf4f0184ae6f8822105acd.json",
+          "control": 0.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s10",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-5da0c2bddfd8448f927541ea1a483ed1.json",
+          "control": 1.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s10",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-18d21155adf24cbc8e84553582b6e552.json",
+          "control": 2.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s10",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-9a9af2239d1146238cc5c9c1fe9c45b0.json",
+          "control": 3.0,
+          "summary": "A blue circle lies in the middle part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s10",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-3e5c04eb12e74d22a245eb5993cff57d.json",
+          "control": 4.0,
+          "summary": "A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s10",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-bf1c6a5f9e6f4d9883cfce3dd03a4d2c.json",
+          "control": 5.0,
+          "summary": "A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.",
+          "render": {
+            "scene_id": "s10",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "action_step": 1.0,
+      "action_options": {
+        "decrease": 2.0,
+        "hold": 3.0,
+        "increase": 4.0
+      },
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe CURRENT image was rendered at control=3. Choose decrease (control - 1), hold, or increase (control + 1) to make the next render closest to the TARGET. Compare the history and both images. Cite two distinct historical records that bracket the current control, one at or below it and one at or above it. The chosen action will be executed and scored using mean absolute pixel error against the TARGET.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-5a95e74e1cdf4f0184ae6f8822105acd.json\", \"control\": 0.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s10\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-5da0c2bddfd8448f927541ea1a483ed1.json\", \"control\": 1.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s10\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-18d21155adf24cbc8e84553582b6e552.json\", \"control\": 2.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s10\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-9a9af2239d1146238cc5c9c1fe9c45b0.json\", \"control\": 3.0, \"summary\": \"A blue circle lies in the middle part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s10\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-3e5c04eb12e74d22a245eb5993cff57d.json\", \"control\": 4.0, \"summary\": \"A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s10\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-bf1c6a5f9e6f4d9883cfce3dd03a4d2c.json\", \"control\": 5.0, \"summary\": \"A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap.\", \"render\": {\"scene_id\": \"s10\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-02/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-02/truth.json",
+      "scene_family": "position"
+    },
+    {
+      "id": "R3-03",
+      "task_type": "R3",
+      "split": "formal",
+      "scenario": "compacted_context",
+      "scene_id": "s11",
+      "caption_detail": "coarse",
+      "current_control": 2.0,
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-03/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-03/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-03/current.png",
+      "record_order": [
+        "record-eea0d370288f472e841794a87e558419.json",
+        "record-74f895e9f6084523b25a3c49d4eb5a68.json",
+        "record-bf5ba8f49a1b4b8e979df20dc061b560.json",
+        "record-e10d3b03bceb45059c2f9cf3f912e861.json",
+        "record-2d30a73001234850a645ea722fcd879d.json",
+        "record-ac7c93f08a53411a9f12bdebbe595206.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-eea0d370288f472e841794a87e558419.json",
+          "control": 0.0,
+          "summary": "A gold rectangular frame contains dense blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s11",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-74f895e9f6084523b25a3c49d4eb5a68.json",
+          "control": 1.0,
+          "summary": "A gold rectangular frame contains dense blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s11",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-bf5ba8f49a1b4b8e979df20dc061b560.json",
+          "control": 2.0,
+          "summary": "A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s11",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-e10d3b03bceb45059c2f9cf3f912e861.json",
+          "control": 3.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s11",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-2d30a73001234850a645ea722fcd879d.json",
+          "control": 4.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s11",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-ac7c93f08a53411a9f12bdebbe595206.json",
+          "control": 5.0,
+          "summary": "A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.",
+          "render": {
+            "scene_id": "s11",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "action_step": 1.0,
+      "action_options": {
+        "decrease": 1.0,
+        "hold": 2.0,
+        "increase": 3.0
+      },
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe CURRENT image was rendered at control=2. Choose decrease (control - 1), hold, or increase (control + 1) to make the next render closest to the TARGET. Compare the history and both images. Cite two distinct historical records that bracket the current control, one at or below it and one at or above it. The chosen action will be executed and scored using mean absolute pixel error against the TARGET.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-eea0d370288f472e841794a87e558419.json\", \"control\": 0.0, \"summary\": \"A gold rectangular frame contains dense blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s11\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-74f895e9f6084523b25a3c49d4eb5a68.json\", \"control\": 1.0, \"summary\": \"A gold rectangular frame contains dense blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s11\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-bf5ba8f49a1b4b8e979df20dc061b560.json\", \"control\": 2.0, \"summary\": \"A gold rectangular frame contains moderate blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s11\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-e10d3b03bceb45059c2f9cf3f912e861.json\", \"control\": 3.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s11\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-2d30a73001234850a645ea722fcd879d.json\", \"control\": 4.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s11\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-ac7c93f08a53411a9f12bdebbe595206.json\", \"control\": 5.0, \"summary\": \"A gold rectangular frame contains sparse blue vertical stripes against a dark navy background.\", \"render\": {\"scene_id\": \"s11\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-03/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-03/truth.json",
+      "scene_family": "spacing"
+    },
+    {
+      "id": "R3-04",
+      "task_type": "R3",
+      "split": "formal",
+      "scenario": "compacted_context",
+      "scene_id": "s12",
+      "caption_detail": "coarse",
+      "current_control": 3.0,
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-04/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-04/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-04/current.png",
+      "record_order": [
+        "record-3f991f676dbf4c2e882f7ec87c9adb3b.json",
+        "record-150bda472d2845a8bad83bc31a9d8e82.json",
+        "record-05eecf2295d540c798937e14b798cd1f.json",
+        "record-1a30a966bd60453eb8f938e88a4df4fb.json",
+        "record-722e9ca3bcb54ed29aacf6501bd6fedc.json",
+        "record-f0bff3ac416a47e3bfa915392333c000.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-3f991f676dbf4c2e882f7ec87c9adb3b.json",
+          "control": 0.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s12",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-150bda472d2845a8bad83bc31a9d8e82.json",
+          "control": 1.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s12",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-05eecf2295d540c798937e14b798cd1f.json",
+          "control": 2.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s12",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-1a30a966bd60453eb8f938e88a4df4fb.json",
+          "control": 3.0,
+          "summary": "A mid-gray gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s12",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-722e9ca3bcb54ed29aacf6501bd6fedc.json",
+          "control": 4.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s12",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-f0bff3ac416a47e3bfa915392333c000.json",
+          "control": 5.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s12",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "action_step": 1.0,
+      "action_options": {
+        "decrease": 2.0,
+        "hold": 3.0,
+        "increase": 4.0
+      },
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe CURRENT image was rendered at control=3. Choose decrease (control - 1), hold, or increase (control + 1) to make the next render closest to the TARGET. Compare the history and both images. Cite two distinct historical records that bracket the current control, one at or below it and one at or above it. The chosen action will be executed and scored using mean absolute pixel error against the TARGET.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-3f991f676dbf4c2e882f7ec87c9adb3b.json\", \"control\": 0.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s12\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-150bda472d2845a8bad83bc31a9d8e82.json\", \"control\": 1.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s12\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-05eecf2295d540c798937e14b798cd1f.json\", \"control\": 2.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s12\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-1a30a966bd60453eb8f938e88a4df4fb.json\", \"control\": 3.0, \"summary\": \"A mid-gray gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s12\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-722e9ca3bcb54ed29aacf6501bd6fedc.json\", \"control\": 4.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s12\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-f0bff3ac416a47e3bfa915392333c000.json\", \"control\": 5.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s12\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-04/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R3-04/truth.json",
+      "scene_family": "brightness"
+    },
+    {
+      "id": "CAL-01",
+      "task_type": "R2",
+      "split": "calibration",
+      "scenario": "new_session",
+      "scene_id": "s14",
+      "caption_detail": "detailed",
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-01/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-01/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-01/current.png",
+      "record_order": [
+        "record-7d3ff5bf85644f029fe25eee637f9b1e.json",
+        "record-ebf82c0f6e124588849ec8ff03cbd733.json",
+        "record-cf2caf6f7e0a4dec8b81db55c0a49762.json",
+        "record-55bef54787ed46bc97555e2bde05a742.json",
+        "record-f0d492f6849b4cc88a7b4bf66f39c033.json",
+        "record-aefa1fd0323a4a27bffa9a0ed23be070.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-7d3ff5bf85644f029fe25eee637f9b1e.json",
+          "control": 0.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 30.0000.",
+          "render": {
+            "scene_id": "s14",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-ebf82c0f6e124588849ec8ff03cbd733.json",
+          "control": 1.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 35.0000.",
+          "render": {
+            "scene_id": "s14",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-cf2caf6f7e0a4dec8b81db55c0a49762.json",
+          "control": 2.0,
+          "summary": "A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 52.0000.",
+          "render": {
+            "scene_id": "s14",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-55bef54787ed46bc97555e2bde05a742.json",
+          "control": 3.0,
+          "summary": "A blue circle lies in the middle part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 88.5497.",
+          "render": {
+            "scene_id": "s14",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-f0d492f6849b4cc88a7b4bf66f39c033.json",
+          "control": 4.0,
+          "summary": "A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 133.1320.",
+          "render": {
+            "scene_id": "s14",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-aefa1fd0323a4a27bffa9a0ed23be070.json",
+          "control": 5.0,
+          "summary": "A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 154.0000.",
+          "render": {
+            "scene_id": "s14",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "current_control": 0.0,
+      "action_step": 1.0,
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe measured feature is horizontal centroid of the blue circle in pixels. The ordered history contains equal +1 changes in control. Other external inputs stay fixed. Identify the adjacent pair with the largest absolute feature change. Then predict whether the feature will increase or decrease if control is increased by 0.5 immediately after the second record of that pair. Cite both records. The TARGET shows the last historical state with an irrelevant bottom-right mark; the CURRENT shows the starting state.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-7d3ff5bf85644f029fe25eee637f9b1e.json\", \"control\": 0.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 30.0000.\", \"render\": {\"scene_id\": \"s14\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-ebf82c0f6e124588849ec8ff03cbd733.json\", \"control\": 1.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 35.0000.\", \"render\": {\"scene_id\": \"s14\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-cf2caf6f7e0a4dec8b81db55c0a49762.json\", \"control\": 2.0, \"summary\": \"A blue circle lies in the left part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 52.0000.\", \"render\": {\"scene_id\": \"s14\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-55bef54787ed46bc97555e2bde05a742.json\", \"control\": 3.0, \"summary\": \"A blue circle lies in the middle part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 88.5497.\", \"render\": {\"scene_id\": \"s14\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-f0d492f6849b4cc88a7b4bf66f39c033.json\", \"control\": 4.0, \"summary\": \"A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 133.1320.\", \"render\": {\"scene_id\": \"s14\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-aefa1fd0323a4a27bffa9a0ed23be070.json\", \"control\": 5.0, \"summary\": \"A blue circle lies in the right part of a dark navy image. A fixed vertical gold bar can obscure the circle where they overlap. Measured horizontal centroid of the blue circle in pixels is 154.0000.\", \"render\": {\"scene_id\": \"s14\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-01/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-01/truth.json",
+      "scene_family": "position"
+    },
+    {
+      "id": "CAL-02",
+      "task_type": "R3",
+      "split": "calibration",
+      "scenario": "compacted_context",
+      "scene_id": "s16",
+      "caption_detail": "coarse",
+      "current_control": 2.0,
+      "width": 192,
+      "height": 160,
+      "root": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-02/vista",
+      "target_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-02/target.png",
+      "current_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-02/current.png",
+      "record_order": [
+        "record-0f2c74bbf15e440eab21ad6d07a7d7ca.json",
+        "record-904ef4f71ace47049a2c1d060063fd0a.json",
+        "record-8202d97d944f4a398bddfe8b92096006.json",
+        "record-1f91a27535014a198a786f05a8045709.json",
+        "record-dd40c285ee244961a9f77cac72760414.json",
+        "record-0025452d165d42b0a406f29bc20c7731.json"
+      ],
+      "summary_rows": [
+        {
+          "record": "record-0f2c74bbf15e440eab21ad6d07a7d7ca.json",
+          "control": 0.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s16",
+            "control": 0.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-904ef4f71ace47049a2c1d060063fd0a.json",
+          "control": 1.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s16",
+            "control": 1.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-8202d97d944f4a398bddfe8b92096006.json",
+          "control": 2.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s16",
+            "control": 2.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-1f91a27535014a198a786f05a8045709.json",
+          "control": 3.0,
+          "summary": "A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s16",
+            "control": 3.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-dd40c285ee244961a9f77cac72760414.json",
+          "control": 4.0,
+          "summary": "A mid-gray gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s16",
+            "control": 4.0,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "record": "record-0025452d165d42b0a406f29bc20c7731.json",
+          "control": 5.0,
+          "summary": "A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.",
+          "render": {
+            "scene_id": "s16",
+            "control": 5.0,
+            "width": 192,
+            "height": 160
+          }
+        }
+      ],
+      "action_step": 1.0,
+      "action_options": {
+        "decrease": 1.0,
+        "hold": 2.0,
+        "increase": 3.0
+      },
+      "prompt": "You are evaluating a recorded deterministic visual process. The two attached images are TARGET first and CURRENT second. History captions were produced by a fixed, question-independent observation rule. All historical external render inputs are included below. GLSL is null because these images were produced by a fixed drawing program. The internal drawing function stays constant within this case. Use list_records/read_record to inspect history when helpful. You may call list_records at most twice and read_record at most eight times.\n\nThe CURRENT image was rendered at control=2. Choose decrease (control - 1), hold, or increase (control + 1) to make the next render closest to the TARGET. Compare the history and both images. Cite two distinct historical records that bracket the current control, one at or below it and one at or above it. The chosen action will be executed and scored using mean absolute pixel error against the TARGET.\n\nThe history is ordered by the following table, not by filenames:\n[{\"record\": \"record-0f2c74bbf15e440eab21ad6d07a7d7ca.json\", \"control\": 0.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s16\", \"control\": 0.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-904ef4f71ace47049a2c1d060063fd0a.json\", \"control\": 1.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s16\", \"control\": 1.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-8202d97d944f4a398bddfe8b92096006.json\", \"control\": 2.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s16\", \"control\": 2.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-1f91a27535014a198a786f05a8045709.json\", \"control\": 3.0, \"summary\": \"A light gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s16\", \"control\": 3.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-dd40c285ee244961a9f77cac72760414.json\", \"control\": 4.0, \"summary\": \"A mid-gray gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s16\", \"control\": 4.0, \"width\": 192, \"height\": 160}}, {\"record\": \"record-0025452d165d42b0a406f29bc20c7731.json\", \"control\": 5.0, \"summary\": \"A dark gray disk is centered on a dark navy background. A fixed gray square at upper left is a brightness reference.\", \"render\": {\"scene_id\": \"s16\", \"control\": 5.0, \"width\": 192, \"height\": 160}}]\n\nReturn one JSON object with these keys: {\"record\":null,\"pair\":[], \"direction\":null,\"action\":null,\"evidence_records\":[],\"evidence\":{}}. Fill record for selection, pair and direction for change analysis, or action for action selection. Use exact record filenames. The evidence object may state the observed feature and measurements. Provide a best-supported answer using the available observations.",
+      "case_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-02/case.json",
+      "truth_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/CAL-02/truth.json",
+      "scene_family": "brightness"
+    }
+  ],
+  "encoding_repair": {
+    "parent_manifest": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/manifest.json",
+    "case_ids": [
+      "R2-03"
+    ],
+    "source_sha256": "fa3f90945f0cd7c1099ffcc404fcf6287d19829125a228924420c76be8f85eb3",
+    "changes": [
+      {
+        "case_id": "R2-03",
+        "role": "target",
+        "original_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-03/target.png",
+        "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v3/R2-03/target.png",
+        "compression_level": 9,
+        "sha256": "8779e5b559b1407957b5182a4134a15ac6b155ec93a187674a131889f36c0067",
+        "pixels_identical": true
+      },
+      {
+        "case_id": "R2-03",
+        "role": "current",
+        "original_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v2/R2-03/current.png",
+        "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261116-eval/dataset-v3/R2-03/current.png",
+        "compression_level": 1,
+        "sha256": "f707655f2f98bdb74e8a045dfb28a06c3ae1de6d81b65c07639a4f2c9d9f740b",
+        "pixels_identical": true
+      }
+    ]
+  }
+}

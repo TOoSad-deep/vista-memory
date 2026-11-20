@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-11-16T10:28:57.293955+08:00",
+  "commit": "48a575a15b2767ad07166c8004fea9cd545d1d46",
+  "working_tree": [
+    " M README.md",
+    " M docs/vista-memory-implementation-plan-20261113.md",
+    " M docs/vista-minimal-image-records-design-20261113.md",
+    "?? docs/test-results/",
+    "?? docs/vista-memory-test-plan-20261113.md"
+  ],
+  "python": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-27.3-arm64-arm-64bit",
+  "versions": {
+    "vista-memory": "0.1.0",
+    "pillow": "13.0.0",
+    "mcp": "2.3.0",
+    "pytest": "9.2.0",
+    "ruff": "0.17.5"
+  },
+  "uv_lock_sha256": "b729b02c15f4557e588977784784fe52361b88e5c430a2915edfdee05fa268b8",
+  "source_sha256": {
+    "src/vista_memory/__init__.py": "1ab1d07eedb95e1a06f53fb64e60e68a372b7e46ddea7db24f5acc1be1b43c23",
+    "src/vista_memory/core.py": "38708a625cb018e6ad5d4b68cb407ee631ab356ce3708ac82565ffa80ab59731",
+    "src/vista_memory/mcp.py": "76c65af7246cdd01601213c5d897e6fdfbeed4beb9c23c7c4352e83430c66a3d"
+  }
+}

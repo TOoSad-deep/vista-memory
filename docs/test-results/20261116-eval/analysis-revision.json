@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-16T11:22:13.578873+08:00",
+  "model_runs_complete_before_revision": true,
+  "statistical_summary_identical": true,
+  "changes": [
+    "Record timeout stage in runner",
+    "Retain task failures in paired scoring",
+    "Allow selecting repeats for infrastructure retry"
+  ],
+  "current_script_sha256": {
+    "scripts/dsh_sdk_run.py": "a148edd58ab8c50a9ddcdd31221f492d006e468f428053492c4327b4684da8d2",
+    "scripts/run_vista_memory_eval.py": "3721167f94cffaca8fab4606c8762e307c0db7600cb3eceb969df6d9890f30aa",
+    "scripts/score_vista_memory_eval.py": "5046f34290fda737c83af20226604fa4f1c03a6480f3c57f4c272c55482451f6"
+  },
+  "execution_archive": "frozen-execution-scripts/index.json",
+  "regression": "scorer-failure-regression.json"
+}

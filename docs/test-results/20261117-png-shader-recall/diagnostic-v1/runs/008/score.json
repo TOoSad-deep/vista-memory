@@ -1,0 +1,97 @@
+{
+  "index": 8,
+  "case_id": "T05-history",
+  "repeat": 1,
+  "condition": "provided",
+  "access_view": "known",
+  "image_condition": "visual",
+  "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/008",
+  "exit_code": 1,
+  "status": "failed",
+  "error": {
+    "type": "RuntimeError",
+    "message": "Live author turn did not complete normally"
+  },
+  "submitted_candidate": null,
+  "new_candidate_count": 1,
+  "template_unchanged": true,
+  "turn_reason": {
+    "kind": "error",
+    "error": {
+      "message": "DeepSeek Messages transport failed",
+      "code": "TRANSPORT"
+    }
+  },
+  "cleanup_error": null,
+  "model_requests": 12,
+  "image_control_errors": [],
+  "trace": {
+    "status": "timing-unverified",
+    "first_target_decision_seq": null,
+    "unclassified_prior_actions": [
+      72,
+      79
+    ],
+    "decision_request_id": null,
+    "recall_triggered_before_decision": null,
+    "timely_related_evidence": null,
+    "requests_with_required_evidence": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17
+    ],
+    "recalls": [],
+    "recall_attempted_in_run": false,
+    "required_evidence_visible_in_run": true,
+    "invalid_argument_events": [],
+    "vista_reads": 0,
+    "other_image_reads": 0,
+    "list_calls": 0,
+    "model_requests": 12,
+    "unresolved_wire_images": 0
+  },
+  "outcome": {
+    "author_submission_completed": false,
+    "visual_acceptance": "pending-review",
+    "produced_candidate_id": "32e07a6c-ce99-431e-bd9b-2a1d41cadfe0",
+    "candidate_state": "produced-without-submission",
+    "evaluated_source_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/008/business/restore-probe/candidates/32e07a6c-ce99-431e-bd9b-2a1d41cadfe0/shader.frag",
+    "evaluated_image_path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/008/business/restore-probe/candidates/32e07a6c-ce99-431e-bd9b-2a1d41cadfe0/render.png",
+    "pixel_mae_before": 19.738252992983217,
+    "pixel_mae_after": 13.28227968569155,
+    "pixel_metric_note": "Auxiliary full-image pixel difference. Visual acceptance needs review."
+  },
+  "cost": {
+    "wall_seconds": 432.01781582832336,
+    "tool_calls": 15,
+    "tool_calls_by_name": {
+      "skill": 1,
+      "read": 3,
+      "bash": 6,
+      "load_workspace_dependencies": 1,
+      "write": 2,
+      "render_shader": 1,
+      "read_image": 1
+    },
+    "repeated_identical_tool_calls": 0,
+    "usage": {
+      "inputTokens": 16747,
+      "outputTokens": 18658,
+      "cacheReadTokens": 211072,
+      "cacheWriteTokens": 0,
+      "totalTokens": 246477
+    },
+    "currency_cost": null,
+    "currency_cost_note": "Account billing amount is not exposed in the captured session events."
+  },
+  "scoring_status": "complete-with-visual-review-pending"
+}

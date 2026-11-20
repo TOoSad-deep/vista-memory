@@ -1,0 +1,196 @@
+{
+  "sets": [
+    {
+      "id": "set-1",
+      "title": "潮声周末",
+      "drafts": [
+        {
+          "id": "baseline",
+          "label": "潮声周末 · 竖版排版甲",
+          "path": "materials/set-1/draft-01.png",
+          "sha256": "51c69b276f2b13d8c55df3e4b6e46ad0f7cd11f200d5e85fdfa1319b0e40b365",
+          "size": [
+            640,
+            800
+          ]
+        },
+        {
+          "id": "accepted",
+          "label": "潮声周末 · 竖版排版乙",
+          "path": "materials/set-1/draft-02.png",
+          "sha256": "f5933aa486e370c5cef3cb7179d79f87ebb911429dd79029efd2b626ac62bf4e",
+          "size": [
+            640,
+            800
+          ]
+        },
+        {
+          "id": "near",
+          "label": "潮声周末 · 横版页眉试排",
+          "path": "materials/set-1/draft-03.png",
+          "sha256": "d579920c4cfc5326092057956361b1acf31ff86a46658aec695922cdc6652ca3",
+          "size": [
+            768,
+            484
+          ]
+        },
+        {
+          "id": "current",
+          "label": "潮声周末 · 竖版排版丙",
+          "path": "materials/set-1/draft-04.png",
+          "sha256": "9d3168f38a333077a6e418905933329df795d861523b24cbba411e538b3e1dea",
+          "size": [
+            640,
+            800
+          ]
+        }
+      ],
+      "accepted": "accepted",
+      "current": "current",
+      "near": "near",
+      "feedback_template": "{short_id} 这版的比例和层级刚好，后面以它做参照。",
+      "cases": [
+        {
+          "id": "visual",
+          "question": "我之前认可的那版，右下角的图案是什么？",
+          "target": "accepted",
+          "relevant": [
+            "accepted"
+          ],
+          "expected": "菱形",
+          "acceptable_answers": [
+            "菱形",
+            "钻石形",
+            "斜方形",
+            "diamond",
+            "rhombus"
+          ],
+          "max_reads": 1
+        },
+        {
+          "id": "rewrite",
+          "question": "把‘定稿是蓝色’改写成一句交付说明。",
+          "expected": "一句交付说明，保留蓝色定稿的意思",
+          "relevant": [],
+          "max_reads": 0
+        },
+        {
+          "id": "absent-text",
+          "question": "「潮声周末」的紫色节庆版当时只提过，后来取消了，没存稿。现在有这份稿可以交付吗？",
+          "expected": "明确说明紫色节庆版没有可交付的存稿",
+          "relevant": [],
+          "max_reads": 0
+        },
+        {
+          "id": "absent-near",
+          "question": "「潮声周末」横版页眉的备选稿里，有存过右下角是人物头像的那版吗？我想找的是带头像的那份。",
+          "expected": "只核对横版页眉试排，说明右下没有人物头像，随后自行停手",
+          "relevant": [
+            "near"
+          ],
+          "max_reads": 1
+        }
+      ]
+    },
+    {
+      "id": "set-2",
+      "title": "林间夜读",
+      "drafts": [
+        {
+          "id": "near",
+          "label": "林间夜读 · 横版页眉试排",
+          "path": "materials/set-2/draft-01.png",
+          "sha256": "aec20057f9c2ccb9d8ba7e282c1e38fa0bd8d60299d1ad44eb56681aa662e642",
+          "size": [
+            768,
+            484
+          ]
+        },
+        {
+          "id": "baseline",
+          "label": "林间夜读 · 竖版排版甲",
+          "path": "materials/set-2/draft-02.png",
+          "sha256": "07062b9c493cc70d27c6a72e671475a13bcaf1a36660e55892eaf67d440f76d4",
+          "size": [
+            640,
+            800
+          ]
+        },
+        {
+          "id": "accepted",
+          "label": "林间夜读 · 竖版排版乙",
+          "path": "materials/set-2/draft-03.png",
+          "sha256": "bfa1b09b80688e46e12310626104251c2c28f980ddbf109a9d14bc20f8cdda8d",
+          "size": [
+            640,
+            800
+          ]
+        },
+        {
+          "id": "current",
+          "label": "林间夜读 · 竖版排版丙",
+          "path": "materials/set-2/draft-04.png",
+          "sha256": "c4e7fab3f3c6c6759b0d89f6f9b43ddada959d59a8f6f775452bebc44c2496c8",
+          "size": [
+            640,
+            800
+          ]
+        }
+      ],
+      "accepted": "accepted",
+      "current": "current",
+      "near": "near",
+      "feedback_template": "{short_id} 这版的比例和层级刚好，后面以它做参照。",
+      "cases": [
+        {
+          "id": "visual",
+          "question": "我之前认可的那版，右下角的图案是什么？",
+          "target": "accepted",
+          "relevant": [
+            "accepted"
+          ],
+          "expected": "四角星",
+          "acceptable_answers": [
+            "四角星",
+            "四芒星",
+            "四角闪光",
+            "星形",
+            "星星",
+            "four-pointed star"
+          ],
+          "max_reads": 1
+        },
+        {
+          "id": "rewrite",
+          "question": "把‘定稿是蓝色’改写成一句交付说明。",
+          "expected": "一句交付说明，保留蓝色定稿的意思",
+          "relevant": [],
+          "max_reads": 0
+        },
+        {
+          "id": "absent-text",
+          "question": "「林间夜读」的紫色节庆版当时只提过，后来取消了，没存稿。现在有这份稿可以交付吗？",
+          "expected": "明确说明紫色节庆版没有可交付的存稿",
+          "relevant": [],
+          "max_reads": 0
+        },
+        {
+          "id": "absent-near",
+          "question": "「林间夜读」横版页眉的备选稿里，有存过右下角是人物头像的那版吗？我想找的是带头像的那份。",
+          "expected": "只核对横版页眉试排，说明右下没有人物头像，随后自行停手",
+          "relevant": [
+            "near"
+          ],
+          "max_reads": 1
+        }
+      ]
+    }
+  ],
+  "model": {
+    "provider": "deepseek-account",
+    "model": "deepseek-flash",
+    "reasoningEffort": "high",
+    "maxTokens": 4096
+  },
+  "image_limit": 3
+}

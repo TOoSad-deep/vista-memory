@@ -1,0 +1,7 @@
+[
+  {
+    "id": "D1",
+    "session_id": "vista-d1-20261116-nuo9zod_",
+    "text": "VISTA acceptance test. First call list_records. Find the record whose label is r-a. Read it using read_record with only the record argument; omit the optional content argument. Describe the image you actually receive, including shape count, foreground color, background color and position. Include the record filename. Use only the VISTA tools."
+  }
+]

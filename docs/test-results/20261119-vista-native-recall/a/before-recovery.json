@@ -1,0 +1,550 @@
+{
+  "session": "f246e6a3-4dc5-40e7-bc8c-82711febc02c",
+  "workspace": "/private/var/folders/td/sk653c_s5zs_g1njndhklzyh0000gn/T/native-vista-0h6nsy45/work",
+  "profile": "sdk-minimal",
+  "started": "2026-11-19T11:48:55.705710+08:00",
+  "turns": [
+    {
+      "stage": "history",
+      "text": "这是「潮汐」图标的定稿，收到后请只回“收到”。",
+      "events": [
+        {
+          "type": "agent/inbox/spliced",
+          "seq": 0,
+          "time": 1795060137073,
+          "data": {
+            "target": "next-turn",
+            "start": 0,
+            "inserted": [
+              {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "这是「潮汐」图标的定稿，收到后请只回“收到”。"
+                  },
+                  {
+                    "type": "image",
+                    "attachment": {
+                      "attachmentId": "sha256:37dcd19c284f99e1ab9b39e3c90fe65d2742e30803f521a604b22edd0ecd6a1c",
+                      "mediaType": "image/png",
+                      "width": 256,
+                      "height": 256,
+                      "bytes": 1817,
+                      "name": "icon.png"
+                    }
+                  }
+                ],
+                "source": {
+                  "kind": "user"
+                },
+                "role": "user",
+                "id": "01b2d79f-c6a6-41c2-8f19-215793a19611"
+              }
+            ]
+          }
+        },
+        {
+          "type": "turn/start",
+          "seq": 1,
+          "time": 1795060137074,
+          "data": {
+            "turn": 1
+          }
+        },
+        {
+          "type": "agent/inbox/spliced",
+          "seq": 2,
+          "time": 1795060137074,
+          "data": {
+            "target": "next-turn",
+            "start": 0,
+            "removedCount": 1,
+            "inserted": []
+          }
+        },
+        {
+          "type": "step/start",
+          "seq": 3,
+          "time": 1795060137090,
+          "data": {
+            "turn": 1,
+            "step": 1
+          }
+        },
+        {
+          "type": "system/message",
+          "seq": 4,
+          "time": 1795060137091,
+          "data": {
+            "turn": 1,
+            "step": 1,
+            "message": {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "You are a helpful software engineer assistant."
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "f83bd649-2a73-4303-8385-f67246711b48"
+            }
+          },
+          "surfaceOp": "append"
+        },
+        {
+          "type": "user/message",
+          "seq": 5,
+          "time": 1795060137091,
+          "data": {
+            "content": [
+              {
+                "type": "text",
+                "text": "这是「潮汐」图标的定稿，收到后请只回“收到”。"
+              },
+              {
+                "type": "image",
+                "attachment": {
+                  "attachmentId": "sha256:37dcd19c284f99e1ab9b39e3c90fe65d2742e30803f521a604b22edd0ecd6a1c",
+                  "mediaType": "image/png",
+                  "width": 256,
+                  "height": 256,
+                  "bytes": 1817,
+                  "name": "icon.png"
+                }
+              }
+            ],
+            "source": {
+              "kind": "user"
+            },
+            "role": "user",
+            "id": "01b2d79f-c6a6-41c2-8f19-215793a19611"
+          },
+          "surfaceOp": "append"
+        },
+        {
+          "type": "user/message",
+          "seq": 6,
+          "time": 1795060137091,
+          "data": {
+            "content": [
+              {
+                "type": "text",
+                "text": "<system-reminder>\nThe following information describes your current session:\n\nCurrent working directory: \"/private/var/folders/td/sk653c_s5zs_g1njndhklzyh0000gn/T/native-vista-0h6nsy45/work\".\n</system-reminder>"
+              }
+            ],
+            "source": {
+              "kind": "runtime-context",
+              "form": "snapshot",
+              "sections": [
+                {
+                  "name": "working-directory:current",
+                  "text": "Current working directory: \"/private/var/folders/td/sk653c_s5zs_g1njndhklzyh0000gn/T/native-vista-0h6nsy45/work\"."
+                }
+              ]
+            },
+            "role": "user",
+            "id": "7ddffa31-e8e7-4d1a-9d9b-b48bfd9a0d82"
+          },
+          "surfaceOp": "append"
+        },
+        {
+          "type": "request/header",
+          "seq": 7,
+          "time": 1795060137091,
+          "data": {
+            "header": {
+              "config": {
+                "maxTokens": 4096,
+                "provider": "deepseek-account",
+                "model": "deepseek-flash",
+                "reasoningEffort": "high"
+              },
+              "tools": [
+                {
+                  "name": "mcp__vista__list_records",
+                  "description": "List saved images by record filename, label, source and code availability.",
+                  "parameters": {
+                    "type": "object",
+                    "properties": {},
+                    "title": "list_recordsArguments"
+                  }
+                },
+                {
+                  "name": "mcp__vista__read_record",
+                  "description": "Read a JSON record's metadata and requested image, GLSL code, or both.",
+                  "parameters": {
+                    "type": "object",
+                    "properties": {
+                      "record": {
+                        "title": "Record",
+                        "type": "string"
+                      },
+                      "content": {
+                        "default": "image",
+                        "enum": [
+                          "image",
+                          "code",
+                          "both"
+                        ],
+                        "title": "Content",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "record"
+                    ],
+                    "title": "read_recordArguments"
+                  }
+                }
+              ]
+            },
+            "reason": "initial"
+          }
+        },
+        {
+          "type": "request/context",
+          "seq": 8,
+          "time": 1795060137091,
+          "data": {
+            "provider": "deepseek-account",
+            "model": "deepseek-flash",
+            "contextWindow": 1048576,
+            "systemPromptUpdate": "in-history"
+          }
+        },
+        {
+          "type": "session/title",
+          "seq": 9,
+          "time": 1795060137092,
+          "data": {
+            "title": "这是「潮汐」图标的定稿，收",
+            "messageSeqs": [
+              5
+            ],
+            "source": {
+              "kind": "fallback"
+            }
+          }
+        },
+        {
+          "type": "assistant/message",
+          "seq": 10,
+          "time": 1795060138458,
+          "data": {
+            "turn": 1,
+            "step": 1,
+            "message": {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "reasoning",
+                  "text": "We need answer only 收到 per user. No tool needed. But maybe confirm? \"收到后请只回“收到”\" So just 收到."
+                },
+                {
+                  "type": "text",
+                  "text": "收到"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "deepseek-account",
+                "model": "deepseek-flash",
+                "replayState": {
+                  "response": {
+                    "kind": "deepseek-messages",
+                    "version": 1,
+                    "model": "deepseek-flash"
+                  },
+                  "blocks": [
+                    {
+                      "type": "reasoning",
+                      "signature": "fec65498-7447-4fe4-b647-66d6073e3257"
+                    },
+                    {
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "id": "4131d29e-7115-491b-8424-b51aa369fe9e"
+            },
+            "usage": {
+              "inputTokens": 879,
+              "outputTokens": 34,
+              "cacheReadTokens": 0,
+              "cacheWriteTokens": 0,
+              "totalTokens": 913
+            },
+            "stream": [
+              {
+                "type": "chunk",
+                "time": 1795060137861,
+                "chunk": {
+                  "type": "block-start",
+                  "index": 0,
+                  "blockType": "reasoning"
+                }
+              },
+              {
+                "type": "reasoning-chunks",
+                "time0": 1795060138202,
+                "index": 0,
+                "dt": [
+                  110,
+                  14,
+                  0,
+                  0,
+                  11,
+                  0,
+                  12,
+                  0,
+                  0,
+                  24,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  0,
+                  16,
+                  0,
+                  0,
+                  14,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  15,
+                  13,
+                  0,
+                  0,
+                  15
+                ],
+                "texts": [
+                  "We",
+                  " need",
+                  " answer",
+                  " only",
+                  " ",
+                  "收到",
+                  " per",
+                  " user",
+                  ".",
+                  " No",
+                  " tool",
+                  " needed",
+                  ".",
+                  " But",
+                  " maybe",
+                  " confirm",
+                  "?",
+                  " \"",
+                  "收到",
+                  "后",
+                  "请",
+                  "只",
+                  "回",
+                  "“",
+                  "收到",
+                  "”",
+                  "\"",
+                  " So",
+                  " just",
+                  " ",
+                  "收到",
+                  "."
+                ]
+              },
+              {
+                "type": "chunk",
+                "time": 1795060138452,
+                "chunk": {
+                  "type": "block-end",
+                  "index": 0,
+                  "block": {
+                    "type": "reasoning",
+                    "text": "We need answer only 收到 per user. No tool needed. But maybe confirm? \"收到后请只回“收到”\" So just 收到."
+                  }
+                }
+              },
+              {
+                "type": "chunk",
+                "time": 1795060138452,
+                "chunk": {
+                  "type": "block-start",
+                  "index": 1,
+                  "blockType": "text"
+                }
+              },
+              {
+                "type": "text-chunks",
+                "time0": 1795060138453,
+                "index": 1,
+                "dt": [],
+                "texts": [
+                  "收到"
+                ]
+              },
+              {
+                "type": "chunk",
+                "time": 1795060138453,
+                "chunk": {
+                  "type": "block-end",
+                  "index": 1,
+                  "block": {
+                    "type": "text",
+                    "text": "收到"
+                  }
+                }
+              },
+              {
+                "type": "chunk",
+                "time": 1795060138453,
+                "chunk": {
+                  "type": "usage",
+                  "usage": {
+                    "inputTokens": 879,
+                    "outputTokens": 34,
+                    "cacheReadTokens": 0,
+                    "cacheWriteTokens": 0,
+                    "totalTokens": 913
+                  }
+                }
+              },
+              {
+                "type": "chunk",
+                "time": 1795060138453,
+                "chunk": {
+                  "type": "finish",
+                  "reason": {
+                    "kind": "stop"
+                  },
+                  "replayState": {
+                    "response": {
+                      "kind": "deepseek-messages",
+                      "version": 1,
+                      "model": "deepseek-flash"
+                    },
+                    "blocks": [
+                      {
+                        "type": "reasoning",
+                        "signature": "fec65498-7447-4fe4-b647-66d6073e3257"
+                      },
+                      {
+                        "type": "text"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "surfaceOp": "append"
+        },
+        {
+          "type": "step/end",
+          "seq": 11,
+          "time": 1795060138458,
+          "data": {
+            "turn": 1,
+            "step": 1
+          }
+        },
+        {
+          "type": "turn/end",
+          "seq": 12,
+          "time": 1795060138459,
+          "data": {
+            "turn": 1,
+            "reason": {
+              "kind": "completed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stage": "question",
+      "text": "上次定稿的「潮汐」图标，缺口朝哪边？",
+      "events": [
+        {
+          "type": "agent/inbox/spliced",
+          "seq": 13,
+          "time": 1795060138462,
+          "data": {
+            "target": "next-turn",
+            "start": 0,
+            "inserted": [
+              {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "上次定稿的「潮汐」图标，缺口朝哪边？"
+                  }
+                ],
+                "source": {
+                  "kind": "user"
+                },
+                "role": "user",
+                "id": "c1da3426-5b63-4488-8757-74fb6781e6fd"
+              }
+            ]
+          }
+        },
+        {
+          "type": "turn/start",
+          "seq": 14,
+          "time": 1795060138462,
+          "data": {
+            "turn": 2
+          }
+        },
+        {
+          "type": "agent/inbox/spliced",
+          "seq": 15,
+          "time": 1795060138462,
+          "data": {
+            "target": "next-turn",
+            "start": 0,
+            "removedCount": 1,
+            "inserted": []
+          }
+        },
+        {
+          "type": "turn/end",
+          "seq": 16,
+          "time": 1795060138464,
+          "data": {
+            "turn": 2,
+            "reason": {
+              "kind": "error",
+              "error": {
+                "message": "surface replace: sourceEventSeqs must include every shadowed surface node; missing 5, 6, 10",
+                "code": "UNKNOWN"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "initialize": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "serverInfo": {
+        "name": "deepseek-harness-sdk-runtime",
+        "version": "0.0.1"
+      }
+    }
+  },
+  "finished": "2026-11-19T11:48:58.505106+08:00",
+  "stderr": [
+    "[llm-deepseek-account] model listing from https://api.deepseek.com/models loaded 2 model(s), skipped 0 row(s)"
+  ]
+}

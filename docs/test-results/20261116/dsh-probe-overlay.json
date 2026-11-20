@@ -1,0 +1,63 @@
+[
+  {
+    "id": "tool-fs",
+    "disabled": true
+  },
+  {
+    "id": "tool-working-directory",
+    "disabled": true
+  },
+  {
+    "id": "persistent-bash",
+    "disabled": true
+  },
+  {
+    "id": "persistent-pwsh",
+    "disabled": true
+  },
+  {
+    "id": "mcp-resources",
+    "disabled": true
+  },
+  {
+    "id": "terminal-bash",
+    "disabled": true
+  },
+  {
+    "id": "terminal-pwsh",
+    "disabled": true
+  },
+  {
+    "id": "pty",
+    "disabled": true
+  },
+  {
+    "id": "subprocess",
+    "disabled": true
+  },
+  {
+    "insert": [
+      {
+        "id": "mcp-vista",
+        "name": "@deepseek-ai/dsh-mcp-client",
+        "config": {
+          "serverName": "vista",
+          "transport": "stdio",
+          "command": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/.venv/bin/vista-memory-mcp",
+          "args": [
+            "--root",
+            "/private/tmp/vista-memory-roundtrip-20261116-p2mfb2s5"
+          ],
+          "cwd": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory",
+          "startupTimeoutMs": 30000,
+          "toolCallTimeoutMs": 30000,
+          "failOnStartupError": true
+        }
+      },
+      {
+        "id": "vista-probe",
+        "name": "/private/tmp/vista-dsh-sdk-probe-20261116-klie7x2j/probe.mjs"
+      }
+    ]
+  }
+]

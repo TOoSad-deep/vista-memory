@@ -1,0 +1,44 @@
+{
+  "reviewer": "assistant",
+  "method": "Viewed the archived r-a PNG, compared final answers with the deterministic fixture renderer, PNG color/geometry specifications and exact tool outputs.",
+  "reference_observation": "One small light-gray filled circle centered on a dark navy-blue square background.",
+  "image_cases": {
+    "D1": {
+      "status": "passed",
+      "basis": "Count, foreground, background and position match the viewed reference PNG."
+    },
+    "D2-image": {
+      "status": "passed",
+      "basis": "Blue circle and radius 18 match the deterministic fixture and returned render metadata."
+    },
+    "D2-both": {
+      "status": "passed",
+      "basis": "Blue circle, centered position and radius 18 match the fixture, with exact code checked separately."
+    },
+    "D3": {
+      "status": "passed",
+      "basis": "No associated code and the viewed reference image are accurately described."
+    },
+    "D4": {
+      "status": "passed",
+      "basis": "Blue radii 18 and 30, orange radius 24, and shared/new code relationships match the fixture definitions."
+    },
+    "D5-append": {
+      "status": "passed",
+      "basis": "New record is listed, green centered circle and radius 36 match the appended fixture."
+    },
+    "D6": {
+      "status": "passed",
+      "basis": "New session describes the same reference image accurately after discovery and reading."
+    },
+    "D7-missing-record": {
+      "status": "passed",
+      "basis": "After expected error, the recovered reference image is correctly described."
+    },
+    "D7-corrupt-record": {
+      "status": "passed",
+      "basis": "After expected error, the recovered reference image is correctly described."
+    }
+  },
+  "scope": "Simple fixture identification and output consistency. Reasoning-benefit evaluation is pending."
+}

@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh",
+    "--profile",
+    "sdk-minimal"
+  ],
+  "isolated_home": "/private/tmp/vista-dsh-sdk-probe-20261116-klie7x2j/dsh-home",
+  "workspace": "/private/tmp/vista-dsh-sdk-probe-20261116-klie7x2j/workspace",
+  "initialize": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "serverInfo": {
+        "name": "deepseek-harness-sdk-runtime",
+        "version": "0.0.1"
+      }
+    }
+  },
+  "shutdown_sent": true,
+  "exit_code": 0,
+  "elapsed_seconds": 0.19,
+  "events": [
+    {
+      "stream": "stderr",
+      "line": "[1116/103024.729363:ERROR:electron/shell/common/mac/codesign_util.cc:79] task_name_for_pid: (os/kern) failure (5)"
+    },
+    {
+      "stream": "stdout",
+      "line": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"serverInfo\":{\"name\":\"deepseek-harness-sdk-runtime\",\"version\":\"0.0.1\"}}}"
+    },
+    {
+      "stream": "stdout",
+      "line": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{}}"
+    }
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "status": "pending",
+  "phase": "formal",
+  "expected_primary_runs": 48,
+  "all_attempt_counts": {
+    "passed": 40,
+    "failed": 4,
+    "infra": 4
+  },
+  "all_attempt_success_rate": 0.8333333333333334,
+  "missing_valid_pairs": [
+    {
+      "case_id": "R2-03",
+      "repeat": 1
+    },
+    {
+      "case_id": "R2-03",
+      "repeat": 2
+    }
+  ],
+  "overall": {
+    "case_count": 11,
+    "text_success_rate": 0.8181818181818182,
+    "visual_success_rate": 1,
+    "paired_difference": 0.18181818181818182,
+    "bootstrap_95_percent_interval": [
+      0,
+      0.45454545454545453
+    ]
+  },
+  "by_task": {
+    "R1": {
+      "case_count": 4,
+      "text_success_rate": 0.75,
+      "visual_success_rate": 1,
+      "paired_difference": 0.25,
+      "bootstrap_95_percent_interval": [
+        0,
+        0.75
+      ]
+    },
+    "R2": {
+      "case_count": 3,
+      "text_success_rate": 0.6666666666666666,
+      "visual_success_rate": 1,
+      "paired_difference": 0.3333333333333333,
+      "bootstrap_95_percent_interval": [
+        0,
+        1
+      ]
+    },
+    "R3": {
+      "case_count": 4,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    }
+  },
+  "by_caption_detail": {
+    "detailed": {
+      "case_count": 3,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    },
+    "coarse": {
+      "case_count": 8,
+      "text_success_rate": 0.75,
+      "visual_success_rate": 1,
+      "paired_difference": 0.25,
+      "bootstrap_95_percent_interval": [
+        0,
+        0.625
+      ]
+    }
+  },
+  "by_scene_family": {
+    "area": {
+      "case_count": 3,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    },
+    "brightness": {
+      "case_count": 3,
+      "text_success_rate": 0.6666666666666666,
+      "visual_success_rate": 1,
+      "paired_difference": 0.3333333333333333,
+      "bootstrap_95_percent_interval": [
+        0,
+        1
+      ]
+    },
+    "position": {
+      "case_count": 3,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    },
+    "spacing": {
+      "case_count": 2,
+      "text_success_rate": 0.5,
+      "visual_success_rate": 1,
+      "paired_difference": 0.5,
+      "bootstrap_95_percent_interval": [
+        0,
+        1
+      ]
+    }
+  },
+  "by_context_scenario": {
+    "compacted_context": {
+      "case_count": 5,
+      "text_success_rate": 0.6,
+      "visual_success_rate": 1,
+      "paired_difference": 0.4,
+      "bootstrap_95_percent_interval": [
+        0,
+        0.8
+      ]
+    },
+    "new_session": {
+      "case_count": 6,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    }
+  },
+  "family_block_sensitivity": {
+    "family_count": 4,
+    "mean_difference": 0.20833333333333331,
+    "bootstrap_95_percent_interval": [
+      0,
+      0.41666666666666663
+    ]
+  },
+  "all_attempt_usage": {
+    "inputTokens": 453,
+    "outputTokens": 30745,
+    "totalTokens": 220397,
+    "cacheWriteTokens": 106090,
+    "cacheReadTokens": 83109
+  },
+  "selected_usage_by_condition": {
+    "text": {
+      "runs": 22,
+      "usage": {
+        "inputTokens": 141,
+        "outputTokens": 17017,
+        "totalTokens": 98196,
+        "cacheWriteTokens": 42495,
+        "cacheReadTokens": 38543
+      },
+      "mean_wall_seconds": 21.156136220151726,
+      "history_image_reads": 0,
+      "tool_calls": 61
+    },
+    "visual": {
+      "runs": 22,
+      "usage": {
+        "inputTokens": 264,
+        "outputTokens": 9484,
+        "totalTokens": 96024,
+        "cacheWriteTokens": 52030,
+        "cacheReadTokens": 34246
+      },
+      "mean_wall_seconds": 11.238752874461087,
+      "history_image_reads": 59,
+      "tool_calls": 59
+    }
+  },
+  "currency_cost": null,
+  "currency_cost_note": "Monetary charges require provider billing data.",
+  "cases": [
+    {
+      "case_id": "R1-01",
+      "task_type": "R1",
+      "scene_family": "area",
+      "caption_detail": "detailed",
+      "scenario": "new_session",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "R1-02",
+      "task_type": "R1",
+      "scene_family": "position",
+      "caption_detail": "coarse",
+      "scenario": "new_session",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "R1-03",
+      "task_type": "R1",
+      "scene_family": "spacing",
+      "caption_detail": "coarse",
+      "scenario": "compacted_context",
+      "text_success_rate": 0,
+      "visual_success_rate": 1,
+      "difference": 1
+    },
+    {
+      "case_id": "R1-04",
+      "task_type": "R1",
+      "scene_family": "brightness",
+      "caption_detail": "coarse",
+      "scenario": "compacted_context",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "R2-01",
+      "task_type": "R2",
+      "scene_family": "area",
+      "caption_detail": "detailed",
+      "scenario": "new_session",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "R2-02",
+      "task_type": "R2",
+      "scene_family": "position",
+      "caption_detail": "coarse",
+      "scenario": "new_session",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "R2-04",
+      "task_type": "R2",
+      "scene_family": "brightness",
+      "caption_detail": "coarse",
+      "scenario": "compacted_context",
+      "text_success_rate": 0,
+      "visual_success_rate": 1,
+      "difference": 1
+    },
+    {
+      "case_id": "R3-01",
+      "task_type": "R3",
+      "scene_family": "area",
+      "caption_detail": "detailed",
+      "scenario": "new_session",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "R3-02",
+      "task_type": "R3",
+      "scene_family": "position",
+      "caption_detail": "coarse",
+      "scenario": "new_session",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "R3-03",
+      "task_type": "R3",
+      "scene_family": "spacing",
+      "caption_detail": "coarse",
+      "scenario": "compacted_context",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "R3-04",
+      "task_type": "R3",
+      "scene_family": "brightness",
+      "caption_detail": "coarse",
+      "scenario": "compacted_context",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    }
+  ],
+  "selected_pairs": [
+    {
+      "case_id": "R1-01",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R1-01-r1-text-a1",
+      "visual_run": "R1-01-r1-visual-a1"
+    },
+    {
+      "case_id": "R1-01",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R1-01-r2-text-a1",
+      "visual_run": "R1-01-r2-visual-a1"
+    },
+    {
+      "case_id": "R1-02",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R1-02-r1-text-a1",
+      "visual_run": "R1-02-r1-visual-a1"
+    },
+    {
+      "case_id": "R1-02",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R1-02-r2-text-a1",
+      "visual_run": "R1-02-r2-visual-a1"
+    },
+    {
+      "case_id": "R1-03",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R1-03-r1-text-a1",
+      "visual_run": "R1-03-r1-visual-a1"
+    },
+    {
+      "case_id": "R1-03",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R1-03-r2-text-a1",
+      "visual_run": "R1-03-r2-visual-a1"
+    },
+    {
+      "case_id": "R1-04",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R1-04-r1-text-a1",
+      "visual_run": "R1-04-r1-visual-a1"
+    },
+    {
+      "case_id": "R1-04",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R1-04-r2-text-a1",
+      "visual_run": "R1-04-r2-visual-a1"
+    },
+    {
+      "case_id": "R2-01",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R2-01-r1-text-a1",
+      "visual_run": "R2-01-r1-visual-a1"
+    },
+    {
+      "case_id": "R2-01",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R2-01-r2-text-a1",
+      "visual_run": "R2-01-r2-visual-a1"
+    },
+    {
+      "case_id": "R2-02",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R2-02-r1-text-a1",
+      "visual_run": "R2-02-r1-visual-a1"
+    },
+    {
+      "case_id": "R2-02",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R2-02-r2-text-a1",
+      "visual_run": "R2-02-r2-visual-a1"
+    },
+    {
+      "case_id": "R2-04",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R2-04-r1-text-a1",
+      "visual_run": "R2-04-r1-visual-a1"
+    },
+    {
+      "case_id": "R2-04",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R2-04-r2-text-a1",
+      "visual_run": "R2-04-r2-visual-a1"
+    },
+    {
+      "case_id": "R3-01",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R3-01-r1-text-a1",
+      "visual_run": "R3-01-r1-visual-a1"
+    },
+    {
+      "case_id": "R3-01",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R3-01-r2-text-a1",
+      "visual_run": "R3-01-r2-visual-a1"
+    },
+    {
+      "case_id": "R3-02",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R3-02-r1-text-a1",
+      "visual_run": "R3-02-r1-visual-a1"
+    },
+    {
+      "case_id": "R3-02",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R3-02-r2-text-a1",
+      "visual_run": "R3-02-r2-visual-a1"
+    },
+    {
+      "case_id": "R3-03",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R3-03-r1-text-a1",
+      "visual_run": "R3-03-r1-visual-a1"
+    },
+    {
+      "case_id": "R3-03",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R3-03-r2-text-a1",
+      "visual_run": "R3-03-r2-visual-a1"
+    },
+    {
+      "case_id": "R3-04",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "R3-04-r1-text-a1",
+      "visual_run": "R3-04-r1-visual-a1"
+    },
+    {
+      "case_id": "R3-04",
+      "repeat": 2,
+      "attempt": 1,
+      "text_run": "R3-04-r2-text-a1",
+      "visual_run": "R3-04-r2-visual-a1"
+    }
+  ],
+  "all_run_scores": [
+    {
+      "run_id": "R1-01-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-01-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R1-01-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-01-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R1-01-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-01-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R1-01-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-01-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R1-02-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-02-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R1-02-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-02-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R1-02-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-02-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R1-02-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-02-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R1-03-r1-text-a1",
+      "status": "failed",
+      "success": false,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-03-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R1-03-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-03-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R1-03-r2-text-a1",
+      "status": "failed",
+      "success": false,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-03-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R1-03-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-03-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R1-04-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-04-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R1-04-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-04-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R1-04-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-04-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R1-04-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R1-04-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R2-01-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-01-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R2-01-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-01-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R2-01-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-01-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R2-01-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-01-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R2-02-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-02-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R2-02-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-02-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R2-02-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-02-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R2-02-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-02-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R2-03-r1-text-a1",
+      "status": "infra",
+      "success": false,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-03-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R2-03-r1-visual-a1",
+      "status": "infra",
+      "success": false,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-03-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R2-03-r2-text-a1",
+      "status": "infra",
+      "success": false,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-03-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R2-03-r2-visual-a1",
+      "status": "infra",
+      "success": false,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-03-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R2-04-r1-text-a1",
+      "status": "failed",
+      "success": false,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-04-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R2-04-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-04-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R2-04-r2-text-a1",
+      "status": "failed",
+      "success": false,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-04-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R2-04-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R2-04-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R3-01-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-01-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R3-01-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-01-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R3-01-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-01-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R3-01-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-01-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R3-02-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-02-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R3-02-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-02-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R3-02-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-02-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R3-02-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-02-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R3-03-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-03-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R3-03-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-03-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R3-03-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-03-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R3-03-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-03-r2-visual-a1/score.json"
+    },
+    {
+      "run_id": "R3-04-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-04-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "R3-04-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-04-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "R3-04-r2-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-04-r2-text-a1/score.json"
+    },
+    {
+      "run_id": "R3-04-r2-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/formal/runs/R3-04-r2-visual-a1/score.json"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "D7-missing-record",
+    "session_id": "vista-d7missing-20261116-nuo9zod_",
+    "text": "Call read_record for record-does-not-exist.json with content=image. Report the error, then read record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json with content=image and describe the received image to verify recovery."
+  },
+  {
+    "id": "D7-corrupt-record",
+    "session_id": "vista-d7corrupt-20261116-nuo9zod_",
+    "text": "Call read_record for record-corrupt.json with content=image. Report the error, then read record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json with content=image and describe the received image to verify recovery."
+  },
+  {
+    "id": "D7-missing-image",
+    "session_id": "vista-d7image-20261116-nuo9zod_",
+    "text": "Call read_record for record-b9a45327c6de4c14a4a8ead59c4a9e9b.json with content=image. Report the error, then read the same record with content=code and quote the code to verify that selective code retrieval works."
+  }
+]

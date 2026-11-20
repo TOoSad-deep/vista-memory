@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "records_added": 4,
+  "mcp_processes": 2,
+  "live_append_verified": true,
+  "restart_readback_verified": true,
+  "image_generator": "Pillow",
+  "glsl_executed": false,
+  "records": [
+    "record-51098ee63b294c159177cc3d39e515a6.json",
+    "record-550296f7c82b40848a237c5f4dbcabf8.json",
+    "record-567dd692329846d29871aa6e82eacb4a.json",
+    "record-1e8429f6ca8d4e3a9188cbbd673c6ca9.json"
+  ]
+}

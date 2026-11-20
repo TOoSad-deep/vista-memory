@@ -1,0 +1,1596 @@
+{
+  "created": "2026-11-20T00:16:55.549700+08:00",
+  "model": {
+    "provider": "deepseek-account",
+    "model": "deepseek-flash",
+    "reasoningEffort": "high",
+    "maxTokens": 4096
+  },
+  "limits": {
+    "budget": 400,
+    "imageLimit": 3,
+    "maxModelRequests": 7
+  },
+  "tokenizer_sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b",
+  "checkpoint_source": "controlled DSH surface replacement",
+  "sets": [
+    {
+      "task": "set-1",
+      "current": "R43",
+      "current_topic": "潮汐图标",
+      "records": {
+        "R1": {
+          "label": "潮汐图标 · 初稿",
+          "topic": "潮汐图标",
+          "direction": "上",
+          "inset": 30,
+          "stroke": 18,
+          "record": "record-b4d7c0b970e54ee9bcbc7bdc237cb9bd.json",
+          "sha256": "dc38913c572e11abc349a3fadf8c5f25c637c8eaccfa8513daa8df12b56c6658"
+        },
+        "R2": {
+          "label": "潮汐光影校准 · 校准稿甲",
+          "topic": "潮汐光影校准",
+          "direction": "下",
+          "inset": 31,
+          "stroke": 18,
+          "record": "record-75fda5f71cf14fc0b30add9942b63107.json",
+          "sha256": "4a6056fa1a9c910135fd2d4388fd82f21daf53a953d24fc60306281be76641e6"
+        },
+        "R3": {
+          "label": "潮汐图标 · 定稿",
+          "topic": "潮汐图标",
+          "direction": "下",
+          "inset": 35,
+          "stroke": 18,
+          "record": "record-b5073db265d64938907ca9e4292c9cb4.json",
+          "sha256": "ef158050c512fb36d4b61487b2555a7ce57f65861881ed5879c2710ef6749f67"
+        },
+        "R4": {
+          "label": "潮位标记 · 细笔画初稿",
+          "topic": "潮位标记",
+          "direction": "右",
+          "inset": 38,
+          "stroke": 9,
+          "record": "record-bbc108e5feff434baaaec087891b079f.json",
+          "sha256": "b90a3848bc02d5ad25756a5eede06dd319d90794573836987c22e5e85654c06c"
+        },
+        "R5": {
+          "label": "潮汐光影校准 · 校准稿乙",
+          "topic": "潮汐光影校准",
+          "direction": "上",
+          "inset": 33,
+          "stroke": 18,
+          "record": "record-24d962cf20f94391a53879d71836ddad.json",
+          "sha256": "a99468f573bc37de2cc2dcf100a0cca77c22713a1719395bdbb84036989ac11e"
+        },
+        "R6": {
+          "label": "潮位标记 · 粗笔画新稿",
+          "topic": "潮位标记",
+          "direction": "下",
+          "inset": 33,
+          "stroke": 24,
+          "record": "record-b046514d4c7a433186682cb4aa8ca33b.json",
+          "sha256": "754fd623825597335805a1a4bb1be6d8ffe847d83cf483d0df235f9b1bdef20d"
+        },
+        "R7": {
+          "label": "潮汐方向识别 · 操作界面预览方案1",
+          "topic": "潮汐方向识别",
+          "direction": "右",
+          "inset": 22,
+          "stroke": 10,
+          "record": "record-9b0e9be788b945bf8862b1ef0fce35bc.json",
+          "sha256": "a8b1ecc09516f74197994539344a7dea9a3fb1834390569718627386d3097117"
+        },
+        "R8": {
+          "label": "潮汐对比度校对 · 操作界面预览方案2",
+          "topic": "潮汐对比度校对",
+          "direction": "下",
+          "inset": 23,
+          "stroke": 10,
+          "record": "record-6fede6339bf64b96b0f144003001caf0.json",
+          "sha256": "ad8ddb328262b91f8b7807bf7bf1f7d4f4701f804415d0dc6e4f503e5bad32d2"
+        },
+        "R9": {
+          "label": "潮汐边界过渡 · 操作界面预览方案3",
+          "topic": "潮汐边界过渡",
+          "direction": "左",
+          "inset": 24,
+          "stroke": 10,
+          "record": "record-9d8967c68c524e21a6e2f5052ffb652b.json",
+          "sha256": "ed60da55d325923814d6c87203ef6101a5e3851e128c96a03c596daab5d976f3"
+        },
+        "R10": {
+          "label": "潮汐缩放适配 · 操作界面预览方案4",
+          "topic": "潮汐缩放适配",
+          "direction": "上",
+          "inset": 25,
+          "stroke": 10,
+          "record": "record-52c8c3f3acdf4bdfbaa34193bf98a8a9.json",
+          "sha256": "abbd4be848e0f57917dfc8bd880d61bf51c81e20f934c733d0bcaf23dd590b8e"
+        },
+        "R11": {
+          "label": "潮汐空白一致性 · 操作界面预览方案5",
+          "topic": "潮汐空白一致性",
+          "direction": "右",
+          "inset": 26,
+          "stroke": 11,
+          "record": "record-3457d9ffcf6245868a17bd9828c76903.json",
+          "sha256": "63e078b255bd1c6c732a6d41593f8e3d0e8b949412ed7f40db487b80d07f6551"
+        },
+        "R12": {
+          "label": "潮汐方向识别 · 操作界面预览方案6",
+          "topic": "潮汐方向识别",
+          "direction": "下",
+          "inset": 27,
+          "stroke": 11,
+          "record": "record-1e7c74a7ef274ef78346578d20a194bf.json",
+          "sha256": "2ca5c55f6a92c233631802ced02b767c39cbc45517b59941b2091a10b85ae058"
+        },
+        "R13": {
+          "label": "潮汐对比度校对 · 操作界面预览方案7",
+          "topic": "潮汐对比度校对",
+          "direction": "左",
+          "inset": 28,
+          "stroke": 11,
+          "record": "record-3eac9448dcea486cabe1a78d4cde1aa3.json",
+          "sha256": "3074f7ccdaa76888ca525ed0a352d8dfbf7e2e215b0287d9af9d11d493e28132"
+        },
+        "R14": {
+          "label": "潮汐边界过渡 · 操作界面预览方案8",
+          "topic": "潮汐边界过渡",
+          "direction": "上",
+          "inset": 29,
+          "stroke": 11,
+          "record": "record-da07e47a14c64d9d8ba165e2f880d9ae.json",
+          "sha256": "2f12e403b594817d2839d1b5e5b3143bdf6fc85357ef50854b37df3c4c1c3af6"
+        },
+        "R15": {
+          "label": "潮汐缩放适配 · 操作界面预览方案9",
+          "topic": "潮汐缩放适配",
+          "direction": "右",
+          "inset": 30,
+          "stroke": 12,
+          "record": "record-6da11a500be54045b46f8cc695d655b6.json",
+          "sha256": "b44fa18a07ab11fe90a2cc514dbc7e94107c0644eb700cde5671577af2de0e6f"
+        },
+        "R16": {
+          "label": "潮汐空白一致性 · 操作界面预览方案10",
+          "topic": "潮汐空白一致性",
+          "direction": "下",
+          "inset": 22,
+          "stroke": 12,
+          "record": "record-5c3510afc8db403c941f9b1c0ec6828d.json",
+          "sha256": "29fbf2044299c62b0f54d59df6fbb79eceab3ed2bfd0bfcbf9e89223ee90314b"
+        },
+        "R17": {
+          "label": "潮汐方向识别 · 操作界面预览方案11",
+          "topic": "潮汐方向识别",
+          "direction": "左",
+          "inset": 23,
+          "stroke": 12,
+          "record": "record-0c887f9863fd45b2a644c9cacd37736b.json",
+          "sha256": "db0b31981ad7665005f56198bbef93907372963ea6f1afd6e3f13ac60acd3a69"
+        },
+        "R18": {
+          "label": "潮汐对比度校对 · 操作界面预览方案12",
+          "topic": "潮汐对比度校对",
+          "direction": "上",
+          "inset": 24,
+          "stroke": 12,
+          "record": "record-e86335f5a76540fa9e626d23345189c2.json",
+          "sha256": "db5742e40fab17113476d07af9ad8a6887b850174874d28ea8963ff3a1c89afe"
+        },
+        "R19": {
+          "label": "潮汐边界过渡 · 操作界面预览方案13",
+          "topic": "潮汐边界过渡",
+          "direction": "右",
+          "inset": 25,
+          "stroke": 13,
+          "record": "record-a8f5067c6d284e368afb6e612e31dd20.json",
+          "sha256": "8f65ea8a5933e70387f37ce33ac7028b1f19ed630f8e9c8608f0a23474e2104b"
+        },
+        "R20": {
+          "label": "潮汐缩放适配 · 操作界面预览方案14",
+          "topic": "潮汐缩放适配",
+          "direction": "下",
+          "inset": 26,
+          "stroke": 13,
+          "record": "record-8d563257a62142259d7f099c2f5198b5.json",
+          "sha256": "e42dec805b9529525b4d71a0cd7865ec51d9475784f2e2e192b4d96a9e8aef89"
+        },
+        "R21": {
+          "label": "潮汐空白一致性 · 操作界面预览方案15",
+          "topic": "潮汐空白一致性",
+          "direction": "左",
+          "inset": 27,
+          "stroke": 13,
+          "record": "record-e327803aaed342729aa7861e56036a5d.json",
+          "sha256": "2e9a108e48f0c06364de93fbde680293ff3518c25d327ec446a3369b6934c568"
+        },
+        "R22": {
+          "label": "潮汐方向识别 · 操作界面预览方案16",
+          "topic": "潮汐方向识别",
+          "direction": "上",
+          "inset": 28,
+          "stroke": 13,
+          "record": "record-4a77cf3169ad4043ba88966c4a223286.json",
+          "sha256": "3ffbfee32aeb231b8ab36f30c8febb58d64f0ca467240253daf69c7bae078d72"
+        },
+        "R23": {
+          "label": "潮汐对比度校对 · 操作界面预览方案17",
+          "topic": "潮汐对比度校对",
+          "direction": "右",
+          "inset": 29,
+          "stroke": 14,
+          "record": "record-6eb809454e594a16bba92c2ea5b6c3d3.json",
+          "sha256": "c0ea5b4219f1676f06c7c02bb972a2656f9780a216f99445f3ad98d17410a807"
+        },
+        "R24": {
+          "label": "潮汐边界过渡 · 操作界面预览方案18",
+          "topic": "潮汐边界过渡",
+          "direction": "下",
+          "inset": 30,
+          "stroke": 14,
+          "record": "record-8e30592b1bd54db299a8894822350e42.json",
+          "sha256": "2c7ebc23ae4898d3a08b399ce2e18208df32a6c064d0470f40dd417a959fdbb6"
+        },
+        "R25": {
+          "label": "潮汐缩放适配 · 操作界面预览方案19",
+          "topic": "潮汐缩放适配",
+          "direction": "左",
+          "inset": 22,
+          "stroke": 14,
+          "record": "record-013dc457ac0e43198bb481f077b853d6.json",
+          "sha256": "dbf8a2185ebe0038545e5739c05084f2463d4c0f12d26d71c7c52f33f9580409"
+        },
+        "R26": {
+          "label": "潮汐空白一致性 · 操作界面预览方案20",
+          "topic": "潮汐空白一致性",
+          "direction": "上",
+          "inset": 23,
+          "stroke": 14,
+          "record": "record-3cd3494261a94bd7bf73998069c844de.json",
+          "sha256": "5eb1fc0e304fad01d77b099152b7b908d54116c99a046f59ff9b87cec01d6ced"
+        },
+        "R27": {
+          "label": "潮汐方向识别 · 操作界面预览方案21",
+          "topic": "潮汐方向识别",
+          "direction": "右",
+          "inset": 24,
+          "stroke": 15,
+          "record": "record-7b7f2534fe50472fac5d844708d891cb.json",
+          "sha256": "9c5a5902823bb30fc39cb5c01cccc879e654214f6a47cc06190c5b15c8f73839"
+        },
+        "R28": {
+          "label": "潮汐对比度校对 · 操作界面预览方案22",
+          "topic": "潮汐对比度校对",
+          "direction": "下",
+          "inset": 25,
+          "stroke": 15,
+          "record": "record-91cfdfefef39446b8d04173233063e2b.json",
+          "sha256": "c2472ac7f4bbc4b67800262f6f130ac1e46edfcac7d4c9200f2b292dd21ba405"
+        },
+        "R29": {
+          "label": "潮汐边界过渡 · 操作界面预览方案23",
+          "topic": "潮汐边界过渡",
+          "direction": "左",
+          "inset": 26,
+          "stroke": 15,
+          "record": "record-a3812589766745bcb8f447e1db810305.json",
+          "sha256": "2c5274bb1b90c6951574327b090c549cf5fe75cb99e1cc299006626421b6ebbd"
+        },
+        "R30": {
+          "label": "潮汐缩放适配 · 操作界面预览方案24",
+          "topic": "潮汐缩放适配",
+          "direction": "上",
+          "inset": 27,
+          "stroke": 15,
+          "record": "record-c45c2f36279d4180abf209432aeaad25.json",
+          "sha256": "f9da6f25a5f1cf185c77075ff4931408044a4401285d054233cf691c58e00ba9"
+        },
+        "R31": {
+          "label": "潮汐空白一致性 · 操作界面预览方案25",
+          "topic": "潮汐空白一致性",
+          "direction": "右",
+          "inset": 28,
+          "stroke": 16,
+          "record": "record-da2ad1cfcefa46ed8f95a07585d1abc9.json",
+          "sha256": "16413c04057f4d36961033abffd6a66c3cfac9686b438bff7d0b0a2a2d218bb5"
+        },
+        "R32": {
+          "label": "潮汐方向识别 · 操作界面预览方案26",
+          "topic": "潮汐方向识别",
+          "direction": "下",
+          "inset": 29,
+          "stroke": 16,
+          "record": "record-96179b432d5f4f659588b08b32f03a71.json",
+          "sha256": "866333fba5bf4f502df039e00dbdef77dff5447b25354867e11680de1c0ee1b8"
+        },
+        "R33": {
+          "label": "潮汐对比度校对 · 操作界面预览方案27",
+          "topic": "潮汐对比度校对",
+          "direction": "左",
+          "inset": 30,
+          "stroke": 16,
+          "record": "record-10ae5809c7db45afa082e4ad678a7004.json",
+          "sha256": "466cb0c3d41f4e1853f4de6467bbc74d9dd0bee7cb7c92d41130d141d4a799cf"
+        },
+        "R34": {
+          "label": "潮汐边界过渡 · 操作界面预览方案28",
+          "topic": "潮汐边界过渡",
+          "direction": "上",
+          "inset": 22,
+          "stroke": 16,
+          "record": "record-24e7c65a36724ae5860070bd3a96c540.json",
+          "sha256": "e85864cf67edbab692fa03fea62a9012674ce4c089013751bbbca5eabe86ac90"
+        },
+        "R35": {
+          "label": "潮汐缩放适配 · 操作界面预览方案29",
+          "topic": "潮汐缩放适配",
+          "direction": "右",
+          "inset": 23,
+          "stroke": 17,
+          "record": "record-148b97d61c104e01bdd161f1801739d3.json",
+          "sha256": "73946687e06da2328ab653effd45a7f40120da1e2cc21740f0d1642c735f20e9"
+        },
+        "R36": {
+          "label": "潮汐空白一致性 · 操作界面预览方案30",
+          "topic": "潮汐空白一致性",
+          "direction": "下",
+          "inset": 24,
+          "stroke": 17,
+          "record": "record-75cad3324353480093fbcc9cff8b7ee0.json",
+          "sha256": "e57e676871f64b2a1ba241716e6bc63f615885617edf9ff515eef64379154832"
+        },
+        "R37": {
+          "label": "潮汐方向识别 · 操作界面预览方案31",
+          "topic": "潮汐方向识别",
+          "direction": "左",
+          "inset": 25,
+          "stroke": 17,
+          "record": "record-a62291fa971e4838b604f244ccfba6b1.json",
+          "sha256": "66cdd17ebea566fdf4863ebf401b60b2bcd48854deef9c4f963cd10a894bfebf"
+        },
+        "R38": {
+          "label": "潮汐对比度校对 · 操作界面预览方案32",
+          "topic": "潮汐对比度校对",
+          "direction": "上",
+          "inset": 26,
+          "stroke": 17,
+          "record": "record-241dda21209c4df0bff6a816320f80a7.json",
+          "sha256": "20d023d6c7bdac6e8efcec00963bd52a2dd0303dd162e9c70911d1739965020d"
+        },
+        "R39": {
+          "label": "潮汐边界过渡 · 操作界面预览方案33",
+          "topic": "潮汐边界过渡",
+          "direction": "右",
+          "inset": 27,
+          "stroke": 18,
+          "record": "record-8b8bc94901f147f394ed8d757a3ddc17.json",
+          "sha256": "d329f260f18c65c44a47709fc72cf13b457867a52c311ce219589945100ae922"
+        },
+        "R40": {
+          "label": "潮汐缩放适配 · 操作界面预览方案34",
+          "topic": "潮汐缩放适配",
+          "direction": "下",
+          "inset": 28,
+          "stroke": 18,
+          "record": "record-a26accf315124b8596f1895010e49da5.json",
+          "sha256": "37ca68a29a29f9aa6c19f89bcbcbc3d3c6a753800b2537cd96136472b3055742"
+        },
+        "R41": {
+          "label": "潮汐空白一致性 · 操作界面预览方案35",
+          "topic": "潮汐空白一致性",
+          "direction": "左",
+          "inset": 29,
+          "stroke": 18,
+          "record": "record-797e1e6d7fde4a58835cc107acbd80c5.json",
+          "sha256": "f7ba468ecbb6d0cffe39ee11f18f5ca85559655be8da4914423855f9381ed52e"
+        },
+        "R42": {
+          "label": "潮位标记 · 最近修改稿",
+          "topic": "潮位标记",
+          "direction": "左",
+          "inset": 34,
+          "stroke": 25,
+          "record": "record-5e12cf1c93a34e7dad4aec20e334875f.json",
+          "sha256": "ec23d6948caea84edc6455f303fca910c9a506f7da6b7f355d0091d2b1951be7"
+        },
+        "R43": {
+          "label": "潮汐图标 · 当前稿",
+          "topic": "潮汐图标",
+          "direction": "右",
+          "inset": 47,
+          "stroke": 13,
+          "record": "record-40a289cb62f4491db1a7e170e5d3497b.json",
+          "sha256": "70533be8916b3b43cf80d545dc1e077c72c26c38c8a886aa69633190ce353260"
+        }
+      },
+      "checkpoint": "此前做过几版图标，这轮同时看当前版本。",
+      "cases": [
+        {
+          "id": "visual",
+          "question": "我们保存的潮汐图标定稿，缺口朝哪边？",
+          "target": "R3",
+          "answer": "下"
+        },
+        {
+          "id": "text",
+          "question": "当前潮汐图标已定为蓝色，请确认颜色。",
+          "answer": "蓝"
+        },
+        {
+          "id": "folded",
+          "question": "潮位标记最初那版细笔画的缺口朝哪边？",
+          "target": "R4",
+          "answer": "右"
+        },
+        {
+          "id": "similar",
+          "question": "潮汐图标那轮专门讨论高光的校准稿，缺口朝哪边？",
+          "target": "R2",
+          "answer": "下"
+        },
+        {
+          "id": "absent-text",
+          "question": "紫色版已经取消且没有保存。旧图里有紫色定稿吗？",
+          "answer": "无"
+        },
+        {
+          "id": "absent-near",
+          "question": "我们保存过中心带星形的潮汐图标定稿吗？想确认有几个尖角。",
+          "answer": "无",
+          "relevant": [
+            "R1",
+            "R3"
+          ]
+        },
+        {
+          "id": "delivery",
+          "question": "这一版的留白好像又大了。",
+          "target": "R2",
+          "answer": null
+        }
+      ],
+      "views": {
+        "A": {
+          "view_id": "yF5xrmI8oNIS",
+          "version": 46,
+          "text": "VISTA 目录 · view_id=yF5xrmI8oNIS\n展开时提供 view_id 和 target。\n当前图 · R43 · \"潮汐图标 · 当前稿\"\nR3 · \"潮汐图标 · 定稿\"\nR1 · \"潮汐图标 · 初稿\"\nR42 · \"潮位标记 · 最近修改稿\"\nR41 · \"潮汐空白一致性 · 操作界面预览方案35\"\nR40 · \"潮汐缩放适配 · 操作界面预览方案34\"\nR39 · \"潮汐边界过渡 · 操作界面预览方案33\"\nR38 · \"潮汐对比度校对 · 操作界面预览方案32\"\nR37 · \"潮汐方向识别 · 操作界面预览方案31\"\nR36 · \"潮汐空白一致性 · 操作界面预览方案30\"\nR35 · \"潮汐缩放适配 · 操作界面预览方案29\"\nR34 · \"潮汐边界过渡 · 操作界面预览方案28\"\nR33 · \"潮汐对比度校对 · 操作界面预览方案27\"\nR32 · \"潮汐方向识别 · 操作界面预览方案26\"\nR31 · \"潮汐空白一致性 · 操作界面预览方案25\"\nR30 · \"潮汐缩放适配 · 操作界面预览方案24\"\nR29 · \"潮汐边界过渡 · 操作界面预览方案23\"\nR28 · \"潮汐对比度校对 · 操作界面预览方案22\"\nR27 · \"潮汐方向识别 · 操作界面预览方案21\"\nR26 · \"潮汐空白一致性 · 操作界面预览方案20\"\nR25 · \"潮汐缩放适配 · 操作界面预览方案19\"\nR24 · \"潮汐边界过渡 · 操作界面预览方案18\"\nR23 · \"潮汐对比度校对 · 操作界面预览方案17\"\nrest · 其余图片 · 20 张",
+          "visible_short_ids": [
+            "R43",
+            "R3",
+            "R1",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R36",
+            "R35",
+            "R34",
+            "R33",
+            "R32",
+            "R31",
+            "R30",
+            "R29",
+            "R28",
+            "R27",
+            "R26",
+            "R25",
+            "R24",
+            "R23"
+          ],
+          "covered_short_ids": [
+            "R43",
+            "R3",
+            "R1",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R36",
+            "R35",
+            "R34",
+            "R33",
+            "R32",
+            "R31",
+            "R30",
+            "R29",
+            "R28",
+            "R27",
+            "R26",
+            "R25",
+            "R24",
+            "R23",
+            "R22",
+            "R21",
+            "R20",
+            "R19",
+            "R18",
+            "R17",
+            "R16",
+            "R15",
+            "R14",
+            "R13",
+            "R12",
+            "R11",
+            "R10",
+            "R9",
+            "R8",
+            "R7",
+            "R6",
+            "R5",
+            "R4",
+            "R2"
+          ],
+          "entries": {
+            "rest": [
+              "R22",
+              "R21",
+              "R20",
+              "R19",
+              "R18",
+              "R17",
+              "R16",
+              "R15",
+              "R14",
+              "R13",
+              "R12",
+              "R11",
+              "R10",
+              "R9",
+              "R8",
+              "R7",
+              "R6",
+              "R5",
+              "R4",
+              "R2"
+            ]
+          },
+          "token_count": 398,
+          "token_count_kind": "measured"
+        },
+        "B1": {
+          "view_id": "tvj0VbQ2CyGu",
+          "version": 46,
+          "text": "VISTA 目录 · view_id=tvj0VbQ2CyGu\n展开时提供 view_id 和 target。\n当前图 · R43 · \"潮汐图标 · 当前稿\"\nG1 · \"潮汐图标\" · 2 张 · R3 · \"潮汐图标 · 定稿\"\nG2 · \"潮位标记\" · 3 张 · R42 · \"潮位标记 · 最近修改稿\"\nG3 · \"潮汐空白一致性\" · 7 张 · R41 · \"潮汐空白一致性 · 操作界面预览方案35\"\nG4 · \"潮汐缩放适配\" · 7 张 · R40 · \"潮汐缩放适配 · 操作界面预览方案34\"\nG5 · \"潮汐边界过渡\" · 7 张 · R39 · \"潮汐边界过渡 · 操作界面预览方案33\"\nG6 · \"潮汐对比度校对\" · 7 张 · R38 · \"潮汐对比度校对 · 操作界面预览方案32\"\nG7 · \"潮汐方向识别\" · 7 张 · R37 · \"潮汐方向识别 · 操作界面预览方案31\"\nG8 · \"潮汐光影校准\" · 2 张 · R5 · \"潮汐光影校准 · 校准稿乙\"",
+          "visible_short_ids": [
+            "R43",
+            "R3",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R5"
+          ],
+          "covered_short_ids": [
+            "R43",
+            "R3",
+            "R1",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R36",
+            "R35",
+            "R34",
+            "R33",
+            "R32",
+            "R31",
+            "R30",
+            "R29",
+            "R28",
+            "R27",
+            "R26",
+            "R25",
+            "R24",
+            "R23",
+            "R22",
+            "R21",
+            "R20",
+            "R19",
+            "R18",
+            "R17",
+            "R16",
+            "R15",
+            "R14",
+            "R13",
+            "R12",
+            "R11",
+            "R10",
+            "R9",
+            "R8",
+            "R7",
+            "R6",
+            "R5",
+            "R4",
+            "R2"
+          ],
+          "entries": {
+            "G1": [
+              "R3",
+              "R1"
+            ],
+            "G2": [
+              "R42",
+              "R6",
+              "R4"
+            ],
+            "G3": [
+              "R41",
+              "R36",
+              "R31",
+              "R26",
+              "R21",
+              "R16",
+              "R11"
+            ],
+            "G4": [
+              "R40",
+              "R35",
+              "R30",
+              "R25",
+              "R20",
+              "R15",
+              "R10"
+            ],
+            "G5": [
+              "R39",
+              "R34",
+              "R29",
+              "R24",
+              "R19",
+              "R14",
+              "R9"
+            ],
+            "G6": [
+              "R38",
+              "R33",
+              "R28",
+              "R23",
+              "R18",
+              "R13",
+              "R8"
+            ],
+            "G7": [
+              "R37",
+              "R32",
+              "R27",
+              "R22",
+              "R17",
+              "R12",
+              "R7"
+            ],
+            "G8": [
+              "R5",
+              "R2"
+            ]
+          },
+          "token_count": 282,
+          "token_count_kind": "measured"
+        },
+        "B2": {
+          "view_id": "_RkhOsNHETF_",
+          "version": 46,
+          "text": "VISTA 目录 · view_id=_RkhOsNHETF_\n展开时提供 view_id 和 target。\n当前图 · R43 · \"潮汐图标 · 当前稿\"\nG1 · \"潮汐图标\" · 2 张 · R3 · \"潮汐图标 · 定稿\"\nG2 · \"潮汐光影校准\" · 2 张 · R5 · \"潮汐光影校准 · 校准稿乙\" · 用户评价 · R5 · \"这张是边缘校准稿。\"\nG3 · \"潮位标记\" · 3 张 · R42 · \"潮位标记 · 最近修改稿\"\nG4 · \"潮汐空白一致性\" · 7 张 · R41 · \"潮汐空白一致性 · 操作界面预览方案35\"\nG5 · \"潮汐缩放适配\" · 7 张 · R40 · \"潮汐缩放适配 · 操作界面预览方案34\"\nG6 · \"潮汐边界过渡\" · 7 张 · R39 · \"潮汐边界过渡 · 操作界面预览方案33\"\nG7 · \"潮汐对比度校对\" · 7 张 · R38 · \"潮汐对比度校对 · 操作界面预览方案32\"\nG8 · \"潮汐方向识别\" · 7 张 · R37 · \"潮汐方向识别 · 操作界面预览方案31\"",
+          "visible_short_ids": [
+            "R43",
+            "R3",
+            "R5",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37"
+          ],
+          "covered_short_ids": [
+            "R43",
+            "R3",
+            "R1",
+            "R5",
+            "R2",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R36",
+            "R35",
+            "R34",
+            "R33",
+            "R32",
+            "R31",
+            "R30",
+            "R29",
+            "R28",
+            "R27",
+            "R26",
+            "R25",
+            "R24",
+            "R23",
+            "R22",
+            "R21",
+            "R20",
+            "R19",
+            "R18",
+            "R17",
+            "R16",
+            "R15",
+            "R14",
+            "R13",
+            "R12",
+            "R11",
+            "R10",
+            "R9",
+            "R8",
+            "R7",
+            "R6",
+            "R4"
+          ],
+          "entries": {
+            "G1": [
+              "R3",
+              "R1"
+            ],
+            "G2": [
+              "R5",
+              "R2"
+            ],
+            "G3": [
+              "R42",
+              "R6",
+              "R4"
+            ],
+            "G4": [
+              "R41",
+              "R36",
+              "R31",
+              "R26",
+              "R21",
+              "R16",
+              "R11"
+            ],
+            "G5": [
+              "R40",
+              "R35",
+              "R30",
+              "R25",
+              "R20",
+              "R15",
+              "R10"
+            ],
+            "G6": [
+              "R39",
+              "R34",
+              "R29",
+              "R24",
+              "R19",
+              "R14",
+              "R9"
+            ],
+            "G7": [
+              "R38",
+              "R33",
+              "R28",
+              "R23",
+              "R18",
+              "R13",
+              "R8"
+            ],
+            "G8": [
+              "R37",
+              "R32",
+              "R27",
+              "R22",
+              "R17",
+              "R12",
+              "R7"
+            ]
+          },
+          "token_count": 294,
+          "token_count_kind": "measured"
+        }
+      }
+    },
+    {
+      "task": "set-2",
+      "current": "R43",
+      "current_topic": "泊位图标",
+      "records": {
+        "R1": {
+          "label": "泊位图标 · 初稿",
+          "topic": "泊位图标",
+          "direction": "上",
+          "inset": 30,
+          "stroke": 18,
+          "record": "record-50645ffd11114370b6e610ec0365b112.json",
+          "sha256": "5ebd20c4cc77ea8ac74f21991acff831c15530553bddeef11e60333ffbcebe32"
+        },
+        "R2": {
+          "label": "泊位光影校准 · 校准稿乙",
+          "topic": "泊位光影校准",
+          "direction": "右",
+          "inset": 33,
+          "stroke": 18,
+          "record": "record-26305f375a9e4c199fe9469645d87bff.json",
+          "sha256": "f61dc6a80a7d41e18a7666d9f71b97873066fda0f5112dbd843de7111bdcf25e"
+        },
+        "R3": {
+          "label": "泊位图标 · 定稿",
+          "topic": "泊位图标",
+          "direction": "左",
+          "inset": 35,
+          "stroke": 18,
+          "record": "record-d268ed4e1b344cdc9d6e3c17d4d40305.json",
+          "sha256": "590ba00ec267fbb9884a807c1fa93dc27bd0406e5c24771e6c04141a3ab18b5d"
+        },
+        "R4": {
+          "label": "港口标记 · 细笔画初稿",
+          "topic": "港口标记",
+          "direction": "上",
+          "inset": 38,
+          "stroke": 9,
+          "record": "record-bf484392cde94387b0117a629afe749d.json",
+          "sha256": "13e2b04473dccb0073ea4c3e4ddb9c9157ad6e6e03b76820a00d2d6f930f89b6"
+        },
+        "R5": {
+          "label": "泊位光影校准 · 校准稿甲",
+          "topic": "泊位光影校准",
+          "direction": "左",
+          "inset": 31,
+          "stroke": 18,
+          "record": "record-da610dbc57574e419a943e9411fbe4ab.json",
+          "sha256": "e1cb7b7a009e48c824f75ab5029404059c49c783984b74696d43989881c8a2c8"
+        },
+        "R6": {
+          "label": "港口标记 · 粗笔画新稿",
+          "topic": "港口标记",
+          "direction": "下",
+          "inset": 33,
+          "stroke": 24,
+          "record": "record-d5b4cd3d800f40d6995059746033d80e.json",
+          "sha256": "282648ebe54fe96465249237e46b6c0d047feca09abcab475c26e4f92dff6212"
+        },
+        "R7": {
+          "label": "泊位方向识别 · 操作界面预览方案1",
+          "topic": "泊位方向识别",
+          "direction": "右",
+          "inset": 22,
+          "stroke": 10,
+          "record": "record-678c9329261c43f7a649b270db39f9cb.json",
+          "sha256": "8bdf1ed6bc257253e318a9811b6da6917562ea26c521a753b73f080f73bed18a"
+        },
+        "R8": {
+          "label": "泊位对比度校对 · 操作界面预览方案2",
+          "topic": "泊位对比度校对",
+          "direction": "下",
+          "inset": 23,
+          "stroke": 10,
+          "record": "record-663072b42de9430f9fa37d06178b62d9.json",
+          "sha256": "701dd3d3aebe42b6a878e143f9943820ce26195679b675e5af26e091983de7bb"
+        },
+        "R9": {
+          "label": "泊位边界过渡 · 操作界面预览方案3",
+          "topic": "泊位边界过渡",
+          "direction": "左",
+          "inset": 24,
+          "stroke": 10,
+          "record": "record-f47c9bd13c2647f480693255e392cdb2.json",
+          "sha256": "988dab1f6028a15dea5df5f5ad9e1a52748a4fcf1cb718015d43afdd2cba463a"
+        },
+        "R10": {
+          "label": "泊位缩放适配 · 操作界面预览方案4",
+          "topic": "泊位缩放适配",
+          "direction": "上",
+          "inset": 25,
+          "stroke": 10,
+          "record": "record-e9e7a25a36a4494d9d8367aecef112ce.json",
+          "sha256": "32fc570dfc5a8569008dea7ea98dd24046989958c953ea335c5e962b9a70a767"
+        },
+        "R11": {
+          "label": "泊位空白一致性 · 操作界面预览方案5",
+          "topic": "泊位空白一致性",
+          "direction": "右",
+          "inset": 26,
+          "stroke": 11,
+          "record": "record-fffcd750f7544269b2ac960b7725a599.json",
+          "sha256": "499ab5290c759dfcab3c5a062a7db09528f99140572acea70ab762a08817282e"
+        },
+        "R12": {
+          "label": "泊位方向识别 · 操作界面预览方案6",
+          "topic": "泊位方向识别",
+          "direction": "下",
+          "inset": 27,
+          "stroke": 11,
+          "record": "record-bf1e3b22f5c54af08e75f288f30f3d89.json",
+          "sha256": "1eeeb1e5582b55dd1d2591d25478f7e88a0838c479efc991de9e1aff60816391"
+        },
+        "R13": {
+          "label": "泊位对比度校对 · 操作界面预览方案7",
+          "topic": "泊位对比度校对",
+          "direction": "左",
+          "inset": 28,
+          "stroke": 11,
+          "record": "record-6252e56eded64c46876a43aa8a68dd38.json",
+          "sha256": "d569ef10f90a477ee8ba9ce0630e0a08a1546669b8898459fee1172e1719f55c"
+        },
+        "R14": {
+          "label": "泊位边界过渡 · 操作界面预览方案8",
+          "topic": "泊位边界过渡",
+          "direction": "上",
+          "inset": 29,
+          "stroke": 11,
+          "record": "record-30de3908ae7144e1b2d068c9b473096e.json",
+          "sha256": "0f47d249c43b51d45f51b3bcf9f18c3fefb55fe562efd66703d4d82dcc8a3480"
+        },
+        "R15": {
+          "label": "泊位缩放适配 · 操作界面预览方案9",
+          "topic": "泊位缩放适配",
+          "direction": "右",
+          "inset": 30,
+          "stroke": 12,
+          "record": "record-b645699f07f641b5961929d5985bbdae.json",
+          "sha256": "b46763f24c954445658027a26043f2d93bcc8fed63068610d83337721065bf72"
+        },
+        "R16": {
+          "label": "泊位空白一致性 · 操作界面预览方案10",
+          "topic": "泊位空白一致性",
+          "direction": "下",
+          "inset": 22,
+          "stroke": 12,
+          "record": "record-d1dfe25cf9f24eb7b53a7b64b7777865.json",
+          "sha256": "317f803e7e34133c3117ac0e7e2a592fa3b329221b20396a7ff62fa3cb7c84a5"
+        },
+        "R17": {
+          "label": "泊位方向识别 · 操作界面预览方案11",
+          "topic": "泊位方向识别",
+          "direction": "左",
+          "inset": 23,
+          "stroke": 12,
+          "record": "record-dd2d3bd6ecff4f6d831df67c4556d33f.json",
+          "sha256": "493eabaf385a81d295dad1f36fa22990a8ba96cf4c244cd83b14f0f045bf4ec2"
+        },
+        "R18": {
+          "label": "泊位对比度校对 · 操作界面预览方案12",
+          "topic": "泊位对比度校对",
+          "direction": "上",
+          "inset": 24,
+          "stroke": 12,
+          "record": "record-61745d59c0b843a0b5937018e88f17d4.json",
+          "sha256": "348e6a10c1475d0f7041cb35ca205e58d84ace770ad9bae74b1bbf482e0a708a"
+        },
+        "R19": {
+          "label": "泊位边界过渡 · 操作界面预览方案13",
+          "topic": "泊位边界过渡",
+          "direction": "右",
+          "inset": 25,
+          "stroke": 13,
+          "record": "record-ea492e1ce085432698e4e261aa455def.json",
+          "sha256": "cf112b67a6aa7f6d2c9ae3b91d8cedfa3aa4fe0ed6ad96ce0ea9e2693b341994"
+        },
+        "R20": {
+          "label": "泊位缩放适配 · 操作界面预览方案14",
+          "topic": "泊位缩放适配",
+          "direction": "下",
+          "inset": 26,
+          "stroke": 13,
+          "record": "record-5c424388bc9549adaafd97c1fb8f4823.json",
+          "sha256": "24e10f0f26b08583452d9313e537de9a67ec3b1eacf69168df746fdbd9e4bbef"
+        },
+        "R21": {
+          "label": "泊位空白一致性 · 操作界面预览方案15",
+          "topic": "泊位空白一致性",
+          "direction": "左",
+          "inset": 27,
+          "stroke": 13,
+          "record": "record-31b024721d284a14a825df1ec1f64506.json",
+          "sha256": "411478e37a2bebd2e7f118762c4805b27c9ba2a8a42c0e76a7071c5cc2775986"
+        },
+        "R22": {
+          "label": "泊位方向识别 · 操作界面预览方案16",
+          "topic": "泊位方向识别",
+          "direction": "上",
+          "inset": 28,
+          "stroke": 13,
+          "record": "record-ba8410fdb6bb4b3ba4ae0298f0d0d2cc.json",
+          "sha256": "cce198f1ac2cb5d4e5df6c397f48075ae02537d016c2c50a6c1413e49b0c3ada"
+        },
+        "R23": {
+          "label": "泊位对比度校对 · 操作界面预览方案17",
+          "topic": "泊位对比度校对",
+          "direction": "右",
+          "inset": 29,
+          "stroke": 14,
+          "record": "record-48d6e9efd0ad47ffad5bb24a879165b5.json",
+          "sha256": "cd8d069c90839ad4461f77798eeed7e3dc7da376936874f5ee228d406a172f0e"
+        },
+        "R24": {
+          "label": "泊位边界过渡 · 操作界面预览方案18",
+          "topic": "泊位边界过渡",
+          "direction": "下",
+          "inset": 30,
+          "stroke": 14,
+          "record": "record-bff3b59f17e54102bcbbb432de8278bf.json",
+          "sha256": "74c635d339839cab3406f7f5075ce43f6536e81c512f4db4a621402e1df30208"
+        },
+        "R25": {
+          "label": "泊位缩放适配 · 操作界面预览方案19",
+          "topic": "泊位缩放适配",
+          "direction": "左",
+          "inset": 22,
+          "stroke": 14,
+          "record": "record-33c5e8683f54413a82e813553a8b60b8.json",
+          "sha256": "67ee7b04e9f1edcde2d3cc6a5a818a673403e01e94f96f0c1665d9c7b8590be1"
+        },
+        "R26": {
+          "label": "泊位空白一致性 · 操作界面预览方案20",
+          "topic": "泊位空白一致性",
+          "direction": "上",
+          "inset": 23,
+          "stroke": 14,
+          "record": "record-bf6b96e5a0584bb8b8acbe77cb752e30.json",
+          "sha256": "a6dab7d69329be9d0d8bcac0d74e0df5cc1b64f930138f7968b35ed2860b2802"
+        },
+        "R27": {
+          "label": "泊位方向识别 · 操作界面预览方案21",
+          "topic": "泊位方向识别",
+          "direction": "右",
+          "inset": 24,
+          "stroke": 15,
+          "record": "record-8c8ae3bdbbc34020b5287ad29c32c806.json",
+          "sha256": "6904ae8c6ca8498f24fad58dfdaf2f36cef8aa16117963d3a6f7e2dec4a70a29"
+        },
+        "R28": {
+          "label": "泊位对比度校对 · 操作界面预览方案22",
+          "topic": "泊位对比度校对",
+          "direction": "下",
+          "inset": 25,
+          "stroke": 15,
+          "record": "record-0ccb0540f3904e7980b2ba97ea98ed54.json",
+          "sha256": "cf18d03de2920283b31cd2a693bbf35ebb7fbe1d4c3f5eef71a391e60c4278a7"
+        },
+        "R29": {
+          "label": "泊位边界过渡 · 操作界面预览方案23",
+          "topic": "泊位边界过渡",
+          "direction": "左",
+          "inset": 26,
+          "stroke": 15,
+          "record": "record-5d079a0b900f4a5ea30a7a0b8b5ab932.json",
+          "sha256": "026494185375bdb140375eddc4da94a4ffed4d8eacf936a07156e2a5a48ead2d"
+        },
+        "R30": {
+          "label": "泊位缩放适配 · 操作界面预览方案24",
+          "topic": "泊位缩放适配",
+          "direction": "上",
+          "inset": 27,
+          "stroke": 15,
+          "record": "record-9eb27fd468a04898b43a1890924c1001.json",
+          "sha256": "5d6078b50bab09b00313be0fa77a907c65517e243377b982393e15562d78ea2d"
+        },
+        "R31": {
+          "label": "泊位空白一致性 · 操作界面预览方案25",
+          "topic": "泊位空白一致性",
+          "direction": "右",
+          "inset": 28,
+          "stroke": 16,
+          "record": "record-ceaa989a62764ca7b39e28d7ed0b7503.json",
+          "sha256": "96bcb2359e05ab6bfc196c7df425a7679a004f8e493616079f2385bd4a64477c"
+        },
+        "R32": {
+          "label": "泊位方向识别 · 操作界面预览方案26",
+          "topic": "泊位方向识别",
+          "direction": "下",
+          "inset": 29,
+          "stroke": 16,
+          "record": "record-bfca3a6fa1954bf7b120b39daa7c1784.json",
+          "sha256": "7971d436867eb4920577bb3aa246cc485c8fe59f1fa2704f72fa6d54a841e262"
+        },
+        "R33": {
+          "label": "泊位对比度校对 · 操作界面预览方案27",
+          "topic": "泊位对比度校对",
+          "direction": "左",
+          "inset": 30,
+          "stroke": 16,
+          "record": "record-1171921eafc841a6820482dfaf49bd7e.json",
+          "sha256": "e50c6864d055adf383a4449aa1d04ecd820981e43e89004a45fd8cbc54ed304e"
+        },
+        "R34": {
+          "label": "泊位边界过渡 · 操作界面预览方案28",
+          "topic": "泊位边界过渡",
+          "direction": "上",
+          "inset": 22,
+          "stroke": 16,
+          "record": "record-b40d7926a52a4a769864f160eb17c9dc.json",
+          "sha256": "a902e3818ddb710286b426ade7756530d9d0d0391ddc2cad94718e78ea45a444"
+        },
+        "R35": {
+          "label": "泊位缩放适配 · 操作界面预览方案29",
+          "topic": "泊位缩放适配",
+          "direction": "右",
+          "inset": 23,
+          "stroke": 17,
+          "record": "record-4e5db14e1d554f129f87cbc5667264b5.json",
+          "sha256": "8b05b7c64076386fed433087479c10db37ab8383a50b759bfd35c84b4e74c96c"
+        },
+        "R36": {
+          "label": "泊位空白一致性 · 操作界面预览方案30",
+          "topic": "泊位空白一致性",
+          "direction": "下",
+          "inset": 24,
+          "stroke": 17,
+          "record": "record-f0675e4624c74edbb455e006a7eaf4e1.json",
+          "sha256": "96316058020ec14d648201158a144f66df55ed3511e6400b1c4e90a36ec5f2df"
+        },
+        "R37": {
+          "label": "泊位方向识别 · 操作界面预览方案31",
+          "topic": "泊位方向识别",
+          "direction": "左",
+          "inset": 25,
+          "stroke": 17,
+          "record": "record-7ee5935d5157429794ee3e1056afff7c.json",
+          "sha256": "bf01f49db46723031dbd0de2b33695d085d63e596fcf4351900b2c232a368c49"
+        },
+        "R38": {
+          "label": "泊位对比度校对 · 操作界面预览方案32",
+          "topic": "泊位对比度校对",
+          "direction": "上",
+          "inset": 26,
+          "stroke": 17,
+          "record": "record-02ea7a31ccd34d94b8d46722b26e06c2.json",
+          "sha256": "e7c89c4999356a3c41ba68bd1b74d6b16517374b045e181f6592f5b616b080ac"
+        },
+        "R39": {
+          "label": "泊位边界过渡 · 操作界面预览方案33",
+          "topic": "泊位边界过渡",
+          "direction": "右",
+          "inset": 27,
+          "stroke": 18,
+          "record": "record-ca63247d05fd4aebb9b130e737717357.json",
+          "sha256": "c1697a3ad0f58d908dba478bb13f05b281253da195da22a603a5c416409a1a31"
+        },
+        "R40": {
+          "label": "泊位缩放适配 · 操作界面预览方案34",
+          "topic": "泊位缩放适配",
+          "direction": "下",
+          "inset": 28,
+          "stroke": 18,
+          "record": "record-a94da972a8f94f9dba23a3c08c1e8b3c.json",
+          "sha256": "fd3ff7ec039fad008065d5bf3f3f0af8b10755e29cf3bf4d2fa007bacd3fa63e"
+        },
+        "R41": {
+          "label": "泊位空白一致性 · 操作界面预览方案35",
+          "topic": "泊位空白一致性",
+          "direction": "左",
+          "inset": 29,
+          "stroke": 18,
+          "record": "record-3fcd700ee7ec447c87704cabe71964b6.json",
+          "sha256": "d2ae9cadd2128a93553ce59f0b3392dadd1083285fbc43ee77383b901970cda6"
+        },
+        "R42": {
+          "label": "港口标记 · 最近修改稿",
+          "topic": "港口标记",
+          "direction": "左",
+          "inset": 34,
+          "stroke": 25,
+          "record": "record-a4ac31f1ca1744f3a344006e360953d9.json",
+          "sha256": "1be55fa744a2747cbbf194972e847eaf3be0b4efcdab9544dbb2564f59e50c20"
+        },
+        "R43": {
+          "label": "泊位图标 · 当前稿",
+          "topic": "泊位图标",
+          "direction": "右",
+          "inset": 47,
+          "stroke": 13,
+          "record": "record-eb2cbc968bc2475fa94ee515328e135d.json",
+          "sha256": "0a8ca05173e5f3b81590bdd987da6f29726ecb0945eb6f2a504b0eba61ddc49d"
+        }
+      },
+      "checkpoint": "此前做过几版图标，这轮同时看当前版本。",
+      "cases": [
+        {
+          "id": "visual",
+          "question": "我们保存的泊位图标定稿，缺口朝哪边？",
+          "target": "R3",
+          "answer": "左"
+        },
+        {
+          "id": "text",
+          "question": "当前泊位图标已定为绿色，请确认颜色。",
+          "answer": "绿"
+        },
+        {
+          "id": "folded",
+          "question": "港口标记最初那版细笔画的缺口朝哪边？",
+          "target": "R4",
+          "answer": "上"
+        },
+        {
+          "id": "similar",
+          "question": "泊位图标那轮专门讨论高光的校准稿，缺口朝哪边？",
+          "target": "R5",
+          "answer": "左"
+        },
+        {
+          "id": "absent-text",
+          "question": "紫色版已经取消且没有保存。旧图里有紫色定稿吗？",
+          "answer": "无"
+        },
+        {
+          "id": "absent-near",
+          "question": "我们保存过中心带星形的泊位图标定稿吗？想确认有几个尖角。",
+          "answer": "无",
+          "relevant": [
+            "R1",
+            "R3"
+          ]
+        },
+        {
+          "id": "delivery",
+          "question": "这一版的留白好像又大了。",
+          "target": "R5",
+          "answer": null
+        }
+      ],
+      "views": {
+        "A": {
+          "view_id": "brA-p2PB3lpY",
+          "version": 46,
+          "text": "VISTA 目录 · view_id=brA-p2PB3lpY\n展开时提供 view_id 和 target。\n当前图 · R43 · \"泊位图标 · 当前稿\"\nR3 · \"泊位图标 · 定稿\"\nR1 · \"泊位图标 · 初稿\"\nR42 · \"港口标记 · 最近修改稿\"\nR41 · \"泊位空白一致性 · 操作界面预览方案35\"\nR40 · \"泊位缩放适配 · 操作界面预览方案34\"\nR39 · \"泊位边界过渡 · 操作界面预览方案33\"\nR38 · \"泊位对比度校对 · 操作界面预览方案32\"\nR37 · \"泊位方向识别 · 操作界面预览方案31\"\nR36 · \"泊位空白一致性 · 操作界面预览方案30\"\nR35 · \"泊位缩放适配 · 操作界面预览方案29\"\nR34 · \"泊位边界过渡 · 操作界面预览方案28\"\nR33 · \"泊位对比度校对 · 操作界面预览方案27\"\nR32 · \"泊位方向识别 · 操作界面预览方案26\"\nR31 · \"泊位空白一致性 · 操作界面预览方案25\"\nR30 · \"泊位缩放适配 · 操作界面预览方案24\"\nR29 · \"泊位边界过渡 · 操作界面预览方案23\"\nR28 · \"泊位对比度校对 · 操作界面预览方案22\"\nR27 · \"泊位方向识别 · 操作界面预览方案21\"\nR26 · \"泊位空白一致性 · 操作界面预览方案20\"\nR25 · \"泊位缩放适配 · 操作界面预览方案19\"\nR24 · \"泊位边界过渡 · 操作界面预览方案18\"\nR23 · \"泊位对比度校对 · 操作界面预览方案17\"\nrest · 其余图片 · 20 张",
+          "visible_short_ids": [
+            "R43",
+            "R3",
+            "R1",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R36",
+            "R35",
+            "R34",
+            "R33",
+            "R32",
+            "R31",
+            "R30",
+            "R29",
+            "R28",
+            "R27",
+            "R26",
+            "R25",
+            "R24",
+            "R23"
+          ],
+          "covered_short_ids": [
+            "R43",
+            "R3",
+            "R1",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R36",
+            "R35",
+            "R34",
+            "R33",
+            "R32",
+            "R31",
+            "R30",
+            "R29",
+            "R28",
+            "R27",
+            "R26",
+            "R25",
+            "R24",
+            "R23",
+            "R22",
+            "R21",
+            "R20",
+            "R19",
+            "R18",
+            "R17",
+            "R16",
+            "R15",
+            "R14",
+            "R13",
+            "R12",
+            "R11",
+            "R10",
+            "R9",
+            "R8",
+            "R7",
+            "R6",
+            "R5",
+            "R4",
+            "R2"
+          ],
+          "entries": {
+            "rest": [
+              "R22",
+              "R21",
+              "R20",
+              "R19",
+              "R18",
+              "R17",
+              "R16",
+              "R15",
+              "R14",
+              "R13",
+              "R12",
+              "R11",
+              "R10",
+              "R9",
+              "R8",
+              "R7",
+              "R6",
+              "R5",
+              "R4",
+              "R2"
+            ]
+          },
+          "token_count": 396,
+          "token_count_kind": "measured"
+        },
+        "B1": {
+          "view_id": "60Vcho1NelDp",
+          "version": 46,
+          "text": "VISTA 目录 · view_id=60Vcho1NelDp\n展开时提供 view_id 和 target。\n当前图 · R43 · \"泊位图标 · 当前稿\"\nG1 · \"泊位图标\" · 2 张 · R3 · \"泊位图标 · 定稿\"\nG2 · \"港口标记\" · 3 张 · R42 · \"港口标记 · 最近修改稿\"\nG3 · \"泊位空白一致性\" · 7 张 · R41 · \"泊位空白一致性 · 操作界面预览方案35\"\nG4 · \"泊位缩放适配\" · 7 张 · R40 · \"泊位缩放适配 · 操作界面预览方案34\"\nG5 · \"泊位边界过渡\" · 7 张 · R39 · \"泊位边界过渡 · 操作界面预览方案33\"\nG6 · \"泊位对比度校对\" · 7 张 · R38 · \"泊位对比度校对 · 操作界面预览方案32\"\nG7 · \"泊位方向识别\" · 7 张 · R37 · \"泊位方向识别 · 操作界面预览方案31\"\nG8 · \"泊位光影校准\" · 2 张 · R5 · \"泊位光影校准 · 校准稿甲\"",
+          "visible_short_ids": [
+            "R43",
+            "R3",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R5"
+          ],
+          "covered_short_ids": [
+            "R43",
+            "R3",
+            "R1",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R36",
+            "R35",
+            "R34",
+            "R33",
+            "R32",
+            "R31",
+            "R30",
+            "R29",
+            "R28",
+            "R27",
+            "R26",
+            "R25",
+            "R24",
+            "R23",
+            "R22",
+            "R21",
+            "R20",
+            "R19",
+            "R18",
+            "R17",
+            "R16",
+            "R15",
+            "R14",
+            "R13",
+            "R12",
+            "R11",
+            "R10",
+            "R9",
+            "R8",
+            "R7",
+            "R6",
+            "R5",
+            "R4",
+            "R2"
+          ],
+          "entries": {
+            "G1": [
+              "R3",
+              "R1"
+            ],
+            "G2": [
+              "R42",
+              "R6",
+              "R4"
+            ],
+            "G3": [
+              "R41",
+              "R36",
+              "R31",
+              "R26",
+              "R21",
+              "R16",
+              "R11"
+            ],
+            "G4": [
+              "R40",
+              "R35",
+              "R30",
+              "R25",
+              "R20",
+              "R15",
+              "R10"
+            ],
+            "G5": [
+              "R39",
+              "R34",
+              "R29",
+              "R24",
+              "R19",
+              "R14",
+              "R9"
+            ],
+            "G6": [
+              "R38",
+              "R33",
+              "R28",
+              "R23",
+              "R18",
+              "R13",
+              "R8"
+            ],
+            "G7": [
+              "R37",
+              "R32",
+              "R27",
+              "R22",
+              "R17",
+              "R12",
+              "R7"
+            ],
+            "G8": [
+              "R5",
+              "R2"
+            ]
+          },
+          "token_count": 278,
+          "token_count_kind": "measured"
+        },
+        "B2": {
+          "view_id": "7ZoWj046FqA3",
+          "version": 46,
+          "text": "VISTA 目录 · view_id=7ZoWj046FqA3\n展开时提供 view_id 和 target。\n当前图 · R43 · \"泊位图标 · 当前稿\"\nG1 · \"泊位图标\" · 2 张 · R3 · \"泊位图标 · 定稿\"\nG2 · \"泊位光影校准\" · 2 张 · R5 · \"泊位光影校准 · 校准稿甲\" · 用户评价 · R5 · \"高光这版留白刚好。\"\nG3 · \"港口标记\" · 3 张 · R42 · \"港口标记 · 最近修改稿\"\nG4 · \"泊位空白一致性\" · 7 张 · R41 · \"泊位空白一致性 · 操作界面预览方案35\"\nG5 · \"泊位缩放适配\" · 7 张 · R40 · \"泊位缩放适配 · 操作界面预览方案34\"\nG6 · \"泊位边界过渡\" · 7 张 · R39 · \"泊位边界过渡 · 操作界面预览方案33\"\nG7 · \"泊位对比度校对\" · 7 张 · R38 · \"泊位对比度校对 · 操作界面预览方案32\"\nG8 · \"泊位方向识别\" · 7 张 · R37 · \"泊位方向识别 · 操作界面预览方案31\"",
+          "visible_short_ids": [
+            "R43",
+            "R3",
+            "R5",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37"
+          ],
+          "covered_short_ids": [
+            "R43",
+            "R3",
+            "R1",
+            "R5",
+            "R2",
+            "R42",
+            "R41",
+            "R40",
+            "R39",
+            "R38",
+            "R37",
+            "R36",
+            "R35",
+            "R34",
+            "R33",
+            "R32",
+            "R31",
+            "R30",
+            "R29",
+            "R28",
+            "R27",
+            "R26",
+            "R25",
+            "R24",
+            "R23",
+            "R22",
+            "R21",
+            "R20",
+            "R19",
+            "R18",
+            "R17",
+            "R16",
+            "R15",
+            "R14",
+            "R13",
+            "R12",
+            "R11",
+            "R10",
+            "R9",
+            "R8",
+            "R7",
+            "R6",
+            "R4"
+          ],
+          "entries": {
+            "G1": [
+              "R3",
+              "R1"
+            ],
+            "G2": [
+              "R5",
+              "R2"
+            ],
+            "G3": [
+              "R42",
+              "R6",
+              "R4"
+            ],
+            "G4": [
+              "R41",
+              "R36",
+              "R31",
+              "R26",
+              "R21",
+              "R16",
+              "R11"
+            ],
+            "G5": [
+              "R40",
+              "R35",
+              "R30",
+              "R25",
+              "R20",
+              "R15",
+              "R10"
+            ],
+            "G6": [
+              "R39",
+              "R34",
+              "R29",
+              "R24",
+              "R19",
+              "R14",
+              "R9"
+            ],
+            "G7": [
+              "R38",
+              "R33",
+              "R28",
+              "R23",
+              "R18",
+              "R13",
+              "R8"
+            ],
+            "G8": [
+              "R37",
+              "R32",
+              "R27",
+              "R22",
+              "R17",
+              "R12",
+              "R7"
+            ]
+          },
+          "token_count": 298,
+          "token_count_kind": "measured"
+        }
+      }
+    }
+  ]
+}

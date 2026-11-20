@@ -1,0 +1,13 @@
+case_id,task_type,scene_family,caption_detail,scenario,text_success_rate,visual_success_rate,difference
+R1-01,R1,area,detailed,new_session,1,1,0
+R1-02,R1,position,coarse,new_session,1,1,0
+R1-03,R1,spacing,coarse,compacted_context,0,1,1
+R1-04,R1,brightness,coarse,compacted_context,1,1,0
+R2-01,R2,area,detailed,new_session,1,1,0
+R2-02,R2,position,coarse,new_session,1,1,0
+R2-03,R2,spacing,coarse,compacted_context,0,1,1
+R2-04,R2,brightness,coarse,compacted_context,0,1,1
+R3-01,R3,area,detailed,new_session,1,1,0
+R3-02,R3,position,coarse,new_session,1,1,0
+R3-03,R3,spacing,coarse,compacted_context,1,1,0
+R3-04,R3,brightness,coarse,compacted_context,1,1,0

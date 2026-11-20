@@ -1,0 +1,217 @@
+{
+  "status": "complete",
+  "phase": "calibration",
+  "expected_primary_runs": 4,
+  "all_attempt_counts": {
+    "passed": 4
+  },
+  "all_attempt_success_rate": 1,
+  "missing_valid_pairs": [],
+  "overall": {
+    "case_count": 2,
+    "text_success_rate": 1,
+    "visual_success_rate": 1,
+    "paired_difference": 0,
+    "bootstrap_95_percent_interval": [
+      0,
+      0
+    ]
+  },
+  "by_task": {
+    "R2": {
+      "case_count": 1,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    },
+    "R3": {
+      "case_count": 1,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    }
+  },
+  "by_caption_detail": {
+    "detailed": {
+      "case_count": 1,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    },
+    "coarse": {
+      "case_count": 1,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    }
+  },
+  "by_scene_family": {
+    "brightness": {
+      "case_count": 1,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    },
+    "position": {
+      "case_count": 1,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    }
+  },
+  "by_context_scenario": {
+    "compacted_context": {
+      "case_count": 1,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    },
+    "new_session": {
+      "case_count": 1,
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "paired_difference": 0,
+      "bootstrap_95_percent_interval": [
+        0,
+        0
+      ]
+    }
+  },
+  "family_block_sensitivity": {
+    "family_count": 2,
+    "mean_difference": 0,
+    "bootstrap_95_percent_interval": [
+      0,
+      0
+    ]
+  },
+  "all_attempt_usage": {
+    "inputTokens": 24,
+    "outputTokens": 1836,
+    "totalTokens": 11658,
+    "cacheWriteTokens": 6952,
+    "cacheReadTokens": 2846
+  },
+  "selected_usage_by_condition": {
+    "text": {
+      "runs": 2,
+      "usage": {
+        "inputTokens": 9,
+        "outputTokens": 1069,
+        "totalTokens": 5782,
+        "cacheWriteTokens": 3283,
+        "cacheReadTokens": 1421
+      },
+      "mean_wall_seconds": 13.768843054771423,
+      "history_image_reads": 0,
+      "tool_calls": 2
+    },
+    "visual": {
+      "runs": 2,
+      "usage": {
+        "inputTokens": 15,
+        "outputTokens": 767,
+        "totalTokens": 5876,
+        "cacheWriteTokens": 3669,
+        "cacheReadTokens": 1425
+      },
+      "mean_wall_seconds": 10.277551054954529,
+      "history_image_reads": 2,
+      "tool_calls": 2
+    }
+  },
+  "currency_cost": null,
+  "currency_cost_note": "Monetary charges require provider billing data.",
+  "cases": [
+    {
+      "case_id": "CAL-01",
+      "task_type": "R2",
+      "scene_family": "position",
+      "caption_detail": "detailed",
+      "scenario": "new_session",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    },
+    {
+      "case_id": "CAL-02",
+      "task_type": "R3",
+      "scene_family": "brightness",
+      "caption_detail": "coarse",
+      "scenario": "compacted_context",
+      "text_success_rate": 1,
+      "visual_success_rate": 1,
+      "difference": 0
+    }
+  ],
+  "selected_pairs": [
+    {
+      "case_id": "CAL-01",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "CAL-01-r1-text-a1",
+      "visual_run": "CAL-01-r1-visual-a1"
+    },
+    {
+      "case_id": "CAL-02",
+      "repeat": 1,
+      "attempt": 1,
+      "text_run": "CAL-02-r1-text-a1",
+      "visual_run": "CAL-02-r1-visual-a1"
+    }
+  ],
+  "all_run_scores": [
+    {
+      "run_id": "CAL-01-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/calibration/runs/CAL-01-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "CAL-01-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/calibration/runs/CAL-01-r1-visual-a1/score.json"
+    },
+    {
+      "run_id": "CAL-02-r1-text-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/calibration/runs/CAL-02-r1-text-a1/score.json"
+    },
+    {
+      "run_id": "CAL-02-r1-visual-a1",
+      "status": "passed",
+      "success": true,
+      "score_path": "docs/test-results/20261116-eval/v2/calibration/runs/CAL-02-r1-visual-a1/score.json"
+    }
+  ]
+}

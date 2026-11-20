@@ -1,0 +1,79 @@
+{
+  "stage": "012",
+  "pass": false,
+  "gates": {
+    "directory_list_returned_relevant_record": false,
+    "successful_read_after_directory_on_a_later_model_step": false,
+    "same_accepted_model_request_with_read_png_and_full_glsl_before_edit": false
+  },
+  "first_failed_gate": "directory_list_returned_relevant_record",
+  "evidence_valid": true,
+  "first_substantive_edit": {
+    "call_id": "call_00_J9DZuWPNvN9Bv6vIsME16644",
+    "tool": "write",
+    "seq": 61,
+    "time": 1794971840306,
+    "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/012/workspace/stages/author/tasks/restore-probe/shader.frag",
+    "before": "03f89a38feb337f1103108939652ca40a7800f9c264929cd9f8ff8a641a7dedd",
+    "after": "2074a8894c85241d2be256d26203fd37f07c1ad2b036d1dc06e085206541a064"
+  },
+  "edit_status": "observed",
+  "unverified_actions": [],
+  "list_calls": [],
+  "read_calls": [],
+  "record_chains": [
+    {
+      "record": "record-f1b8c56445f043369d0f2b97ec7e1578.json",
+      "catalog_result_seqs": [],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    },
+    {
+      "record": "record-f3b0dc11639543b9977860a276c9b4c5.json",
+      "catalog_result_seqs": [],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    },
+    {
+      "record": "record-9cbe249928e14d1d82cc3d8e1df047c7.json",
+      "catalog_result_seqs": [],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    },
+    {
+      "record": "record-5a87ce377b90417a90f4eece5cc403b8.json",
+      "catalog_result_seqs": [],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    },
+    {
+      "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+      "catalog_result_seqs": [],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    }
+  ],
+  "immediate_predecessor": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+  "immediate_predecessor_chain_pass": false,
+  "run_status": "passed",
+  "turn_reason": {
+    "kind": "completed"
+  },
+  "run_error": null,
+  "model_requests": 12,
+  "new_candidate_ids": [
+    "aa62ba5f-e2fd-4604-b284-19c9243909ed"
+  ],
+  "submitted_candidate": "aa62ba5f-e2fd-4604-b284-19c9243909ed",
+  "control_errors": []
+}

@@ -1,0 +1,261 @@
+{
+  "started_at": "2026-11-18T00:21:16.137449+08:00",
+  "phase": "diagnostic",
+  "status": "paused-by-user",
+  "expected_runs": 96,
+  "runs": [
+    {
+      "index": 1,
+      "case_id": "T01-current",
+      "repeat": 1,
+      "condition": "provided",
+      "access_view": "known",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/001",
+      "exit_code": 0,
+      "status": "passed",
+      "error": null,
+      "submitted_candidate": "eb860465-2b7c-4888-8bb9-ab00e05a96af",
+      "new_candidate_count": 1,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "completed"
+      },
+      "cleanup_error": null,
+      "model_requests": 8,
+      "image_control_errors": []
+    },
+    {
+      "index": 2,
+      "case_id": "T01-current",
+      "repeat": 1,
+      "condition": "reminded",
+      "access_view": "known",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/002",
+      "exit_code": 0,
+      "status": "passed",
+      "error": null,
+      "submitted_candidate": "2f756eb1-1818-486b-963b-868f224a5d1b",
+      "new_candidate_count": 1,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "completed"
+      },
+      "cleanup_error": null,
+      "model_requests": 8,
+      "image_control_errors": []
+    },
+    {
+      "index": 3,
+      "case_id": "T01-current",
+      "repeat": 1,
+      "condition": "natural",
+      "access_view": "known",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/003",
+      "exit_code": 0,
+      "status": "passed",
+      "error": null,
+      "submitted_candidate": "5b6826e0-d14a-43ce-ac81-d32c0b4ac571",
+      "new_candidate_count": 1,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "completed"
+      },
+      "cleanup_error": null,
+      "model_requests": 9,
+      "image_control_errors": []
+    },
+    {
+      "index": 4,
+      "case_id": "T05-history",
+      "repeat": 1,
+      "condition": "reminded",
+      "access_view": "discovery",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/004",
+      "exit_code": 0,
+      "status": "passed",
+      "error": null,
+      "submitted_candidate": "f23bc5bc-a37b-43e7-af37-c2f210c843ac",
+      "new_candidate_count": 1,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "completed"
+      },
+      "cleanup_error": null,
+      "model_requests": 12,
+      "image_control_errors": []
+    },
+    {
+      "index": 5,
+      "case_id": "T05-history",
+      "repeat": 1,
+      "condition": "natural",
+      "access_view": "known",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/005",
+      "exit_code": 1,
+      "status": "failed",
+      "error": {
+        "type": "RuntimeError",
+        "message": "Live author turn did not complete normally"
+      },
+      "submitted_candidate": null,
+      "new_candidate_count": 0,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "max-tokens"
+      },
+      "cleanup_error": null,
+      "model_requests": 6,
+      "image_control_errors": []
+    },
+    {
+      "index": 6,
+      "case_id": "T05-history",
+      "repeat": 1,
+      "condition": "natural",
+      "access_view": "discovery",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/006",
+      "exit_code": 1,
+      "status": "failed",
+      "error": {
+        "type": "RuntimeError",
+        "message": "Live author turn did not complete normally"
+      },
+      "submitted_candidate": null,
+      "new_candidate_count": 0,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "max-tokens"
+      },
+      "cleanup_error": null,
+      "model_requests": 6,
+      "image_control_errors": []
+    },
+    {
+      "index": 7,
+      "case_id": "T05-history",
+      "repeat": 1,
+      "condition": "reminded",
+      "access_view": "known",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/007",
+      "exit_code": 1,
+      "status": "failed",
+      "error": {
+        "type": "RuntimeError",
+        "message": "Live author turn did not complete normally"
+      },
+      "submitted_candidate": null,
+      "new_candidate_count": 1,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "error",
+        "error": {
+          "message": "DeepSeek Messages transport failed",
+          "code": "TRANSPORT"
+        }
+      },
+      "cleanup_error": null,
+      "model_requests": 12,
+      "image_control_errors": []
+    },
+    {
+      "index": 8,
+      "case_id": "T05-history",
+      "repeat": 1,
+      "condition": "provided",
+      "access_view": "known",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/008",
+      "exit_code": 1,
+      "status": "failed",
+      "error": {
+        "type": "RuntimeError",
+        "message": "Live author turn did not complete normally"
+      },
+      "submitted_candidate": null,
+      "new_candidate_count": 1,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "error",
+        "error": {
+          "message": "DeepSeek Messages transport failed",
+          "code": "TRANSPORT"
+        }
+      },
+      "cleanup_error": null,
+      "model_requests": 12,
+      "image_control_errors": []
+    },
+    {
+      "index": 9,
+      "case_id": "T01-history",
+      "repeat": 2,
+      "condition": "reminded",
+      "access_view": "discovery",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/009",
+      "exit_code": 1,
+      "status": "failed",
+      "error": {
+        "type": "RuntimeError",
+        "message": "Live author turn did not complete normally"
+      },
+      "submitted_candidate": null,
+      "new_candidate_count": 1,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "error",
+        "error": {
+          "message": "DeepSeek Messages transport failed",
+          "code": "TRANSPORT"
+        }
+      },
+      "cleanup_error": null,
+      "model_requests": 12,
+      "image_control_errors": []
+    },
+    {
+      "index": 10,
+      "case_id": "T01-history",
+      "repeat": 2,
+      "condition": "natural",
+      "access_view": "known",
+      "image_condition": "visual",
+      "directory": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/diagnostic-v1/runs/010",
+      "exit_code": 1,
+      "status": "failed",
+      "error": {
+        "type": "RuntimeError",
+        "message": "Live author turn did not complete normally"
+      },
+      "submitted_candidate": null,
+      "new_candidate_count": 1,
+      "template_unchanged": true,
+      "turn_reason": {
+        "kind": "error",
+        "error": {
+          "message": "DeepSeek Messages transport failed",
+          "code": "TRANSPORT"
+        }
+      },
+      "cleanup_error": null,
+      "model_requests": 12,
+      "image_control_errors": []
+    }
+  ],
+  "finished_at": "2026-11-18T00:54:25.101386+08:00",
+  "raw_scheduler_status": "source-changed",
+  "scope": "small-scale-problem-localization",
+  "requested_runs": 10,
+  "original_planned_diagnostic_runs": 96,
+  "remaining_diagnostic_runs_paused": 86,
+  "end_to_end_runs_not_started": 16,
+  "pause_reason": "用户要求本轮控制8至12段并等待审阅后决定扩量。当前010正常收尾后源指纹保护停止了调度。",
+  "scheduler_source_restored": true
+}

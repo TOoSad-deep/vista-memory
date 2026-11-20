@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "case_id": "R2-03",
+      "role": "target",
+      "source_sha256": "8779e5b559b1407957b5182a4134a15ac6b155ec93a187674a131889f36c0067",
+      "attachment_identical": true,
+      "request_identical": true,
+      "attachment": {
+        "attachmentId": "sha256:8779e5b559b1407957b5182a4134a15ac6b155ec93a187674a131889f36c0067",
+        "mediaType": "image/png",
+        "width": 192,
+        "height": 160,
+        "bytes": 454
+      }
+    },
+    {
+      "case_id": "R2-03",
+      "role": "current",
+      "source_sha256": "f707655f2f98bdb74e8a045dfb28a06c3ae1de6d81b65c07639a4f2c9d9f740b",
+      "attachment_identical": true,
+      "request_identical": true,
+      "attachment": {
+        "attachmentId": "sha256:f707655f2f98bdb74e8a045dfb28a06c3ae1de6d81b65c07639a4f2c9d9f740b",
+        "mediaType": "image/png",
+        "width": 192,
+        "height": 160,
+        "bytes": 1490
+      }
+    }
+  ]
+}

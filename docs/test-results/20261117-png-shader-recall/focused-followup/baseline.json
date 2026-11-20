@@ -1,0 +1,39 @@
+{
+  "baseline": "006",
+  "checkpoint": "docs/test-results/20261117-png-shader-recall/diagnostic-fixtures-v2/T05/checkpoint.json",
+  "requirements": "继续完善铜色环上的窄高光层次，保持环的布局和宽度。",
+  "target_selection_011": "immediately preceding formal candidate",
+  "target_step_011": 5,
+  "target_record_011": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+  "target_png_sha256_011": "3cd1eb09c634aa8e61f86c510ae0de28045c5568390553112731e66c0e333a1a",
+  "target_glsl_sha256_011": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+  "acceptable_history_records_012": [
+    "record-f1b8c56445f043369d0f2b97ec7e1578.json",
+    "record-f3b0dc11639543b9977860a276c9b4c5.json",
+    "record-9cbe249928e14d1d82cc3d8e1df047c7.json",
+    "record-5a87ce377b90417a90f4eece5cc403b8.json",
+    "record-ab8cc0f4df2842e681a769e254c937d1.json"
+  ],
+  "baseline_first_request_common_images": [
+    "5d86d8bb5fe6d96943587ff91d71d9869bb0b58be1da2e0d067c117703ccd2d4",
+    "2924369ced489830582ec11598b3379a6b506113ba2cee7803d1fa305703814d"
+  ],
+  "condition_006": {
+    "access": "discovery",
+    "condition": "natural",
+    "image_condition": "visual"
+  },
+  "original_files_sha256": {
+    "diagnostic-v1/schedule.json": "a67dab2ca052358ab83cc1a7a86fbd8f3e4a52f2d7d53fecc1eac5456c6c38b8",
+    "diagnostic-v1/execution.json": "5d6d4f31afdafe447378688e2624c3d1fa4ec66584a94d3526cd4d0f4579657c",
+    "diagnostic-v1/summary.csv": "0385c77e884413af0621fe3d382dbacaa9fade7d19b6876fa0c0fab7df12357e",
+    "diagnostic-v1/runs/006/probe.json": "32e3f90dcdb1370b16389c27a2c987267b92b9463b437d795b2930bf817a4e00",
+    "diagnostic-v1/runs/006/http-audit.jsonl": "7787ede4b0f214a4ce826a453e616f92f981033dc9d0070601e2252558ccec1b",
+    "diagnostic-v1/runs/006/prepared-prompt.json": "7b846ac44cd26dde2982361824f2056b828c973fe12ec2239400c6480d9ea509",
+    "diagnostic-v1/runs/006/workspace/stages/author/tasks/restore-probe/HISTORY.md": "fc7b7ecedfb009333a935da1d93441d3f65cbdd977aade845d560d5e0a5b59f8",
+    "diagnostic-fixtures-v2/T05/checkpoint.json": "c26fe08c2e6868b32dc9400dcc68b780c5ac0ad538464238ae17dc49421f49e7"
+  },
+  "vista_template_files_verified": 20,
+  "original_host_sources_verified": 63,
+  "original_host_hashes": "../diagnostic-v1/freeze.json"
+}

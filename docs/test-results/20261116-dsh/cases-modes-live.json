@@ -1,0 +1,63 @@
+[
+  {
+    "id": "D2-image",
+    "session_id": "vista-d2-image-20261116-nuo9zod_",
+    "text": "Read VISTA record record-b9a45327c6de4c14a4a8ead59c4a9e9b.json with content=image. Report the image foreground and background and the render radius from the returned metadata. Include the record name."
+  },
+  {
+    "id": "D2-code",
+    "session_id": "vista-d2-code-20261116-nuo9zod_",
+    "text": "Read VISTA record record-b9a45327c6de4c14a4a8ead59c4a9e9b.json with content=code. Quote the full returned GLSL exactly in a code block, and report the render radius from the metadata. Include the record name."
+  },
+  {
+    "id": "D2-both",
+    "session_id": "vista-d2-both-20261116-nuo9zod_",
+    "text": "Read VISTA record record-b9a45327c6de4c14a4a8ead59c4a9e9b.json with content=both. Describe the returned image, quote the full returned GLSL exactly, and report the render radius. Include the record name."
+  },
+  {
+    "id": "D3",
+    "session_id": "vista-d3-20261116-nuo9zod_",
+    "text": "For VISTA record record-6df878ac5a7e4dfcbbb39bfe5a46cf87.json, first read content=code, then read content=both. Report whether code is associated and describe the actual image returned by the second call."
+  },
+  {
+    "id": "D4",
+    "session_id": "vista-d4-20261116-nuo9zod_",
+    "text": "Read these three VISTA records with content=both: record-b9a45327c6de4c14a4a8ead59c4a9e9b.json, record-f20ce50817414201bb9b992fceecdfc5.json, record-8b1aa4d6df1640db8f2b64553ef6f186.json. Identify which records share exactly the same code, report each render radius, and describe the image differences. Base the answer on the tool outputs. Keep the answer concise."
+  },
+  {
+    "id": "D5-before",
+    "session_id": "vista-d5-20261116-nuo9zod_",
+    "text": "List VISTA records and report their count and record filenames."
+  },
+  {
+    "id": "D5-append",
+    "session_id": "vista-d5-20261116-nuo9zod_",
+    "text": "A backend has just registered record {{record}}. First read that exact record with content=both, then list VISTA records. Report whether the new record is listed, its render radius, and its actual image appearance.",
+    "append_record": {
+      "root": "/private/tmp/vista-dsh-acceptance-20261116-nuo9zod_/vista",
+      "png_path": "/private/tmp/vista-dsh-acceptance-20261116-nuo9zod_/append.png",
+      "label": "r-e",
+      "render": {
+        "width": 96,
+        "height": 96,
+        "center": [
+          48,
+          48
+        ],
+        "radius": 36,
+        "foreground": [
+          80,
+          200,
+          120
+        ],
+        "background": [
+          16,
+          24,
+          40
+        ]
+      },
+      "reuse_glsl_from": "record-b9a45327c6de4c14a4a8ead59c4a9e9b.json",
+      "source_agent": "acceptance"
+    }
+  }
+]

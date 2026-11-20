@@ -1,0 +1,34 @@
+{
+  "pyproject.toml": {
+    "archive": "pyproject.toml",
+    "sha256": "8e786a1e7a286b5cb4f5d77bd8269c834082c1d9fa06694e96904ab262240f6c"
+  },
+  "scripts/vista_eval_data.py": {
+    "archive": "vista_eval_data.py",
+    "sha256": "01821945fdd618abce0c33f8ef9d72ef647fd039dc5d8071677eafaada821eb0"
+  },
+  "scripts/dsh_sdk_run.py": {
+    "archive": "dsh_sdk_run.py",
+    "sha256": "959d3ea09e0a271136f5035c6f4c26f81e462a357ce2650da21cf3693717e98a"
+  },
+  "scripts/dsh_request_audit.mjs": {
+    "archive": "dsh_request_audit.mjs",
+    "sha256": "779637d126bdf48eac2052ccdec9c580b9f23171a05d19c267761f26e29b5bb6"
+  },
+  "scripts/run_vista_memory_eval.py": {
+    "archive": "run_vista_memory_eval.py",
+    "sha256": "071ca22d5cb8381dafddf6401e6308f0e63fc170936c0f3169dad4627e5f1032"
+  },
+  "scripts/score_vista_memory_eval.py": {
+    "archive": "score_vista_memory_eval.py",
+    "sha256": "f8b77b70a7de7b2f3d66af5ea103d4bc31944cce3dd2ab55126f10f2edc9ef50"
+  },
+  "scripts/repair_vista_eval_inputs.py": {
+    "archive": "repair_vista_eval_inputs.py",
+    "sha256": "fa3f90945f0cd7c1099ffcc404fcf6287d19829125a228924420c76be8f85eb3"
+  },
+  "src/vista_memory/core.py": {
+    "archive": "core.py",
+    "sha256": "38708a625cb018e6ad5d4b68cb407ee631ab356ce3708ac82565ffa80ab59731"
+  }
+}

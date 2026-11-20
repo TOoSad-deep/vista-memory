@@ -1,0 +1,68 @@
+{
+  "command": [
+    "/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh",
+    "--profile",
+    "sdk-minimal",
+    "--patch",
+    "/private/tmp/vista-dsh-sdk-probe-20261116-klie7x2j/vista-probe.yml"
+  ],
+  "isolated_home": "/private/tmp/vista-dsh-sdk-probe-20261116-klie7x2j/dsh-home",
+  "fixture_root": "/private/tmp/vista-memory-roundtrip-20261116-p2mfb2s5",
+  "responses": [
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "serverInfo": {
+          "name": "deepseek-harness-sdk-runtime",
+          "version": "0.0.1"
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "cwd": "/private/tmp/vista-dsh-sdk-probe-20261116-klie7x2j/workspace"
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {}
+    }
+  ],
+  "probe": {
+    "probe": "vista-tools",
+    "sessionId": "vista-tools-probe-20261116",
+    "tools": [
+      "mcp__vista__list_records",
+      "mcp__vista__read_record"
+    ]
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 0.71,
+  "only_vista_tools": true,
+  "events": [
+    {
+      "stream": "stderr",
+      "line": "[1116/103135.484783:ERROR:electron/shell/common/mac/codesign_util.cc:79] task_name_for_pid: (os/kern) failure (5)"
+    },
+    {
+      "stream": "stdout",
+      "line": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"serverInfo\":{\"name\":\"deepseek-harness-sdk-runtime\",\"version\":\"0.0.1\"}}}"
+    },
+    {
+      "stream": "stderr",
+      "line": "{\"probe\":\"vista-tools\",\"sessionId\":\"vista-tools-probe-20261116\",\"tools\":[\"mcp__vista__list_records\",\"mcp__vista__read_record\"]}"
+    },
+    {
+      "stream": "stdout",
+      "line": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"cwd\":\"/private/tmp/vista-dsh-sdk-probe-20261116-klie7x2j/workspace\"}}"
+    },
+    {
+      "stream": "stdout",
+      "line": "{\"jsonrpc\":\"2.0\",\"id\":3,\"result\":{}}"
+    }
+  ]
+}

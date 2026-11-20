@@ -9,7 +9,7 @@ file: vista-minimal-image-records-20261113
 
 VISTA 作为独立项目 vista-memory 开发，以“一张图片及其可选对应代码”为存储单位。后端负责保存，Agent 通过 MCP 工具发现和回看记录。
 
-状态：最小存储与工具设计已确认，独立存取核心、MCP 适配和本地协议验收已完成。DSH 图像入模、全新 Agent 会话及业务接入的验收留待后续执行，结果见实施计划。
+状态：最小存储与工具设计已确认，独立存取核心、MCP 适配和本地协议验收已完成。DSH 桌面端基础接入已验证，2026-11-16 又通过独立 SDK profile 完成受控验收，源 PNG、附件与实际出站图片哈希匹配。首轮合成任务推理对照实验已完成，结果和后续业务验收见[测试规划与执行清单](vista-memory-test-plan-20261113.md)。
 
 ## A 定位与范围
 
@@ -237,4 +237,4 @@ VISTA --> 业务后端: 返回记录摘要
 
 本文已复制到 vista-memory 的 `docs/`，后续以本仓库文档作为独立开发依据。
 
-工程基础、存取核心和 MCP 本地开发已按[实施计划](vista-memory-implementation-plan-20261113.md)完成。下一阶段补齐 DSH 宿主配置，验证图像入模与全新 Agent 会话回看。
+工程基础、存取核心和 MCP 本地开发已按[实施计划](vista-memory-implementation-plan-20261113.md)完成。DSH 基础接入、SDK 受控验收及首轮合成任务推理收益评估已完成，具体结果与适用范围见[测试规划](vista-memory-test-plan-20261113.md)。

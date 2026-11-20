@@ -1,0 +1,432 @@
+{
+  "stage": "011",
+  "pass": true,
+  "gates": {
+    "directory_list_returned_relevant_record": true,
+    "successful_read_after_directory_on_a_later_model_step": true,
+    "same_accepted_model_request_with_read_png_and_full_glsl_before_edit": true
+  },
+  "first_failed_gate": null,
+  "evidence_valid": true,
+  "first_substantive_edit": {
+    "call_id": "call_00_V4oRX2RmFX5LTAP08E7m0308",
+    "tool": "write",
+    "seq": 72,
+    "time": 1794971709389,
+    "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/workspace/stages/author/tasks/restore-probe/shader.frag",
+    "before": "03f89a38feb337f1103108939652ca40a7800f9c264929cd9f8ff8a641a7dedd",
+    "after": "28754be6d7e59fb948465b8a24c41158f7e0485bbee074390cb681b0896d98db"
+  },
+  "edit_status": "observed",
+  "unverified_actions": [],
+  "list_calls": [
+    {
+      "call_id": "call_01_T9UtrLUYtYnNdfntEZpz4417",
+      "call_seq": 26,
+      "call_step": 2,
+      "call_time": 1794971638882,
+      "success": true,
+      "result_seq": 27,
+      "result_time": 1794971638893,
+      "records": [
+        "record-31c6b488d1eb482e8cde1fbd0e4b7bfb.json",
+        "record-5a87ce377b90417a90f4eece5cc403b8.json",
+        "record-7ef3f1b01d984f0ba7518f96f6d61a86.json",
+        "record-9cbe249928e14d1d82cc3d8e1df047c7.json",
+        "record-ab8cc0f4df2842e681a769e254c937d1.json",
+        "record-f1b8c56445f043369d0f2b97ec7e1578.json",
+        "record-f3b0dc11639543b9977860a276c9b4c5.json"
+      ],
+      "is_error": false
+    }
+  ],
+  "read_calls": [
+    {
+      "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+      "call_seq": 33,
+      "call_step": 3,
+      "call_time": 1794971640609,
+      "success": true,
+      "result_seq": 34,
+      "result_time": 1794971640660,
+      "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+      "mode": "both",
+      "png": true,
+      "glsl": true,
+      "parameters": true,
+      "is_error": false
+    }
+  ],
+  "record_chains": [
+    {
+      "record": "record-f1b8c56445f043369d0f2b97ec7e1578.json",
+      "catalog_result_seqs": [
+        27
+      ],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    },
+    {
+      "record": "record-f3b0dc11639543b9977860a276c9b4c5.json",
+      "catalog_result_seqs": [
+        27
+      ],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    },
+    {
+      "record": "record-9cbe249928e14d1d82cc3d8e1df047c7.json",
+      "catalog_result_seqs": [
+        27
+      ],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    },
+    {
+      "record": "record-5a87ce377b90417a90f4eece5cc403b8.json",
+      "catalog_result_seqs": [
+        27
+      ],
+      "successful_read_result_seqs": [],
+      "ordered_read_result_seqs": [],
+      "wire_visibility": [],
+      "qualifying_requests": []
+    },
+    {
+      "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+      "catalog_result_seqs": [
+        27
+      ],
+      "successful_read_result_seqs": [
+        34
+      ],
+      "ordered_read_result_seqs": [
+        34
+      ],
+      "wire_visibility": [
+        {
+          "request": 8,
+          "time": "2026-11-18T03:14:01.274Z",
+          "http_status": 200,
+          "png": true,
+          "glsl": true,
+          "parameters": true,
+          "image_origins": [
+            {
+              "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+              "source": {
+                "kind": "candidate",
+                "candidateId": "3b13c410-8313-442d-a743-eea78e8ea5a4",
+                "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+                "channel": "mcp__vista__read_record",
+                "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/vista/png/image-09b372f648d84fc8bd81b75d8a3306e6.png",
+                "common": false
+              },
+              "location": "input[6].content[0].content[2]"
+            }
+          ],
+          "code_origins": [
+            {
+              "sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+              "location": "input[6].content[0].content[0].text",
+              "toolCallId": "call_00_XxG9OO44uGIDzchbR56k7582"
+            }
+          ],
+          "after_ordered_read": true,
+          "before_edit_or_ambiguous_action": true,
+          "proven_read_png": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ],
+          "proven_read_glsl": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ]
+        },
+        {
+          "request": 9,
+          "time": "2026-11-18T03:14:09.568Z",
+          "http_status": 200,
+          "png": true,
+          "glsl": true,
+          "parameters": true,
+          "image_origins": [
+            {
+              "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+              "source": {
+                "kind": "candidate",
+                "candidateId": "3b13c410-8313-442d-a743-eea78e8ea5a4",
+                "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+                "channel": "mcp__vista__read_record",
+                "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/vista/png/image-09b372f648d84fc8bd81b75d8a3306e6.png",
+                "common": false
+              },
+              "location": "input[6].content[0].content[2]"
+            }
+          ],
+          "code_origins": [
+            {
+              "sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+              "location": "input[6].content[0].content[0].text",
+              "toolCallId": "call_00_XxG9OO44uGIDzchbR56k7582"
+            }
+          ],
+          "after_ordered_read": true,
+          "before_edit_or_ambiguous_action": true,
+          "proven_read_png": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ],
+          "proven_read_glsl": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ]
+        },
+        {
+          "request": 10,
+          "time": "2026-11-18T03:14:12.110Z",
+          "http_status": 200,
+          "png": true,
+          "glsl": true,
+          "parameters": true,
+          "image_origins": [
+            {
+              "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+              "source": {
+                "kind": "candidate",
+                "candidateId": "3b13c410-8313-442d-a743-eea78e8ea5a4",
+                "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+                "channel": "mcp__vista__read_record",
+                "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/vista/png/image-09b372f648d84fc8bd81b75d8a3306e6.png",
+                "common": false
+              },
+              "location": "input[6].content[0].content[2]"
+            }
+          ],
+          "code_origins": [
+            {
+              "sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+              "location": "input[6].content[0].content[0].text",
+              "toolCallId": "call_00_XxG9OO44uGIDzchbR56k7582"
+            }
+          ],
+          "after_ordered_read": true,
+          "before_edit_or_ambiguous_action": true,
+          "proven_read_png": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ],
+          "proven_read_glsl": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ]
+        },
+        {
+          "request": 11,
+          "time": "2026-11-18T03:14:16.682Z",
+          "http_status": 200,
+          "png": true,
+          "glsl": true,
+          "parameters": true,
+          "image_origins": [
+            {
+              "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+              "source": {
+                "kind": "candidate",
+                "candidateId": "3b13c410-8313-442d-a743-eea78e8ea5a4",
+                "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+                "channel": "mcp__vista__read_record",
+                "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/vista/png/image-09b372f648d84fc8bd81b75d8a3306e6.png",
+                "common": false
+              },
+              "location": "input[6].content[0].content[2]"
+            }
+          ],
+          "code_origins": [
+            {
+              "sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+              "location": "input[6].content[0].content[0].text",
+              "toolCallId": "call_00_XxG9OO44uGIDzchbR56k7582"
+            }
+          ],
+          "after_ordered_read": true,
+          "before_edit_or_ambiguous_action": true,
+          "proven_read_png": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ],
+          "proven_read_glsl": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ]
+        },
+        {
+          "request": 12,
+          "time": "2026-11-18T03:14:52.325Z",
+          "http_status": 200,
+          "png": true,
+          "glsl": true,
+          "parameters": true,
+          "image_origins": [
+            {
+              "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+              "source": {
+                "kind": "candidate",
+                "candidateId": "3b13c410-8313-442d-a743-eea78e8ea5a4",
+                "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+                "channel": "mcp__vista__read_record",
+                "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/vista/png/image-09b372f648d84fc8bd81b75d8a3306e6.png",
+                "common": false
+              },
+              "location": "input[6].content[0].content[2]"
+            }
+          ],
+          "code_origins": [
+            {
+              "sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+              "location": "input[6].content[0].content[0].text",
+              "toolCallId": "call_00_XxG9OO44uGIDzchbR56k7582"
+            }
+          ],
+          "after_ordered_read": true,
+          "before_edit_or_ambiguous_action": true,
+          "proven_read_png": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ],
+          "proven_read_glsl": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ]
+        },
+        {
+          "request": 13,
+          "time": "2026-11-18T03:15:09.447Z",
+          "http_status": 200,
+          "png": true,
+          "glsl": true,
+          "parameters": true,
+          "image_origins": [
+            {
+              "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+              "source": {
+                "kind": "candidate",
+                "candidateId": "3b13c410-8313-442d-a743-eea78e8ea5a4",
+                "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+                "channel": "mcp__vista__read_record",
+                "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/vista/png/image-09b372f648d84fc8bd81b75d8a3306e6.png",
+                "common": false
+              },
+              "location": "input[6].content[0].content[2]"
+            }
+          ],
+          "code_origins": [
+            {
+              "sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+              "location": "input[6].content[0].content[0].text",
+              "toolCallId": "call_00_XxG9OO44uGIDzchbR56k7582"
+            }
+          ],
+          "after_ordered_read": true,
+          "before_edit_or_ambiguous_action": false,
+          "proven_read_png": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ],
+          "proven_read_glsl": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ]
+        },
+        {
+          "request": 14,
+          "time": "2026-11-18T03:15:18.197Z",
+          "http_status": 200,
+          "png": true,
+          "glsl": true,
+          "parameters": true,
+          "image_origins": [
+            {
+              "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+              "source": {
+                "kind": "candidate",
+                "candidateId": "3b13c410-8313-442d-a743-eea78e8ea5a4",
+                "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+                "channel": "mcp__vista__read_record",
+                "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/vista/png/image-09b372f648d84fc8bd81b75d8a3306e6.png",
+                "common": false
+              },
+              "location": "input[6].content[0].content[2]"
+            }
+          ],
+          "code_origins": [
+            {
+              "sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+              "location": "input[6].content[0].content[0].text",
+              "toolCallId": "call_00_XxG9OO44uGIDzchbR56k7582"
+            }
+          ],
+          "after_ordered_read": true,
+          "before_edit_or_ambiguous_action": false,
+          "proven_read_png": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ],
+          "proven_read_glsl": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ]
+        },
+        {
+          "request": 16,
+          "time": "2026-11-18T03:15:20.903Z",
+          "http_status": 200,
+          "png": true,
+          "glsl": true,
+          "parameters": true,
+          "image_origins": [
+            {
+              "call_id": "call_00_XxG9OO44uGIDzchbR56k7582",
+              "source": {
+                "kind": "candidate",
+                "candidateId": "3b13c410-8313-442d-a743-eea78e8ea5a4",
+                "record": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+                "channel": "mcp__vista__read_record",
+                "path": "/Users/douwen/Documents/HUAWEl/Shader-Agent/vista-memory/docs/test-results/20261117-png-shader-recall/focused-followup/runs/011/vista/png/image-09b372f648d84fc8bd81b75d8a3306e6.png",
+                "common": false
+              },
+              "location": "input[6].content[0].content[2]"
+            }
+          ],
+          "code_origins": [
+            {
+              "sha256": "d47e5c8798bde3eba37499a20a70f08f386f89e4f863f0b4b1821eae5f8a09d7",
+              "location": "input[6].content[0].content[0].text",
+              "toolCallId": "call_00_XxG9OO44uGIDzchbR56k7582"
+            }
+          ],
+          "after_ordered_read": true,
+          "before_edit_or_ambiguous_action": false,
+          "proven_read_png": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ],
+          "proven_read_glsl": [
+            "call_00_XxG9OO44uGIDzchbR56k7582"
+          ]
+        }
+      ],
+      "qualifying_requests": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "immediate_predecessor": "record-ab8cc0f4df2842e681a769e254c937d1.json",
+  "immediate_predecessor_chain_pass": true,
+  "run_status": "passed",
+  "turn_reason": {
+    "kind": "completed"
+  },
+  "run_error": null,
+  "model_requests": 11,
+  "new_candidate_ids": [
+    "61ae407e-8ba8-4b78-8b7a-4eb6a36b6139"
+  ],
+  "submitted_candidate": "61ae407e-8ba8-4b78-8b7a-4eb6a36b6139",
+  "control_errors": []
+}
