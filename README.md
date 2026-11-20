@@ -1,31 +1,84 @@
 # vista-memory
 
-VISTA 视觉记忆，以一张图片及其可选对应代码为记录单位，提供独立存取核心与 MCP 读取接口。
+给 Agent 一个可以回看的本地图片库。你的程序用 Python 保存一张 PNG，可以同时存下生成它的 GLSL 和渲染参数。之后 Agent 通过 MCP 列出记录，按记录名取回当时的原图和代码。
 
-## 安装
+## 快速开始
 
-需要 Python 3.11 及以上，以及支持目录描述符相对操作和 `O_NOFOLLOW` 的 POSIX 文件系统环境。本轮验证使用 macOS。使用 uv 安装开发依赖与 MCP 适配层。
+准备好 Git、uv 和支持 POSIX 目录操作的本地文件系统（macOS 或 Linux）。项目要求 Python 3.11 及以上。示例会自己画图，首次运行可能需要联网下载 Python 或依赖，全程无需模型账号。[uv 安装说明](https://docs.astral.sh/uv/getting-started/installation/)
 
 ```bash
-uv sync --extra mcp --group dev
+git clone https://github.com/TOoSad-deep/vista-memory.git
+cd vista-memory
+./scripts/quickstart.sh --root ./vista/demo
 ```
 
-通过 pip 安装时，`pip install .` 提供存取核心，`pip install '.[mcp]'` 同时安装 MCP 依赖。
+脚本按 `uv.lock` 安装依赖，往 `vista/demo/` 追加 4 条示例记录，再用两个先后启动的 MCP 进程核对目录、原图字节和代码。看到以下字段，就说明写入和重启回读都成功了。
 
-## 保存与回读
+```json
+{
+  "status": "passed",
+  "records_added": 4,
+  "restart_readback_verified": true
+}
+```
 
-调用方绑定运行时数据目录，核心在其中维护 `png/`、`glsl/` 和 `json/`。每份 JSON 对应一张 PNG 和可选 GLSL，记录文件名由核心生成。
+打开 `vista/demo/png/` 就能看到示例图。`json/` 下的每条记录关联一张 PNG 和可选的 `glsl/` 文件。同一目录再跑一次会追加 4 条。只想临时试用时，直接运行 `./scripts/quickstart.sh`，脚本会新建并打印本次的临时目录。
+
+## 让 Agent 打开刚才的图
+
+**通用 MCP 客户端。** 对于使用 `mcpServers` 的客户端，在仓库根目录运行下面的命令。它打印适合这台机器的 JSON，包含 Python 解释器和示例库的绝对路径。如果已有图库，可以跳过示例，先执行 `uv sync --locked --no-dev --extra mcp --inexact`，再将 `--root` 换成自己的目录。
+
+```bash
+uv run --no-sync python scripts/mcp_config.py --root ./vista/demo
+```
+
+把输出中的 `vista` 条目合并到客户端现有的 `mcpServers` 下，重载客户端。然后请支持图片的 Agent 试着回看一张图。
+
+> 请列出 VISTA 图片，打开标签为 Image fixture 3 的那张，告诉我圆是什么颜色。
+
+客户端应先调用 `list_records`，再把返回的 `record` 文件名传给 `read_record`。示例图中，深色背景上有一个橙色圆。你也可以直接在客户端的工具面板中调用这两个工具。
+
+| 工具 | 传入 | 取回 |
+| --- | --- | --- |
+| `list_records` | `{}` | 记录文件名、标签、来源和是否有关联代码 |
+| `read_record` | `record` 填上一步返回的文件名，`content` 可选 | 元数据及所选内容。默认 `image` 读原 PNG，`code` 读 GLSL，`both` 同时取图和代码 |
+
+图片通过 MCP 图像内容块传输。读取无代码记录时，`code` 返回“没有关联代码”，`both` 仍会返回图片。客户端会自行通过 stdio 启动服务。如果手动调试，可运行 `uv run --no-sync vista-memory-mcp --root ./vista/demo`，终端会等待客户端输入协议消息。
+
+**原生 DeepSeek Harness（DSH）。** 已装 DSH 的用户可以为 SDK 单独生成一份补丁，使用同一份图片库。
+
+```bash
+uv run --no-sync python scripts/mcp_config.py --root ./vista/demo --format dsh > ./vista/dsh-patch.json
+dsh --profile sdk-minimal --patch "$PWD/vista/dsh-patch.json"
+```
+
+这里的 `dsh` 指本机的可执行文件。macOS 桌面版如果未加入 PATH，可换成 `"/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh"`。这个命令供 SDK 客户端通过 stdio 连接。会话中的工具名为 `mcp__vista__list_records` 和 `mcp__vista__read_record`。需要让 Agent 真正看图时，在宿主中配置支持图片的模型。[原生 DSH 测试计划](docs/vista-memory-test-plan-20261113.md) · [工具调用和图片送达记录](docs/test-results/20261116-dsh/README.md)
+
+**常见问题**
+
+- **列表是空的。** 核对生成配置时的 `--root` 与快速启动打印的目录。一个新的可写目录会被初始化为空库。
+- **客户端报找不到 Python 或模块。** 移动仓库或重建虚拟环境后，重新生成配置并重载客户端。生成配置要用装有 `vista-memory[mcp]` 的 Python。
+- **想连自己的图库。** 用下面的 Python 接口保存 PNG，再用同一个根目录生成 MCP 配置。只有通过 VISTA 登记的图才会出现在列表里。
+
+## 用 Python 保存自己的图
+
+快速启动已经装好 Python 包。只需要 Python 存取接口时，也可以在自己的虚拟环境里从仓库根目录运行 `python -m pip install .`。需要 MCP 时使用 `python -m pip install '.[mcp]'`。
+
+把一张 PNG 放在当前目录，命名为 `reference.png`。用过快速启动的读者可以把下面的代码保存为 `save_image.py`，在仓库根目录执行 `uv run --no-sync python save_image.py`。
 
 ```python
 from pathlib import Path
-
 from vista_memory import VistaStore
 
-store = VistaStore("/absolute/path/to/vista")
-reference = store.save_record(
-    png=Path("reference.png").read_bytes(),
-    label="参考图",
-)
+store = VistaStore("vista/my-images")
+reference = store.save_record(png=Path("reference.png").read_bytes(), label="参考图")
+result = store.read_record(reference["record"])
+print(result.metadata["label"], len(result.image))  # 参考图、取回的 PNG 字节数
+```
+
+如果图片是渲染结果，还可以传入完整代码和当时生效的参数。下面假设你已有两张渲染图和一份 GLSL。两次只改了参数，可以复用第一条记录的代码。
+
+```python
 first = store.save_record(
     png=Path("render-001.png").read_bytes(),
     label="第 1 次渲染",
@@ -40,78 +93,45 @@ second = store.save_record(
     source_agent="generation",
     render={"time": 0, "uniforms": {"radius": 0.3}},
 )
-
-print(store.list_records())
 result = store.read_record(second["record"], content="both")
-print(result.metadata)
-print(result.code)
-png_bytes = result.image
+print(result.metadata, result.code)
 ```
 
-调用方提供本次实际 PNG、完整代码和生效的外部参数。复用代码时传入同库已有记录文件名 `reuse_glsl_from`，它与 `glsl` 互斥。代码变化时传入新的 `glsl` 正文。每次保存追加新记录，旧记录引用的文件保持稳定。
+`glsl` 与 `reuse_glsl_from` 二选一，代码变化时传新的正文。每次保存会追加一条记录。返回的 `record` 是后续读取所需的文件名，`label` 是给人看的名称。Python 读取时，未请求的内容和未关联的代码为 `None`。输入无效、记录损坏或文件访问失败会引发 `VistaError`。
 
-保存成功返回 `record`、`label`、`source_agent` 和 `has_glsl`。`read_record()` 默认读取图片，支持 `image`、`code`、`both`。返回对象含 `metadata`、`image` 和 `code`，其中 `image` 是 PNG 字节，`code` 是 GLSL 字符串，未选择的内容为 `None`。参考图的 `code` 为 `None`，空代码正文保留为空字符串。
+## 在一个任务里用 R1、R2 回看
 
-需要在进程重启后补登的写入方可向 `save_record()` 传入预留的 UUID（`record_id`）。同一 UUID 只能发布一次。Shader 接入层用业务候选 ID 推导这个 UUID，重试时先回读并核对 PNG、完整 GLSL 和渲染参数，再补写候选映射。已有运行的恢复命令和验收条件见[实施清单](docs/test-results/20261117-png-shader-recall/implementation-checklist.md)。
-
-核心使用 `VistaError` 报告无效输入、损坏记录和文件访问错误。目录按文件名排序，遇到损坏 JSON 时报告具体记录并使本次列出失败。内容文件按读取模式访问。文件操作绑定已打开的目录描述符，读取逐层使用 `O_NOFOLLOW`。保存最后发布完整 JSON，并在返回成功前复核目录绑定。绑定变化时报告错误，通过原目录描述符清理本次独有文件。
-
-## MCP 启动
-
-```bash
-uv run --extra mcp vista-memory-mcp --root /absolute/path/to/vista
-```
-
-也可使用 `python -m vista_memory.mcp --root /absolute/path/to/vista`。MCP 客户端通过 stdio 启动该命令，标准输出承载协议，日志写入标准错误。
-
-| 工具 | 输入 | 结果 |
-| --- | --- | --- |
-| `list_records()` | `{}` | 记录摘要目录的 JSON 文本 |
-| `read_record()` | `{"record": "记录.json", "content": "both"}` | 元数据文本及按需返回的 GLSL 文本和 PNG 图像内容 |
-
-`content` 默认 `image`，支持 `code` 和 `both`。无关联代码时，代码请求返回“没有关联代码”；`both` 同时返回图片。图片内容通过 MCP 图像内容块传输。
-
-## 任务内图片回看
-
-同一个任务里的图片有 `R1`、`R2` 等短号。调用方绑定任务和数据目录，为每次保存提供一个稳定的请求 ID。遇到中断时，用同一 ID 和同一份输入重试即可恢复登记。
+如果要记住“用户认可了哪张图”，可以为任务建立短号和备注。下面把上面保存的参考图登记到一个任务，然后按短号取回原图。任务目录用来保存短号、反馈和目录视图。
 
 ```python
 from vista_memory.history_catalog import HistoryCatalog
 from vista_memory.history_store import TaskHistory
 
-history = TaskHistory(store, "/absolute/path/to/task-data", task_id="icon-review")
-item = history.save("save-001", png=Path("draft.png").read_bytes(), label="留白调整稿")
-print(item.receipt)
-
+history = TaskHistory(store, "vista/tasks/icon-review", task_id="icon-review")
+item = history.import_record(f"import-{reference['record']}", reference["record"])
 catalog = HistoryCatalog(history)
-catalog.append_user_feedback("feedback-001", f"{item.short_id} 的留白刚好。")
-view = catalog.short_view(selected=item.short_id)
-print(view.text)
-print(catalog.expand(view_id=view.view_id, target=item.short_id).text)
+catalog.append_user_feedback(f"feedback-{item.short_id}", f"{item.short_id} 的留白刚好。")
+print(catalog.short_view(selected=item.short_id).text)
 png_bytes = catalog.new_turn(image_limit=3).read(item.short_id).image
 ```
 
-旧记录可通过 `history.import_record()` 按明确的任务归属登记。目录预算默认 400 token。接入端可以传入目标模型的 `count_tokens` 实测整段文字，缺少计数器时目录标记为估算。原生 DSH 的接入和验收情况见 [v1.1 实施报告](docs/test-results/20261120-vista-image-history/README.md)。
+写入新图时可用 `history.save(request_id, png=..., label=...)` 同时完成保存和登记。重试同一次写入时沿用同一请求 ID 和相同输入。短目录默认预算为 400 token，接入端可传入 `count_tokens` 实测。DSH 的按短号回看和自动补入目录需要单独加载任务历史插件，绑定会话 ID、任务和数据目录。[插件配置示例](docs/test-results/20261120-vista-image-history/host.md#接入方式) · [日常会话实测](docs/test-results/20261120-vista-dsh-daily/README.md)
 
-## 本地示例与验证
+## 开发与验证
+
+在单独克隆的仓库中，可以运行以下检查，覆盖 Python 存取、路径竞态、MCP 工具和任务内历史。
 
 ```bash
-uv run --extra mcp python examples/local_roundtrip.py --root /tmp/vista-example
-uv run pytest tests/test_core.py tests/test_path_races.py
-uv run --extra mcp pytest tests/test_mcp.py
-uv run ruff check .
-uv run ruff format --check .
+uv sync --locked --extra mcp --group dev
+uv run --no-sync pytest tests/test_core.py tests/test_path_races.py tests/test_mcp.py tests/test_history_store.py tests/test_history_catalog.py
+uv run --no-sync ruff check src tests scripts examples
 uv build
 ```
 
-示例按预设参数生成 PNG，连续登记参考图、共享代码和新代码版本，通过真实 MCP 子进程检查目录、三种读取模式、图片字节、代码正文和参数，再启动新连接回读。GLSL 使用固定存取测试正文，Shader 执行与视觉效果在业务接入时验证。重复运行示例会向指定目录追加记录。
+要跑完整 Python 测试，另需一份带 `runtime/vista_bridge.py` 的 `dsh-shader` 业务仓库。将 `VISTA_BUSINESS_ROOT` 指向其根目录后运行 `uv run --no-sync pytest`。本地快速启动和上面的独立库检查都可以单独完成。
 
-## 设计与进度
+## 设计与实验记录
 
-详见[最小图片记录与 MCP 接入设计](docs/vista-minimal-image-records-design-20261113.md)和[实施计划](docs/vista-memory-implementation-plan-20261113.md)。
-
-首轮独立存取核心、MCP 读取接口和本地协议验收已完成，79 个测试通过，包含 8 个目录或文件替换竞态回归用例。连续记录与重启回读示例通过，构建及独立安装检查通过。DSH 桌面端已完成基础接入与测试图识别，图像附件哈希与原 PNG 匹配。
-
-2026-11-16 基础回归再次通过，79 项测试全部执行，详见[基础回归记录](docs/test-results/20261116/README.md)。独立 DSH SDK profile 随后完成 D1 至 D8 受控验收，12 个真实模型回合通过，源 PNG、附件与实际出站图片哈希一致，详见[DSH 验收记录](docs/test-results/20261116-dsh/README.md)。
-
-首轮合成任务对照实验已完成 48 次有效运行，文字历史组成功率 75%，原图回读组 100%。小样本区间与适用范围、校准及补跑见[实验报告](docs/test-results/20261116-eval/README.md)。随后完成 12 段 PNG 转 Shader 业务诊断。T05 的明确回顾任务成功选版并在修改前收到图和代码，仅增强历史说明的自然任务未触发旧图回读。[业务诊断与视觉对照](docs/test-results/20261117-png-shader-recall/focused-followup/results.md)
+- 图片、可选代码、记录发布顺序和调用约定见[最小图片记录设计](docs/vista-minimal-image-records-design-20261113.md)和[实施计划](docs/vista-memory-implementation-plan-20261113.md)。需要跨进程补登记的写入方可预留 UUID 作为 `record_id`，恢复时先核对实际内容。[业务接入恢复清单](docs/test-results/20261117-png-shader-recall/implementation-checklist.md)
+- [基础回归记录](docs/test-results/20261116/README.md)和[任务历史实施报告](docs/test-results/20261120-vista-image-history/README.md)给出了各阶段的测试环境、覆盖范围和已知限制。
+- 48 次合成任务对照中，文字历史组成功率为 75%，原图回读组为 100%。后续 Shader 业务诊断中，明确要求回顾时能取回图和代码，仅增强历史说明的自然任务仍未触发旧图回读。[合成实验报告](docs/test-results/20261116-eval/README.md) · [业务诊断](docs/test-results/20261117-png-shader-recall/focused-followup/results.md)
